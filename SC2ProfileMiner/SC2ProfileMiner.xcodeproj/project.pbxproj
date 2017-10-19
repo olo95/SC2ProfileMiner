@@ -286,9 +286,9 @@
 		D6B2587A1F98F82C0049F887 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				D68A22BA1F991F5F009474C4 /* TransitionManager.swift */,
 				D6B2587B1F98F8470049F887 /* AppTransitionManager.swift */,
 				D68A22B71F991D2C009474C4 /* DrawerTransitionManager.swift */,
-				D68A22BA1F991F5F009474C4 /* TransitionManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";

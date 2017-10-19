@@ -8,6 +8,12 @@
 
 import RxSwift
 
+enum DrawerRouter {
+    case none
+    case shown
+    case hidden
+}
+
 class SC2ProfileCoordinator: Coordinating {
     func addNew(coordinator: Coordinating) {
         let coordinator = SC2ProfileCoordinator(parent: self)
@@ -23,6 +29,9 @@ class SC2ProfileCoordinator: Coordinating {
     var childCoordinators: [Coordinating] = []
     var parent: Coordinating?
     
+    var drawerRouter = BehaviorSubject<DrawerRouter>(value: .none)
+    let bag = DisposeBag()
+    
     var sc2Profile: SC2ProfileViewController {
         let vm = SC2ProfileViewModel(flowDelegate: self)
         let vc = SC2ProfileViewController()
@@ -36,7 +45,23 @@ class SC2ProfileCoordinator: Coordinating {
     
     required init(parent: Coordinating?) {
         self.parent = parent
+        setDrawerRouter()
     }
     
+    private func setDrawerRouter() {
+        drawerRouter.subscribe( onNext: { state in
+            switch state {
+            case .shown:
+                let drawerController = DrawerViewController()
+                let drawerTransitionManager = DrawerTransitionManager(coordinator: self)
+                drawerController.transitioningDelegate = drawerTransitionManager
+                self.present(viewController: drawerController, completion: nil)
+            case .hidden:
+                break
+            case .none:
+                break
+            }
+        }).disposed(by: bag)
+    }
     
 }

@@ -18,8 +18,13 @@ class SC2ProfileViewController: UIViewController {
     }
     
     private func setNavigationBar() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "hamburger"), style: .done, target: self, action: nil)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "hamburger"), style: .done, target: self, action: #selector(showDrawer))
         navigationItem.leftBarButtonItem?.image = navigationItem.leftBarButtonItem?.image!.withRenderingMode(.alwaysTemplate)
         navigationItem.leftBarButtonItem?.tintColor = ColorTheme.appTheme.gray
+    }
+    
+    @objc
+    private func showDrawer() {
+        viewModel.flowDelegate.drawerRouter.onNext(.shown)
     }
 }

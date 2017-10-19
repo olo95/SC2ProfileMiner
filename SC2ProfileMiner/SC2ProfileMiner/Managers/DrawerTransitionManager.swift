@@ -25,13 +25,15 @@ extension DrawerTransitionManager: UIViewControllerAnimatedTransitioning {
                 return
         }
         let containerView = transitionContext.containerView
-        let snapshot = toVC.view.snapshotView(afterScreenUpdates: true)
-        snapshot?.frame = originFrame
-        snapshot?.frame.origin.x += originFrame.maxX
+//        let snapshot = toVC.view.snapshotView(afterScreenUpdates: true)
+//        snapshot?.frame = originFrame
+        toVC.view.frame.origin.x -= fromVC.view.frame.maxX
         
+        containerView.addSubview(fromVC.view)
+        toVC.view.sendSubview(toBack: fromVC.view)
         containerView.addSubview(toVC.view)
-        containerView.addSubview(snapshot!)
-        toVC.view.isHidden = true
+        //containerView.addSubview(snapshot!)
+        //toVC.view.isHidden = true
         
         let duration = transitionDuration(using: transitionContext)
         
@@ -41,15 +43,12 @@ extension DrawerTransitionManager: UIViewControllerAnimatedTransitioning {
             options: .calculationModeCubic,
             animations: {
                 UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1 / 1, animations: {
-                    fromVC.view.frame.origin.x -= fromVC.view.frame.maxX / 3
-                    fromVC.view.alpha = 0.50
-                    snapshot?.alpha = 1.0
-                    snapshot?.frame = toVC.view.frame
+                    fromVC.view.frame.origin.x += fromVC.view.frame.maxX / 3
+                    toVC.view.alpha = 1.0
+                    toVC.view.frame = CGRect(x: containerView.frame.origin.x - containerView.frame.width / 2, y: containerView.frame.origin.y, width: containerView.frame.width, height: containerView.frame.height)
                 })
         },
             completion: { _ in
-                toVC.view.isHidden = false
-                snapshot?.removeFromSuperview()
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
     }
