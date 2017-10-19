@@ -19,28 +19,22 @@ enum MainMenuChoice {
 class AppCoordinator: Coordinating {
    
     let window = UIWindow(frame: UIScreen.main.bounds)
+    var appTransitionManager: AppTransitionManager!
+    
     required init(parent: Coordinating?) {
         self.parent = parent
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
+        appTransitionManager = AppTransitionManager(coordinator: self)
         
         menuChoice.subscribe( onNext: { choice in
             switch choice {
             case .sc2Profile:
-                let profileCoordinator = SC2ProfileCoordinator(parent: self)
-                self.childCoordinators.append(profileCoordinator)
-                profileCoordinator.start()
-                self.present(viewController: profileCoordinator.navigationController, completion: nil)
+                self.addNew(coordinator: SC2ProfileCoordinator(parent: self))
             case .sc2Compare:
-                let compareCoordinator = SC2CompareCoordinator(parent: self)
-                self.childCoordinators.append(compareCoordinator)
-                compareCoordinator.start()
-                self.present(viewController: compareCoordinator.navigationController, completion: nil)
+                self.addNew(coordinator: SC2CompareCoordinator(parent: self))
             case .sc2Build:
-                let buildCoordinator = SC2BuildCoordinator(parent: self)
-                self.childCoordinators.append(buildCoordinator)
-                buildCoordinator.start()
-                self.present(viewController: buildCoordinator.navigationController, completion: nil)
+                self.addNew(coordinator: SC2BuildCoordinator(parent: self))
             case .none:
                 break
             }
@@ -59,6 +53,15 @@ class AppCoordinator: Coordinating {
     func start() {
         navigationController.setViewControllers([mainMenuViewController], animated: true)
     }
+    
+    func addNew(coordinator: Coordinating) {
+        let coordinator = SC2ProfileCoordinator(parent: self)
+        childCoordinators.append(coordinator)
+        coordinator.start()
+        coordinator.navigationController.transitioningDelegate = appTransitionManager
+        self.present(viewController: coordinator.navigationController, completion: nil)
+    }
+
     
     var menuChoice = BehaviorSubject<MainMenuChoice>(value: .none)
     let bag = DisposeBag()

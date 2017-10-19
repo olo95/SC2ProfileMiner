@@ -17,6 +17,7 @@ protocol Coordinating {
     func dismiss(viewController: UIViewController, completion: (() -> ())?)
     func push(viewController: UIViewController)
     func start()
+    func addNew(coordinator: Coordinating)
     
     init(parent: Coordinating?)
 }

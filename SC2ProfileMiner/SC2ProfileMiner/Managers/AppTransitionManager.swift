@@ -86,7 +86,7 @@ extension AppTransitionManager: UIViewControllerAnimatedTransitioning {
         let containerView = transitionContext.containerView
         let snapshot = toVC.view.snapshotView(afterScreenUpdates: true)
         snapshot?.frame = originFrame
-        snapshot?.frame.origin.x -= originFrame.maxX
+        snapshot?.frame.origin.x += originFrame.maxX
         
         containerView.addSubview(toVC.view)
         containerView.addSubview(snapshot!)
@@ -100,7 +100,7 @@ extension AppTransitionManager: UIViewControllerAnimatedTransitioning {
             options: .calculationModeCubic,
             animations: {
                 UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1 / 1, animations: {
-                    fromVC.view.frame.origin.x += fromVC.view.frame.maxX / 3
+                    fromVC.view.frame.origin.x -= fromVC.view.frame.maxX / 3
                     fromVC.view.alpha = 0.50
                     snapshot?.alpha = 1.0
                     snapshot?.frame = toVC.view.frame
@@ -113,8 +113,7 @@ extension AppTransitionManager: UIViewControllerAnimatedTransitioning {
         })
     }
     
-    func animationEnded(_: Bool) {
-    }
+    func animationEnded(_: Bool) {}
 }
 
 extension AppTransitionManager: UIViewControllerTransitioningDelegate {

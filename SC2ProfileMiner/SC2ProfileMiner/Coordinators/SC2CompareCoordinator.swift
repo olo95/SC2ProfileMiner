@@ -9,6 +9,7 @@
 import RxSwift
 
 class SC2CompareCoordinator: Coordinating {
+    
     var navigationController: UINavigationController = {
         return UINavigationController()
     }()
@@ -27,9 +28,14 @@ class SC2CompareCoordinator: Coordinating {
         navigationController.setViewControllers([sc2Compare], animated: true)
     }
     
+    func addNew(coordinator: Coordinating) {
+        let coordinator = SC2ProfileCoordinator(parent: self)
+        childCoordinators.append(coordinator)
+        coordinator.start()
+        self.present(viewController: coordinator.navigationController, completion: nil)
+    }
+    
     required init(parent: Coordinating?) {
         self.parent = parent
     }
-    
-    
 }

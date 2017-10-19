@@ -9,6 +9,7 @@
 import RxSwift
 
 class SC2BuildCoordinator: Coordinating {
+    
     var navigationController: UINavigationController = {
         return UINavigationController()
     }()
@@ -25,6 +26,13 @@ class SC2BuildCoordinator: Coordinating {
     
     func start() {
         navigationController.setViewControllers([sc2Build], animated: true)
+    }
+    
+    func addNew(coordinator: Coordinating) {
+        let coordinator = SC2ProfileCoordinator(parent: self)
+        childCoordinators.append(coordinator)
+        coordinator.start()
+        self.present(viewController: coordinator.navigationController, completion: nil)
     }
     
     required init(parent: Coordinating?) {

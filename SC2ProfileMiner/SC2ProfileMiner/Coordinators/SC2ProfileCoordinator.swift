@@ -9,6 +9,13 @@
 import RxSwift
 
 class SC2ProfileCoordinator: Coordinating {
+    func addNew(coordinator: Coordinating) {
+        let coordinator = SC2ProfileCoordinator(parent: self)
+        childCoordinators.append(coordinator)
+        coordinator.start()
+        self.present(viewController: coordinator.navigationController, completion: nil)
+    }
+    
     var navigationController: UINavigationController = {
         return UINavigationController()
     }()
