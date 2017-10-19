@@ -1,19 +1,19 @@
 //
-//  AppTransitionManager.swift
+//  DrawerTransitionManager.swift
 //  SC2ProfileMiner
 //
 //  Created by Alexander Stolar on 19.10.2017.
 //  Copyright © 2017 Alexander Stolar. All rights reserved.
 //
 
+import RxSwift
+import RxCocoa
 
-import UIKit
-
-class AppTransitionManager: TransitionManager {
+class DrawerTransitionManager: TransitionManager {
     
 }
 
-extension AppTransitionManager: UIViewControllerAnimatedTransitioning {
+extension DrawerTransitionManager: UIViewControllerAnimatedTransitioning {
     
     func transitionDuration(using _: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.5
@@ -57,7 +57,7 @@ extension AppTransitionManager: UIViewControllerAnimatedTransitioning {
     func animationEnded(_: Bool) {}
 }
 
-extension AppTransitionManager: UIViewControllerTransitioningDelegate {
+extension DrawerTransitionManager: UIViewControllerTransitioningDelegate {
     
     func animationController(forPresented _: UIViewController, presenting _: UIViewController, source _: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return self
@@ -67,4 +67,3 @@ extension AppTransitionManager: UIViewControllerTransitioningDelegate {
         return nil
     }
 }
-

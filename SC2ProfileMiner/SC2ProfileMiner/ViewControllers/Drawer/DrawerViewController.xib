@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DrawerViewController" customModule="SC2ProfileMiner" customModuleProvider="target">
+            <connections>
+                <outlet property="buildImageView" destination="m4m-Ex-WPt" id="KIX-xd-l8z"/>
+                <outlet property="compareImageView" destination="t9O-xd-541" id="jHt-G8-Oz5"/>
+                <outlet property="leftBoundView" destination="xLW-dy-l8j" id="h7S-I1-QCO"/>
+                <outlet property="profileImageView" destination="KB7-C7-NwG" id="Zk5-bz-5BT"/>
+                <outlet property="sc2CompareButton" destination="04K-4r-dmr" id="nb9-sK-TTx"/>
+                <outlet property="sc2CreateButton" destination="5Ph-Sh-oWF" id="l7O-cs-EDG"/>
+                <outlet property="sc2ProfileButton" destination="diE-Q8-fii" id="e9i-Hl-z7f"/>
+                <outlet property="splitterConstraint" destination="D0D-Bm-Yc6" id="E2z-hs-6kq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLW-dy-l8j">
+                    <rect key="frame" x="187" y="20" width="0.0" height="647"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" id="dMu-WH-af1"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VUb-1e-gZh">
+                    <rect key="frame" x="195" y="28" width="172" height="631"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="SC2 Profile Miner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfV-1g-Lzx">
+                            <rect key="frame" x="0.0" y="0.0" width="172" height="126"/>
+                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                            <color key="textColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mjr-XD-xUI">
+                            <rect key="frame" x="0.0" y="126" width="172" height="126.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="diE-Q8-fii">
+                                    <rect key="frame" x="41" y="8" width="123" height="110.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
+                                    <state key="normal" title="Load the SC2Profile">
+                                        <color key="titleColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="KB7-C7-NwG">
+                                    <rect key="frame" x="8" y="51" width="24.5" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="KB7-C7-NwG" secondAttribute="height" id="LeN-R8-7D8"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="diE-Q8-fii" firstAttribute="centerY" secondItem="KB7-C7-NwG" secondAttribute="centerY" id="8Xh-oa-SbM"/>
+                                <constraint firstAttribute="bottom" secondItem="diE-Q8-fii" secondAttribute="bottom" constant="8" id="F1c-PC-79b"/>
+                                <constraint firstAttribute="trailing" secondItem="diE-Q8-fii" secondAttribute="trailing" constant="8" id="Hdd-HP-4fQ"/>
+                                <constraint firstItem="diE-Q8-fii" firstAttribute="top" secondItem="Mjr-XD-xUI" secondAttribute="top" constant="8" id="gPa-e2-Iq7"/>
+                                <constraint firstItem="KB7-C7-NwG" firstAttribute="leading" secondItem="Mjr-XD-xUI" secondAttribute="leading" constant="8" id="vnK-GT-ULs"/>
+                                <constraint firstItem="diE-Q8-fii" firstAttribute="leading" secondItem="KB7-C7-NwG" secondAttribute="trailing" constant="8" id="yDz-mV-ObN"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KeF-Gh-tN3">
+                            <rect key="frame" x="0.0" y="252.5" width="172" height="126"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="04K-4r-dmr">
+                                    <rect key="frame" x="41" y="8" width="123" height="110"/>
+                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
+                                    <state key="normal" title="Compare SC2Profiles">
+                                        <color key="titleColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="compare" translatesAutoresizingMaskIntoConstraints="NO" id="t9O-xd-541">
+                                    <rect key="frame" x="8" y="50.5" width="25" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="t9O-xd-541" secondAttribute="height" multiplier="1:1" id="BhK-99-5gH"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="t9O-xd-541" firstAttribute="centerY" secondItem="04K-4r-dmr" secondAttribute="centerY" id="3pi-bj-EUw"/>
+                                <constraint firstAttribute="bottom" secondItem="04K-4r-dmr" secondAttribute="bottom" constant="8" id="5ne-gB-dBR"/>
+                                <constraint firstItem="04K-4r-dmr" firstAttribute="top" secondItem="KeF-Gh-tN3" secondAttribute="top" constant="8" id="Fx3-cw-f3w"/>
+                                <constraint firstItem="t9O-xd-541" firstAttribute="leading" secondItem="KeF-Gh-tN3" secondAttribute="leading" constant="8" id="HEG-Id-xOl"/>
+                                <constraint firstAttribute="trailing" secondItem="04K-4r-dmr" secondAttribute="trailing" constant="8" id="dG0-Ez-XcH"/>
+                                <constraint firstItem="04K-4r-dmr" firstAttribute="leading" secondItem="t9O-xd-541" secondAttribute="trailing" constant="8" id="ie5-qN-RFj"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amf-Hu-baN">
+                            <rect key="frame" x="0.0" y="378.5" width="172" height="126.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="5Ph-Sh-oWF">
+                                    <rect key="frame" x="41.5" y="8" width="122.5" height="110.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
+                                    <state key="normal" title="Create the SC2Build">
+                                        <color key="titleColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="build" translatesAutoresizingMaskIntoConstraints="NO" id="m4m-Ex-WPt">
+                                    <rect key="frame" x="8" y="50.5" width="25" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="m4m-Ex-WPt" secondAttribute="height" multiplier="1:1" id="uS8-oW-TC0"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="5Ph-Sh-oWF" firstAttribute="leading" secondItem="m4m-Ex-WPt" secondAttribute="trailing" constant="8" id="AVH-Wn-MFW"/>
+                                <constraint firstAttribute="trailing" secondItem="5Ph-Sh-oWF" secondAttribute="trailing" constant="8" id="Yk5-Qa-Aeg"/>
+                                <constraint firstItem="m4m-Ex-WPt" firstAttribute="leading" secondItem="amf-Hu-baN" secondAttribute="leading" constant="8" id="cF7-Ev-Ahy"/>
+                                <constraint firstItem="m4m-Ex-WPt" firstAttribute="centerY" secondItem="5Ph-Sh-oWF" secondAttribute="centerY" id="cWN-Dt-EnR"/>
+                                <constraint firstAttribute="bottom" secondItem="5Ph-Sh-oWF" secondAttribute="bottom" constant="8" id="fo7-ZW-bRK"/>
+                                <constraint firstItem="5Ph-Sh-oWF" firstAttribute="top" secondItem="amf-Hu-baN" secondAttribute="top" constant="8" id="wJO-U3-8ZC"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wBt-Fl-ofQ">
+                            <rect key="frame" x="0.0" y="505" width="172" height="126"/>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VUb-1e-gZh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="3uJ-6O-H74"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="VUb-1e-gZh" secondAttribute="bottom" constant="8" id="9Nq-7B-vDQ"/>
+                <constraint firstItem="xLW-dy-l8j" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="D0D-Bm-Yc6"/>
+                <constraint firstItem="xLW-dy-l8j" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="a3y-79-rs6"/>
+                <constraint firstItem="VUb-1e-gZh" firstAttribute="leading" secondItem="xLW-dy-l8j" secondAttribute="trailing" constant="8" id="b3K-QY-ujp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VUb-1e-gZh" secondAttribute="trailing" constant="8" id="evH-Ab-Zvc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xLW-dy-l8j" secondAttribute="bottom" id="fQC-CQ-UTT"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="build" width="25" height="25"/>
+        <image name="compare" width="25" height="25"/>
+        <image name="profile" width="25" height="25"/>
+    </resources>
+</document>

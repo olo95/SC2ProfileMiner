@@ -25,6 +25,14 @@
 		D6045A821F98BBBB00DA2840 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6045A7E1F98BBBB00DA2840 /* MainMenuViewController.xib */; };
 		D6045A851F98CA5B00DA2840 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6045A841F98CA5B00DA2840 /* ColorTheme.swift */; };
 		D6045A861F98CA5B00DA2840 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6045A841F98CA5B00DA2840 /* ColorTheme.swift */; };
+		D68A22B81F991D2C009474C4 /* DrawerTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A22B71F991D2C009474C4 /* DrawerTransitionManager.swift */; };
+		D68A22B91F991D2C009474C4 /* DrawerTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A22B71F991D2C009474C4 /* DrawerTransitionManager.swift */; };
+		D68A22BB1F991F5F009474C4 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A22BA1F991F5F009474C4 /* TransitionManager.swift */; };
+		D68A22BC1F991F5F009474C4 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A22BA1F991F5F009474C4 /* TransitionManager.swift */; };
+		D68A22C31F992282009474C4 /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A22C11F992282009474C4 /* DrawerViewController.swift */; };
+		D68A22C41F992282009474C4 /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A22C11F992282009474C4 /* DrawerViewController.swift */; };
+		D68A22C51F992282009474C4 /* DrawerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68A22C21F992282009474C4 /* DrawerViewController.xib */; };
+		D68A22C61F992282009474C4 /* DrawerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68A22C21F992282009474C4 /* DrawerViewController.xib */; };
 		D6B258691F98E73F0049F887 /* SC2ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B258681F98E73F0049F887 /* SC2ProfileViewModel.swift */; };
 		D6B2586A1F98E73F0049F887 /* SC2ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B258681F98E73F0049F887 /* SC2ProfileViewModel.swift */; };
 		D6B2586C1F98E74E0049F887 /* SC2CompareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2586B1F98E74E0049F887 /* SC2CompareViewModel.swift */; };
@@ -86,6 +94,10 @@
 		D6045A7E1F98BBBB00DA2840 /* MainMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuViewController.xib; sourceTree = "<group>"; };
 		D6045A841F98CA5B00DA2840 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		D6247AB79494F1A2A1E31AF2 /* Pods-SC2ProfileMiner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SC2ProfileMiner.release.xcconfig"; path = "Pods/Target Support Files/Pods-SC2ProfileMiner/Pods-SC2ProfileMiner.release.xcconfig"; sourceTree = "<group>"; };
+		D68A22B71F991D2C009474C4 /* DrawerTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerTransitionManager.swift; sourceTree = "<group>"; };
+		D68A22BA1F991F5F009474C4 /* TransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
+		D68A22C11F992282009474C4 /* DrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
+		D68A22C21F992282009474C4 /* DrawerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawerViewController.xib; sourceTree = "<group>"; };
 		D6B258681F98E73F0049F887 /* SC2ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2ProfileViewModel.swift; sourceTree = "<group>"; };
 		D6B2586B1F98E74E0049F887 /* SC2CompareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2CompareViewModel.swift; sourceTree = "<group>"; };
 		D6B2586E1F98E75B0049F887 /* SC2BuildViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2BuildViewModel.swift; sourceTree = "<group>"; };
@@ -192,6 +204,7 @@
 		D6045A641F98AB3A00DA2840 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D68A22BD1F99224C009474C4 /* Drawer */,
 				D6045A4D1F98A58F00DA2840 /* LaunchScreen.storyboard */,
 				D6045A761F98B76000DA2840 /* MainMenu */,
 				D6D178A31F98E340004BC623 /* SC2Profile */,
@@ -261,10 +274,21 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		D68A22BD1F99224C009474C4 /* Drawer */ = {
+			isa = PBXGroup;
+			children = (
+				D68A22C11F992282009474C4 /* DrawerViewController.swift */,
+				D68A22C21F992282009474C4 /* DrawerViewController.xib */,
+			);
+			path = Drawer;
+			sourceTree = "<group>";
+		};
 		D6B2587A1F98F82C0049F887 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				D6B2587B1F98F8470049F887 /* AppTransitionManager.swift */,
+				D68A22B71F991D2C009474C4 /* DrawerTransitionManager.swift */,
+				D68A22BA1F991F5F009474C4 /* TransitionManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -388,6 +412,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68A22C51F992282009474C4 /* DrawerViewController.xib in Resources */,
 				D6045A4F1F98A58F00DA2840 /* LaunchScreen.storyboard in Resources */,
 				D6D178B01F98E38F004BC623 /* SC2CompareViewController.xib in Resources */,
 				D6D178B61F98E39D004BC623 /* SC2BuildViewController.xib in Resources */,
@@ -402,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6D178AB1F98E37E004BC623 /* SC2ProfileViewController.xib in Resources */,
+				D68A22C61F992282009474C4 /* DrawerViewController.xib in Resources */,
 				D6D178B71F98E39D004BC623 /* SC2BuildViewController.xib in Resources */,
 				D6D1789F1F98D28E004BC623 /* Assets.xcassets in Resources */,
 				D6045A821F98BBBB00DA2840 /* MainMenuViewController.xib in Resources */,
@@ -530,9 +556,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68A22BB1F991F5F009474C4 /* TransitionManager.swift in Sources */,
 				D6B258781F98EB8D0049F887 /* SC2BuildCoordinator.swift in Sources */,
 				D6045A711F98B12400DA2840 /* AppCoordinator.swift in Sources */,
 				D6B258721F98EB730049F887 /* SC2ProfileCoordinator.swift in Sources */,
+				D68A22B81F991D2C009474C4 /* DrawerTransitionManager.swift in Sources */,
 				D6D178A81F98E37E004BC623 /* SC2ProfileViewController.swift in Sources */,
 				D6D178B41F98E39D004BC623 /* SC2BuildViewController.swift in Sources */,
 				D6B2586C1F98E74E0049F887 /* SC2CompareViewModel.swift in Sources */,
@@ -545,6 +573,7 @@
 				D6D178AE1F98E38F004BC623 /* SC2CompareViewController.swift in Sources */,
 				D6045A6E1F98AC4600DA2840 /* Coordinating.swift in Sources */,
 				D6B2587C1F98F8470049F887 /* AppTransitionManager.swift in Sources */,
+				D68A22C31F992282009474C4 /* DrawerViewController.swift in Sources */,
 				D6045A451F98A58F00DA2840 /* AppDelegate.swift in Sources */,
 				D6B258691F98E73F0049F887 /* SC2ProfileViewModel.swift in Sources */,
 			);
@@ -554,9 +583,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68A22BC1F991F5F009474C4 /* TransitionManager.swift in Sources */,
 				D6B258791F98EB8D0049F887 /* SC2BuildCoordinator.swift in Sources */,
 				D6045A721F98B12400DA2840 /* AppCoordinator.swift in Sources */,
 				D6B258731F98EB730049F887 /* SC2ProfileCoordinator.swift in Sources */,
+				D68A22B91F991D2C009474C4 /* DrawerTransitionManager.swift in Sources */,
 				D6D178A91F98E37E004BC623 /* SC2ProfileViewController.swift in Sources */,
 				D6D178B51F98E39D004BC623 /* SC2BuildViewController.swift in Sources */,
 				D6B2586D1F98E74E0049F887 /* SC2CompareViewModel.swift in Sources */,
@@ -569,6 +600,7 @@
 				D6D178AF1F98E38F004BC623 /* SC2CompareViewController.swift in Sources */,
 				D6045A6F1F98AC4600DA2840 /* Coordinating.swift in Sources */,
 				D6B2587D1F98F8470049F887 /* AppTransitionManager.swift in Sources */,
+				D68A22C41F992282009474C4 /* DrawerViewController.swift in Sources */,
 				D6045A5A1F98A58F00DA2840 /* SC2ProfileMinerTests.swift in Sources */,
 				D6B2586A1F98E73F0049F887 /* SC2ProfileViewModel.swift in Sources */,
 			);
