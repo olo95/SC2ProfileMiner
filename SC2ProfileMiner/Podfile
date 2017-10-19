@@ -6,6 +6,9 @@ target 'SC2ProfileMiner' do
   use_frameworks!
 
   # Pods for SC2ProfileMiner
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxAlamofire'
   pod 'Alamofire'
   pod 'AlamofireImage'
   pod 'ObjectMapper'
