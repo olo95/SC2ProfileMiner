@@ -1,5 +1,5 @@
 //
-//  MainMenuViewModel.swift
+//  SC2ProfileViewModel.swift
 //  SC2ProfileMiner
 //
 //  Created by Alexander Stolar on 19.10.2017.
@@ -8,12 +8,10 @@
 
 import RxSwift
 
-class MainMenuViewModel {
+class SC2ProfileViewModel {
+    var flowDelegate: SC2ProfileCoordinator!
     
-    var flowDelegate: AppCoordinator!
-    let bag = DisposeBag()
-    
-    init(flowDelegate: AppCoordinator) {
+    init(flowDelegate: SC2ProfileCoordinator) {
         self.flowDelegate = flowDelegate
     }
 }

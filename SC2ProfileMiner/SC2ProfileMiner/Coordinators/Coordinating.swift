@@ -14,6 +14,7 @@ protocol Coordinating {
     var parent: Coordinating? { get set }
     func rootCoordinator() -> Coordinating
     func present(viewController: UIViewController, completion: (() -> ())?)
+    func dismiss(viewController: UIViewController, completion: (() -> ())?)
     func push(viewController: UIViewController)
     func start()
     
@@ -32,6 +33,12 @@ extension Coordinating {
     
     func present(viewController: UIViewController, completion: (() -> ())?) {
         navigationController.present(viewController, animated: true, completion: {
+            completion?()
+        })
+    }
+    
+    func dismiss(viewController: UIViewController, completion: (() -> ())?) {
+        viewController.dismiss(animated: true, completion: {
             completion?()
         })
     }

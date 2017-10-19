@@ -23,6 +23,37 @@
 		D6045A801F98BBBB00DA2840 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6045A7D1F98BBBB00DA2840 /* MainMenuViewController.swift */; };
 		D6045A811F98BBBB00DA2840 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6045A7E1F98BBBB00DA2840 /* MainMenuViewController.xib */; };
 		D6045A821F98BBBB00DA2840 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6045A7E1F98BBBB00DA2840 /* MainMenuViewController.xib */; };
+		D6045A851F98CA5B00DA2840 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6045A841F98CA5B00DA2840 /* ColorTheme.swift */; };
+		D6045A861F98CA5B00DA2840 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6045A841F98CA5B00DA2840 /* ColorTheme.swift */; };
+		D6B258691F98E73F0049F887 /* SC2ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B258681F98E73F0049F887 /* SC2ProfileViewModel.swift */; };
+		D6B2586A1F98E73F0049F887 /* SC2ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B258681F98E73F0049F887 /* SC2ProfileViewModel.swift */; };
+		D6B2586C1F98E74E0049F887 /* SC2CompareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2586B1F98E74E0049F887 /* SC2CompareViewModel.swift */; };
+		D6B2586D1F98E74E0049F887 /* SC2CompareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2586B1F98E74E0049F887 /* SC2CompareViewModel.swift */; };
+		D6B2586F1F98E75B0049F887 /* SC2BuildViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2586E1F98E75B0049F887 /* SC2BuildViewModel.swift */; };
+		D6B258701F98E75B0049F887 /* SC2BuildViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2586E1F98E75B0049F887 /* SC2BuildViewModel.swift */; };
+		D6B258721F98EB730049F887 /* SC2ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B258711F98EB730049F887 /* SC2ProfileCoordinator.swift */; };
+		D6B258731F98EB730049F887 /* SC2ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B258711F98EB730049F887 /* SC2ProfileCoordinator.swift */; };
+		D6B258751F98EB7F0049F887 /* SC2CompareCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B258741F98EB7F0049F887 /* SC2CompareCoordinator.swift */; };
+		D6B258761F98EB7F0049F887 /* SC2CompareCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B258741F98EB7F0049F887 /* SC2CompareCoordinator.swift */; };
+		D6B258781F98EB8D0049F887 /* SC2BuildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B258771F98EB8D0049F887 /* SC2BuildCoordinator.swift */; };
+		D6B258791F98EB8D0049F887 /* SC2BuildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B258771F98EB8D0049F887 /* SC2BuildCoordinator.swift */; };
+		D6B2587C1F98F8470049F887 /* AppTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2587B1F98F8470049F887 /* AppTransitionManager.swift */; };
+		D6B2587D1F98F8470049F887 /* AppTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2587B1F98F8470049F887 /* AppTransitionManager.swift */; };
+		D6D1789F1F98D28E004BC623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6045A4B1F98A58F00DA2840 /* Assets.xcassets */; };
+		D6D178A11F98DC2C004BC623 /* CABasicAnimation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D178A01F98DC2C004BC623 /* CABasicAnimation+Extension.swift */; };
+		D6D178A21F98DC2C004BC623 /* CABasicAnimation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D178A01F98DC2C004BC623 /* CABasicAnimation+Extension.swift */; };
+		D6D178A81F98E37E004BC623 /* SC2ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D178A61F98E37E004BC623 /* SC2ProfileViewController.swift */; };
+		D6D178A91F98E37E004BC623 /* SC2ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D178A61F98E37E004BC623 /* SC2ProfileViewController.swift */; };
+		D6D178AA1F98E37E004BC623 /* SC2ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D178A71F98E37E004BC623 /* SC2ProfileViewController.xib */; };
+		D6D178AB1F98E37E004BC623 /* SC2ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D178A71F98E37E004BC623 /* SC2ProfileViewController.xib */; };
+		D6D178AE1F98E38F004BC623 /* SC2CompareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D178AC1F98E38F004BC623 /* SC2CompareViewController.swift */; };
+		D6D178AF1F98E38F004BC623 /* SC2CompareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D178AC1F98E38F004BC623 /* SC2CompareViewController.swift */; };
+		D6D178B01F98E38F004BC623 /* SC2CompareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D178AD1F98E38F004BC623 /* SC2CompareViewController.xib */; };
+		D6D178B11F98E38F004BC623 /* SC2CompareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D178AD1F98E38F004BC623 /* SC2CompareViewController.xib */; };
+		D6D178B41F98E39D004BC623 /* SC2BuildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D178B21F98E39D004BC623 /* SC2BuildViewController.swift */; };
+		D6D178B51F98E39D004BC623 /* SC2BuildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D178B21F98E39D004BC623 /* SC2BuildViewController.swift */; };
+		D6D178B61F98E39D004BC623 /* SC2BuildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D178B31F98E39D004BC623 /* SC2BuildViewController.xib */; };
+		D6D178B71F98E39D004BC623 /* SC2BuildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D178B31F98E39D004BC623 /* SC2BuildViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +84,22 @@
 		D6045A771F98B77600DA2840 /* MainMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewModel.swift; sourceTree = "<group>"; };
 		D6045A7D1F98BBBB00DA2840 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		D6045A7E1F98BBBB00DA2840 /* MainMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuViewController.xib; sourceTree = "<group>"; };
+		D6045A841F98CA5B00DA2840 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		D6247AB79494F1A2A1E31AF2 /* Pods-SC2ProfileMiner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SC2ProfileMiner.release.xcconfig"; path = "Pods/Target Support Files/Pods-SC2ProfileMiner/Pods-SC2ProfileMiner.release.xcconfig"; sourceTree = "<group>"; };
+		D6B258681F98E73F0049F887 /* SC2ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2ProfileViewModel.swift; sourceTree = "<group>"; };
+		D6B2586B1F98E74E0049F887 /* SC2CompareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2CompareViewModel.swift; sourceTree = "<group>"; };
+		D6B2586E1F98E75B0049F887 /* SC2BuildViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2BuildViewModel.swift; sourceTree = "<group>"; };
+		D6B258711F98EB730049F887 /* SC2ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2ProfileCoordinator.swift; sourceTree = "<group>"; };
+		D6B258741F98EB7F0049F887 /* SC2CompareCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2CompareCoordinator.swift; sourceTree = "<group>"; };
+		D6B258771F98EB8D0049F887 /* SC2BuildCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2BuildCoordinator.swift; sourceTree = "<group>"; };
+		D6B2587B1F98F8470049F887 /* AppTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTransitionManager.swift; sourceTree = "<group>"; };
+		D6D178A01F98DC2C004BC623 /* CABasicAnimation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CABasicAnimation+Extension.swift"; sourceTree = "<group>"; };
+		D6D178A61F98E37E004BC623 /* SC2ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2ProfileViewController.swift; sourceTree = "<group>"; };
+		D6D178A71F98E37E004BC623 /* SC2ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SC2ProfileViewController.xib; sourceTree = "<group>"; };
+		D6D178AC1F98E38F004BC623 /* SC2CompareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2CompareViewController.swift; sourceTree = "<group>"; };
+		D6D178AD1F98E38F004BC623 /* SC2CompareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SC2CompareViewController.xib; sourceTree = "<group>"; };
+		D6D178B21F98E39D004BC623 /* SC2BuildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2BuildViewController.swift; sourceTree = "<group>"; };
+		D6D178B31F98E39D004BC623 /* SC2BuildViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SC2BuildViewController.xib; sourceTree = "<group>"; };
 		D6F01BF2A72F3542D1A5D032 /* Pods_SC2ProfileMinerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SC2ProfileMinerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -120,6 +166,9 @@
 		D6045A431F98A58F00DA2840 /* SC2ProfileMiner */ = {
 			isa = PBXGroup;
 			children = (
+				D6045A441F98A58F00DA2840 /* AppDelegate.swift */,
+				D6045A501F98A58F00DA2840 /* Info.plist */,
+				D6B2587A1F98F82C0049F887 /* Managers */,
 				D6045A831F98BF9F00DA2840 /* Utils */,
 				D6045A691F98AB6600DA2840 /* Extensions */,
 				D6045A681F98AB5E00DA2840 /* Resources */,
@@ -127,10 +176,6 @@
 				D6045A661F98AB4A00DA2840 /* Coordinators */,
 				D6045A651F98AB4200DA2840 /* Models */,
 				D6045A641F98AB3A00DA2840 /* ViewControllers */,
-				D6045A441F98A58F00DA2840 /* AppDelegate.swift */,
-				D6045A4B1F98A58F00DA2840 /* Assets.xcassets */,
-				D6045A4D1F98A58F00DA2840 /* LaunchScreen.storyboard */,
-				D6045A501F98A58F00DA2840 /* Info.plist */,
 			);
 			path = SC2ProfileMiner;
 			sourceTree = "<group>";
@@ -147,7 +192,11 @@
 		D6045A641F98AB3A00DA2840 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D6045A4D1F98A58F00DA2840 /* LaunchScreen.storyboard */,
 				D6045A761F98B76000DA2840 /* MainMenu */,
+				D6D178A31F98E340004BC623 /* SC2Profile */,
+				D6D178A41F98E349004BC623 /* SC2Compare */,
+				D6D178A51F98E350004BC623 /* SC2Build */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -164,6 +213,9 @@
 			children = (
 				D6045A6D1F98AC4600DA2840 /* Coordinating.swift */,
 				D6045A701F98B12400DA2840 /* AppCoordinator.swift */,
+				D6B258711F98EB730049F887 /* SC2ProfileCoordinator.swift */,
+				D6B258741F98EB7F0049F887 /* SC2CompareCoordinator.swift */,
+				D6B258771F98EB8D0049F887 /* SC2BuildCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -178,6 +230,7 @@
 		D6045A681F98AB5E00DA2840 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D6045A4B1F98A58F00DA2840 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -185,6 +238,7 @@
 		D6045A691F98AB6600DA2840 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D6D178A01F98DC2C004BC623 /* CABasicAnimation+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -202,8 +256,47 @@
 		D6045A831F98BF9F00DA2840 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D6045A841F98CA5B00DA2840 /* ColorTheme.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D6B2587A1F98F82C0049F887 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D6B2587B1F98F8470049F887 /* AppTransitionManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D6D178A31F98E340004BC623 /* SC2Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D6D178A61F98E37E004BC623 /* SC2ProfileViewController.swift */,
+				D6D178A71F98E37E004BC623 /* SC2ProfileViewController.xib */,
+				D6B258681F98E73F0049F887 /* SC2ProfileViewModel.swift */,
+			);
+			path = SC2Profile;
+			sourceTree = "<group>";
+		};
+		D6D178A41F98E349004BC623 /* SC2Compare */ = {
+			isa = PBXGroup;
+			children = (
+				D6D178AC1F98E38F004BC623 /* SC2CompareViewController.swift */,
+				D6D178AD1F98E38F004BC623 /* SC2CompareViewController.xib */,
+				D6B2586B1F98E74E0049F887 /* SC2CompareViewModel.swift */,
+			);
+			path = SC2Compare;
+			sourceTree = "<group>";
+		};
+		D6D178A51F98E350004BC623 /* SC2Build */ = {
+			isa = PBXGroup;
+			children = (
+				D6D178B21F98E39D004BC623 /* SC2BuildViewController.swift */,
+				D6D178B31F98E39D004BC623 /* SC2BuildViewController.xib */,
+				D6B2586E1F98E75B0049F887 /* SC2BuildViewModel.swift */,
+			);
+			path = SC2Build;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +389,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6045A4F1F98A58F00DA2840 /* LaunchScreen.storyboard in Resources */,
+				D6D178B01F98E38F004BC623 /* SC2CompareViewController.xib in Resources */,
+				D6D178B61F98E39D004BC623 /* SC2BuildViewController.xib in Resources */,
+				D6D178AA1F98E37E004BC623 /* SC2ProfileViewController.xib in Resources */,
 				D6045A811F98BBBB00DA2840 /* MainMenuViewController.xib in Resources */,
 				D6045A4C1F98A58F00DA2840 /* Assets.xcassets in Resources */,
 			);
@@ -305,7 +401,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6D178AB1F98E37E004BC623 /* SC2ProfileViewController.xib in Resources */,
+				D6D178B71F98E39D004BC623 /* SC2BuildViewController.xib in Resources */,
+				D6D1789F1F98D28E004BC623 /* Assets.xcassets in Resources */,
 				D6045A821F98BBBB00DA2840 /* MainMenuViewController.xib in Resources */,
+				D6D178B11F98E38F004BC623 /* SC2CompareViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,11 +530,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6B258781F98EB8D0049F887 /* SC2BuildCoordinator.swift in Sources */,
 				D6045A711F98B12400DA2840 /* AppCoordinator.swift in Sources */,
+				D6B258721F98EB730049F887 /* SC2ProfileCoordinator.swift in Sources */,
+				D6D178A81F98E37E004BC623 /* SC2ProfileViewController.swift in Sources */,
+				D6D178B41F98E39D004BC623 /* SC2BuildViewController.swift in Sources */,
+				D6B2586C1F98E74E0049F887 /* SC2CompareViewModel.swift in Sources */,
+				D6D178A11F98DC2C004BC623 /* CABasicAnimation+Extension.swift in Sources */,
+				D6B258751F98EB7F0049F887 /* SC2CompareCoordinator.swift in Sources */,
 				D6045A7F1F98BBBB00DA2840 /* MainMenuViewController.swift in Sources */,
 				D6045A781F98B77600DA2840 /* MainMenuViewModel.swift in Sources */,
+				D6B2586F1F98E75B0049F887 /* SC2BuildViewModel.swift in Sources */,
+				D6045A851F98CA5B00DA2840 /* ColorTheme.swift in Sources */,
+				D6D178AE1F98E38F004BC623 /* SC2CompareViewController.swift in Sources */,
 				D6045A6E1F98AC4600DA2840 /* Coordinating.swift in Sources */,
+				D6B2587C1F98F8470049F887 /* AppTransitionManager.swift in Sources */,
 				D6045A451F98A58F00DA2840 /* AppDelegate.swift in Sources */,
+				D6B258691F98E73F0049F887 /* SC2ProfileViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,11 +554,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6B258791F98EB8D0049F887 /* SC2BuildCoordinator.swift in Sources */,
 				D6045A721F98B12400DA2840 /* AppCoordinator.swift in Sources */,
+				D6B258731F98EB730049F887 /* SC2ProfileCoordinator.swift in Sources */,
+				D6D178A91F98E37E004BC623 /* SC2ProfileViewController.swift in Sources */,
+				D6D178B51F98E39D004BC623 /* SC2BuildViewController.swift in Sources */,
+				D6B2586D1F98E74E0049F887 /* SC2CompareViewModel.swift in Sources */,
+				D6D178A21F98DC2C004BC623 /* CABasicAnimation+Extension.swift in Sources */,
+				D6B258761F98EB7F0049F887 /* SC2CompareCoordinator.swift in Sources */,
 				D6045A801F98BBBB00DA2840 /* MainMenuViewController.swift in Sources */,
 				D6045A791F98B77600DA2840 /* MainMenuViewModel.swift in Sources */,
+				D6B258701F98E75B0049F887 /* SC2BuildViewModel.swift in Sources */,
+				D6045A861F98CA5B00DA2840 /* ColorTheme.swift in Sources */,
+				D6D178AF1F98E38F004BC623 /* SC2CompareViewController.swift in Sources */,
 				D6045A6F1F98AC4600DA2840 /* Coordinating.swift in Sources */,
+				D6B2587D1F98F8470049F887 /* AppTransitionManager.swift in Sources */,
 				D6045A5A1F98A58F00DA2840 /* SC2ProfileMinerTests.swift in Sources */,
+				D6B2586A1F98E73F0049F887 /* SC2ProfileViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
