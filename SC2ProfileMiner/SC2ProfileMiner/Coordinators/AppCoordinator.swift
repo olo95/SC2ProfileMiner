@@ -26,8 +26,11 @@ class AppCoordinator: Coordinating {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         appTransitionManager = AppTransitionManager(coordinator: self)
-        
-        menuChoice.subscribe( onNext: { choice in
+        setMenuRouter()
+    }
+    
+    private func setMenuRouter() {
+        menuChoice.subscribe(onNext: { choice in
             switch choice {
             case .sc2Profile:
                 self.addNew(coordinator: SC2ProfileCoordinator(parent: self))

@@ -14,8 +14,14 @@ class SC2ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setNavigationBar()
         // Do any additional setup after loading the view.
+    }
+    
+    private func setNavigationBar() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "hamburger"), style: .done, target: self, action: nil)
+        navigationItem.leftBarButtonItem?.image = navigationItem.leftBarButtonItem?.image!.withRenderingMode(.alwaysTemplate)
+        navigationItem.leftBarButtonItem?.tintColor = ColorTheme.appTheme.gray
     }
 
     override func didReceiveMemoryWarning() {
