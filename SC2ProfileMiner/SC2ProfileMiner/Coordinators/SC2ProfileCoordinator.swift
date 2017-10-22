@@ -15,6 +15,10 @@ enum DrawerRouter {
 }
 
 class SC2ProfileCoordinator: Coordinating {
+    
+    var drawerController: DrawerViewController!
+    var drawerTransitionManager: DrawerTransitionManager!
+    
     func addNew(coordinator: Coordinating) {
         let coordinator = SC2ProfileCoordinator(parent: self)
         childCoordinators.append(coordinator)
@@ -52,10 +56,12 @@ class SC2ProfileCoordinator: Coordinating {
         drawerRouter.subscribe( onNext: { state in
             switch state {
             case .shown:
-                let drawerController = DrawerViewController()
-                let drawerTransitionManager = DrawerTransitionManager(coordinator: self)
-                drawerController.transitioningDelegate = drawerTransitionManager
-                self.present(viewController: drawerController, completion: nil)
+                self.drawerController = DrawerViewController()
+                self.drawerTransitionManager = DrawerTransitionManager(coordinator: self)
+//                let drawerController = DrawerViewController()
+//                let drawerTransitionManager = DrawerTransitionManager(coordinator: self)
+                self.drawerController.transitioningDelegate = self.drawerTransitionManager
+                self.present(viewController: self.drawerController, completion: nil)
             case .hidden:
                 break
             case .none:

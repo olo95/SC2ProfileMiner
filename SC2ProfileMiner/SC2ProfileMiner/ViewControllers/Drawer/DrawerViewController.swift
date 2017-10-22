@@ -10,6 +10,7 @@ import UIKit
 
 class DrawerViewController: UIViewController {
 
+    @IBOutlet weak var drawerView: UIView!
     @IBOutlet weak var buildImageView: UIImageView!
     @IBOutlet weak var compareImageView: UIImageView!
     @IBOutlet weak var profileImageView: UIImageView!
@@ -20,6 +21,8 @@ class DrawerViewController: UIViewController {
     
     @IBOutlet weak var leftBoundView: UIView!
     @IBOutlet weak var splitterConstraint: NSLayoutConstraint!
+    
+    var flowDelegate: Coordinating!
     
     override func viewDidLoad() {
         super.viewDidLoad()
