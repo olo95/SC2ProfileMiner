@@ -70,14 +70,14 @@ class DrawerTransitionManager: TransitionManager {
         }
         lastTransitionContext = transitionContext
         let containerView = transitionContext.containerView
-        let snapshot = fromVC.view.snapshotView(afterScreenUpdates: true)
-        snapshot?.frame = originFrame
-        toVC.view.frame.origin.x -= fromVC.view.frame.maxX
+        //let snapshot = fromVC.view.snapshotView(afterScreenUpdates: true)
+//        snapshot?.frame = originFrame
+        fromVC.view.frame.origin.x -= toVC.view.frame.maxX
         
         //containerView.addSubview(fromVC.view)
         //toVC.view.addSubview(fromVC.view)
         fromVC.view.frame = containerView.frame
-        containerView.addSubview(snapshot!)
+//        containerView.addSubview(snapshot!)
         containerView.addSubview(toVC.view)
         //toVC.view.isHidden = true
         
@@ -89,7 +89,7 @@ class DrawerTransitionManager: TransitionManager {
             options: .calculationModeCubic,
             animations: {
                 UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1 / 1, animations: {
-                    fromVC.view.frame.origin.x -= fromVC.view.frame.maxX / 3
+                    //fromVC.view.frame.origin.x -= fromVC.view.frame.maxX / 3
                     toVC.view.alpha = 1.0
 //                    toVC.view.frame = CGRect(x: containerView.frame.origin.x - containerView.frame.width / 2, y: containerView.frame.origin.y, width: containerView.frame.width, height: containerView.frame.height)
                     toVC.view.frame.origin.x -= fromVC.view.frame.maxX
@@ -104,7 +104,7 @@ class DrawerTransitionManager: TransitionManager {
 extension DrawerTransitionManager: UIViewControllerAnimatedTransitioning {
     
     func transitionDuration(using _: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 1.0
+        return 0.5
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
