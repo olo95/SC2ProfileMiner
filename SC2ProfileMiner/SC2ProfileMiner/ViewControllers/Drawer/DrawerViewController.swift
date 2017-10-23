@@ -50,12 +50,16 @@ class DrawerViewController: UIViewController {
             })
         }).disposed(by: bag)
         sc2CompareButton.rx.tap.subscribe(onNext: { _ in
-            let sc2CompareCoordinator = SC2CompareCoordinator(parent: self.flowDelegate.rootCoordinator())
-            self.flowDelegate.addNew(coordinator: sc2CompareCoordinator, fromRoot: true)
+            self.dismiss(animated: true, completion: {
+                let sc2CompareCoordinator = SC2CompareCoordinator(parent: self.flowDelegate.rootCoordinator())
+                self.flowDelegate.addNew(coordinator: sc2CompareCoordinator, fromRoot: true)
+            })
         }).disposed(by: bag)
         sc2CreateButton.rx.tap.subscribe(onNext: { _ in
-            let sc2CreateCoordinator = SC2BuildCoordinator(parent: self.flowDelegate.rootCoordinator())
-            self.flowDelegate.addNew(coordinator: sc2CreateCoordinator, fromRoot: true)
+            self.dismiss(animated: true, completion: {
+                let sc2CreateCoordinator = SC2BuildCoordinator(parent: self.flowDelegate.rootCoordinator())
+                self.flowDelegate.addNew(coordinator: sc2CreateCoordinator, fromRoot: true)
+            })
         }).disposed(by: bag)
     }
 }

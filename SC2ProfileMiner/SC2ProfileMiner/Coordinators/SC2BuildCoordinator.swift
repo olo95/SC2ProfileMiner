@@ -44,5 +44,9 @@ class SC2BuildCoordinator: Coordinating {
         self.parent = parent
     }
     
-    
+    func showDrawer() {
+        let drawerCoordinator = DrawerCoordinator(parent: self)
+        drawerCoordinator.navigationController = self.navigationController
+        drawerCoordinator.start()
+    }
 }

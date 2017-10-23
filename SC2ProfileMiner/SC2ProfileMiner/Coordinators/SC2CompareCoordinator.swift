@@ -43,4 +43,10 @@ class SC2CompareCoordinator: Coordinating {
     required init(parent: Coordinating?) {
         self.parent = parent
     }
+    
+    func showDrawer() {
+        let drawerCoordinator = DrawerCoordinator(parent: self)
+        drawerCoordinator.navigationController = self.navigationController
+        drawerCoordinator.start()
+    }
 }

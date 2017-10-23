@@ -25,6 +25,6 @@ class SC2ProfileViewController: UIViewController {
     
     @objc
     private func showDrawer() {
-        viewModel.flowDelegate.drawerRouter.onNext(.shown)
+        viewModel.flowDelegate.showDrawer()
     }
 }

@@ -10,9 +10,6 @@ import RxSwift
 
 class SC2ProfileCoordinator: Coordinating {
     
-    var drawerController: DrawerViewController!
-    var drawerTransitionManager: DrawerTransitionManager!
-    
     func addNew(coordinator: Coordinating, fromRoot: Bool) {
         if fromRoot && parent != nil {
             childCoordinators.removeAll()
@@ -30,8 +27,6 @@ class SC2ProfileCoordinator: Coordinating {
     
     var childCoordinators: [Coordinating] = []
     var parent: Coordinating?
-    
-    var drawerRouter = BehaviorSubject<DrawerRouter>(value: .none)
     let bag = DisposeBag()
     
     var sc2Profile: SC2ProfileViewController {
@@ -47,22 +42,12 @@ class SC2ProfileCoordinator: Coordinating {
     
     required init(parent: Coordinating?) {
         self.parent = parent
-        setDrawerRouter()
     }
     
-    private func setDrawerRouter() {
-        drawerRouter.subscribe( onNext: { state in
-            switch state {
-            case .shown:
-                let drawerCoordinator = DrawerCoordinator(parent: self)
-                drawerCoordinator.navigationController = self.navigationController
-                drawerCoordinator.start()
-            case .hidden:
-                break
-            case .none:
-                break
-            }
-        }).disposed(by: bag)
+    func showDrawer() {
+        let drawerCoordinator = DrawerCoordinator(parent: self)
+        drawerCoordinator.navigationController = self.navigationController
+        drawerCoordinator.start()
     }
     
 }
