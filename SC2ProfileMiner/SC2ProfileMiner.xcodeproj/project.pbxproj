@@ -101,6 +101,11 @@
 		D62419671F9EA53600C0C6FA /* Portraits.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62419581F9EA53600C0C6FA /* Portraits.swift */; };
 		D62419681F9EA53600C0C6FA /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62419591F9EA53600C0C6FA /* Animations.swift */; };
 		D62419691F9EA53600C0C6FA /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62419591F9EA53600C0C6FA /* Animations.swift */; };
+		D624196E1F9EA71500C0C6FA /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624196A1F9EA71400C0C6FA /* UIResponder+Extension.swift */; };
+		D624196F1F9EA71500C0C6FA /* SC2Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624196B1F9EA71400C0C6FA /* SC2Networker.swift */; };
+		D62419701F9EA71500C0C6FA /* SC2RequestStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624196C1F9EA71400C0C6FA /* SC2RequestStrings.swift */; };
+		D62419711F9EA71500C0C6FA /* SC2Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624196D1F9EA71500C0C6FA /* SC2Router.swift */; };
+		D62419721F9EA73700C0C6FA /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624196A1F9EA71400C0C6FA /* UIResponder+Extension.swift */; };
 		D68A22B81F991D2C009474C4 /* DrawerTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A22B71F991D2C009474C4 /* DrawerTransitionManager.swift */; };
 		D68A22B91F991D2C009474C4 /* DrawerTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A22B71F991D2C009474C4 /* DrawerTransitionManager.swift */; };
 		D68A22BB1F991F5F009474C4 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A22BA1F991F5F009474C4 /* TransitionManager.swift */; };
@@ -207,6 +212,10 @@
 		D62419571F9EA53600C0C6FA /* TerranDecals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerranDecals.swift; sourceTree = "<group>"; };
 		D62419581F9EA53600C0C6FA /* Portraits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Portraits.swift; sourceTree = "<group>"; };
 		D62419591F9EA53600C0C6FA /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		D624196A1F9EA71400C0C6FA /* UIResponder+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extension.swift"; sourceTree = "<group>"; };
+		D624196B1F9EA71400C0C6FA /* SC2Networker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SC2Networker.swift; sourceTree = "<group>"; };
+		D624196C1F9EA71400C0C6FA /* SC2RequestStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SC2RequestStrings.swift; sourceTree = "<group>"; };
+		D624196D1F9EA71500C0C6FA /* SC2Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SC2Router.swift; sourceTree = "<group>"; };
 		D6247AB79494F1A2A1E31AF2 /* Pods-SC2ProfileMiner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SC2ProfileMiner.release.xcconfig"; path = "Pods/Target Support Files/Pods-SC2ProfileMiner/Pods-SC2ProfileMiner.release.xcconfig"; sourceTree = "<group>"; };
 		D68A22B71F991D2C009474C4 /* DrawerTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerTransitionManager.swift; sourceTree = "<group>"; };
 		D68A22BA1F991F5F009474C4 /* TransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
@@ -357,6 +366,9 @@
 		D6045A671F98AB5300DA2840 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				D624196B1F9EA71400C0C6FA /* SC2Networker.swift */,
+				D624196C1F9EA71400C0C6FA /* SC2RequestStrings.swift */,
+				D624196D1F9EA71500C0C6FA /* SC2Router.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -372,6 +384,7 @@
 		D6045A691F98AB6600DA2840 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D624196A1F9EA71400C0C6FA /* UIResponder+Extension.swift */,
 				D6D178A01F98DC2C004BC623 /* CABasicAnimation+Extension.swift */,
 			);
 			path = Extensions;
@@ -765,6 +778,7 @@
 				D62419141F9EA4E800C0C6FA /* ShowcasePlacement.swift in Sources */,
 				D62419081F9EA4A000C0C6FA /* Character.swift in Sources */,
 				D68A22BB1F991F5F009474C4 /* TransitionManager.swift in Sources */,
+				D62419701F9EA71500C0C6FA /* SC2RequestStrings.swift in Sources */,
 				D624193D1F9EA51B00C0C6FA /* Career.swift in Sources */,
 				D624194D1F9EA51B00C0C6FA /* SwarmLevels.swift in Sources */,
 				D62419061F9EA4A000C0C6FA /* LadderMembers.swift in Sources */,
@@ -797,6 +811,7 @@
 				D6045A7F1F98BBBB00DA2840 /* MainMenuViewController.swift in Sources */,
 				D624190A1F9EA4A000C0C6FA /* SC2Ladder.swift in Sources */,
 				D62419491F9EA51B00C0C6FA /* Points.swift in Sources */,
+				D624196E1F9EA71500C0C6FA /* UIResponder+Extension.swift in Sources */,
 				D6045A781F98B77600DA2840 /* MainMenuViewModel.swift in Sources */,
 				D6B2586F1F98E75B0049F887 /* SC2BuildViewModel.swift in Sources */,
 				D62418E01F9E974000C0C6FA /* DrawerCoordinator.swift in Sources */,
@@ -809,12 +824,14 @@
 				D624194F1F9EA51B00C0C6FA /* SC2Profile.swift in Sources */,
 				D6D178AE1F98E38F004BC623 /* SC2CompareViewController.swift in Sources */,
 				D62419251F9EA50300C0C6FA /* SC2MatchHistory.swift in Sources */,
+				D62419711F9EA71500C0C6FA /* SC2Router.swift in Sources */,
 				D6045A6E1F98AC4600DA2840 /* Coordinating.swift in Sources */,
 				D624191A1F9EA4E800C0C6FA /* CurrentSeason.swift in Sources */,
 				D6B2587C1F98F8470049F887 /* AppTransitionManager.swift in Sources */,
 				D62418FA1F9EA47000C0C6FA /* Children.swift in Sources */,
 				D68A22C31F992282009474C4 /* DrawerViewController.swift in Sources */,
 				D624191E1F9EA4E800C0C6FA /* PreviousSeason.swift in Sources */,
+				D624196F1F9EA71500C0C6FA /* SC2Networker.swift in Sources */,
 				D6045A451F98A58F00DA2840 /* AppDelegate.swift in Sources */,
 				D62419431F9EA51B00C0C6FA /* Zerg.swift in Sources */,
 				D624193F1F9EA51B00C0C6FA /* Season.swift in Sources */,
@@ -862,6 +879,7 @@
 				D6045A801F98BBBB00DA2840 /* MainMenuViewController.swift in Sources */,
 				D624190B1F9EA4A000C0C6FA /* SC2Ladder.swift in Sources */,
 				D624194A1F9EA51B00C0C6FA /* Points.swift in Sources */,
+				D62419721F9EA73700C0C6FA /* UIResponder+Extension.swift in Sources */,
 				D6045A791F98B77600DA2840 /* MainMenuViewModel.swift in Sources */,
 				D6B258701F98E75B0049F887 /* SC2BuildViewModel.swift in Sources */,
 				D62418E11F9E974000C0C6FA /* DrawerCoordinator.swift in Sources */,
