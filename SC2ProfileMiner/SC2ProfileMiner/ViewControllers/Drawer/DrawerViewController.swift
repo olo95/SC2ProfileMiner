@@ -6,7 +6,8 @@
 //  Copyright © 2017 Alexander Stolar. All rights reserved.
 //
 
-import UIKit
+import RxSwift
+import RxCocoa
 
 class DrawerViewController: UIViewController {
 
@@ -23,6 +24,7 @@ class DrawerViewController: UIViewController {
     @IBOutlet weak var splitterConstraint: NSLayoutConstraint!
     
     var flowDelegate: Coordinating!
+    var bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +43,19 @@ class DrawerViewController: UIViewController {
     }
     
     private func setButtons() {
-        
+        sc2ProfileButton.rx.tap.subscribe(onNext: { _ in
+            self.dismiss(animated: true, completion: {
+                let sc2ProfileCoordinator = SC2ProfileCoordinator(parent: self.flowDelegate.rootCoordinator())
+                self.flowDelegate.addNew(coordinator: sc2ProfileCoordinator, fromRoot: true)
+            })
+        }).disposed(by: bag)
+        sc2CompareButton.rx.tap.subscribe(onNext: { _ in
+            let sc2CompareCoordinator = SC2CompareCoordinator(parent: self.flowDelegate.rootCoordinator())
+            self.flowDelegate.addNew(coordinator: sc2CompareCoordinator, fromRoot: true)
+        }).disposed(by: bag)
+        sc2CreateButton.rx.tap.subscribe(onNext: { _ in
+            let sc2CreateCoordinator = SC2BuildCoordinator(parent: self.flowDelegate.rootCoordinator())
+            self.flowDelegate.addNew(coordinator: sc2CreateCoordinator, fromRoot: true)
+        }).disposed(by: bag)
     }
 }

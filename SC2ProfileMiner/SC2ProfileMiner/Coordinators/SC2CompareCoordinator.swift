@@ -28,7 +28,12 @@ class SC2CompareCoordinator: Coordinating {
         navigationController.setViewControllers([sc2Compare], animated: true)
     }
     
-    func addNew(coordinator: Coordinating) {
+    func addNew(coordinator: Coordinating, fromRoot: Bool) {
+        if fromRoot && parent != nil {
+            childCoordinators.removeAll()
+            parent?.addNew(coordinator: coordinator, fromRoot: fromRoot)
+        }
+        
         let coordinator = SC2ProfileCoordinator(parent: self)
         childCoordinators.append(coordinator)
         coordinator.start()

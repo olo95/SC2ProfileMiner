@@ -9,6 +9,12 @@
 import RxSwift
 import RxCocoa
 
+enum DrawerRouter {
+    case none
+    case shown
+    case hidden
+}
+
 class DrawerTransitionManager: TransitionManager {
     
     var lastTransitionContext: UIViewControllerContextTransitioning!
@@ -78,7 +84,7 @@ class DrawerTransitionManager: TransitionManager {
         //toVC.view.addSubview(fromVC.view)
         fromVC.view.frame = containerView.frame
 //        containerView.addSubview(snapshot!)
-        containerView.addSubview(toVC.view)
+        //containerView.addSubview(toVC.view)
         //toVC.view.isHidden = true
         
         let duration = transitionDuration(using: transitionContext)
@@ -104,7 +110,7 @@ class DrawerTransitionManager: TransitionManager {
 extension DrawerTransitionManager: UIViewControllerAnimatedTransitioning {
     
     func transitionDuration(using _: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.5
+        return 0.25
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {

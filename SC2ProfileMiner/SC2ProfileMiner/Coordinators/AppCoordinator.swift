@@ -33,11 +33,11 @@ class AppCoordinator: Coordinating {
         menuChoice.subscribe(onNext: { choice in
             switch choice {
             case .sc2Profile:
-                self.addNew(coordinator: SC2ProfileCoordinator(parent: self))
+                self.addNew(coordinator: SC2ProfileCoordinator(parent: self), fromRoot: true)
             case .sc2Compare:
-                self.addNew(coordinator: SC2CompareCoordinator(parent: self))
+                self.addNew(coordinator: SC2CompareCoordinator(parent: self), fromRoot: true)
             case .sc2Build:
-                self.addNew(coordinator: SC2BuildCoordinator(parent: self))
+                self.addNew(coordinator: SC2BuildCoordinator(parent: self), fromRoot: true)
             case .none:
                 break
             }
@@ -57,8 +57,9 @@ class AppCoordinator: Coordinating {
         navigationController.setViewControllers([mainMenuViewController], animated: true)
     }
     
-    func addNew(coordinator: Coordinating) {
-        let coordinator = SC2ProfileCoordinator(parent: self)
+    func addNew(coordinator: Coordinating, fromRoot: Bool) {
+
+        childCoordinators.removeAll()
         childCoordinators.append(coordinator)
         coordinator.start()
         coordinator.navigationController.transitioningDelegate = appTransitionManager

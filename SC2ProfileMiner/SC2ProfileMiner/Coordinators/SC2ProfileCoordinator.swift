@@ -8,19 +8,17 @@
 
 import RxSwift
 
-enum DrawerRouter {
-    case none
-    case shown
-    case hidden
-}
-
 class SC2ProfileCoordinator: Coordinating {
     
     var drawerController: DrawerViewController!
     var drawerTransitionManager: DrawerTransitionManager!
     
-    func addNew(coordinator: Coordinating) {
-        let coordinator = SC2ProfileCoordinator(parent: self)
+    func addNew(coordinator: Coordinating, fromRoot: Bool) {
+        if fromRoot && parent != nil {
+            childCoordinators.removeAll()
+            parent?.addNew(coordinator: coordinator, fromRoot: fromRoot)
+        }
+        
         childCoordinators.append(coordinator)
         coordinator.start()
         self.present(viewController: coordinator.navigationController, completion: nil)
@@ -56,12 +54,9 @@ class SC2ProfileCoordinator: Coordinating {
         drawerRouter.subscribe( onNext: { state in
             switch state {
             case .shown:
-                self.drawerController = DrawerViewController()
-                self.drawerTransitionManager = DrawerTransitionManager(coordinator: self)
-//                let drawerController = DrawerViewController()
-//                let drawerTransitionManager = DrawerTransitionManager(coordinator: self)
-                self.drawerController.transitioningDelegate = self.drawerTransitionManager
-                self.present(viewController: self.drawerController, completion: nil)
+                let drawerCoordinator = DrawerCoordinator(parent: self)
+                drawerCoordinator.navigationController = self.navigationController
+                drawerCoordinator.start()
             case .hidden:
                 break
             case .none:

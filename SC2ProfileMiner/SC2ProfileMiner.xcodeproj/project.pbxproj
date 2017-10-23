@@ -25,6 +25,8 @@
 		D6045A821F98BBBB00DA2840 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6045A7E1F98BBBB00DA2840 /* MainMenuViewController.xib */; };
 		D6045A851F98CA5B00DA2840 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6045A841F98CA5B00DA2840 /* ColorTheme.swift */; };
 		D6045A861F98CA5B00DA2840 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6045A841F98CA5B00DA2840 /* ColorTheme.swift */; };
+		D62418E01F9E974000C0C6FA /* DrawerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62418DF1F9E974000C0C6FA /* DrawerCoordinator.swift */; };
+		D62418E11F9E974000C0C6FA /* DrawerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62418DF1F9E974000C0C6FA /* DrawerCoordinator.swift */; };
 		D68A22B81F991D2C009474C4 /* DrawerTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A22B71F991D2C009474C4 /* DrawerTransitionManager.swift */; };
 		D68A22B91F991D2C009474C4 /* DrawerTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A22B71F991D2C009474C4 /* DrawerTransitionManager.swift */; };
 		D68A22BB1F991F5F009474C4 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A22BA1F991F5F009474C4 /* TransitionManager.swift */; };
@@ -93,6 +95,7 @@
 		D6045A7D1F98BBBB00DA2840 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		D6045A7E1F98BBBB00DA2840 /* MainMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuViewController.xib; sourceTree = "<group>"; };
 		D6045A841F98CA5B00DA2840 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
+		D62418DF1F9E974000C0C6FA /* DrawerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerCoordinator.swift; sourceTree = "<group>"; };
 		D6247AB79494F1A2A1E31AF2 /* Pods-SC2ProfileMiner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SC2ProfileMiner.release.xcconfig"; path = "Pods/Target Support Files/Pods-SC2ProfileMiner/Pods-SC2ProfileMiner.release.xcconfig"; sourceTree = "<group>"; };
 		D68A22B71F991D2C009474C4 /* DrawerTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerTransitionManager.swift; sourceTree = "<group>"; };
 		D68A22BA1F991F5F009474C4 /* TransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
@@ -229,6 +232,7 @@
 				D6B258711F98EB730049F887 /* SC2ProfileCoordinator.swift */,
 				D6B258741F98EB7F0049F887 /* SC2CompareCoordinator.swift */,
 				D6B258771F98EB8D0049F887 /* SC2BuildCoordinator.swift */,
+				D62418DF1F9E974000C0C6FA /* DrawerCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -569,6 +573,7 @@
 				D6045A7F1F98BBBB00DA2840 /* MainMenuViewController.swift in Sources */,
 				D6045A781F98B77600DA2840 /* MainMenuViewModel.swift in Sources */,
 				D6B2586F1F98E75B0049F887 /* SC2BuildViewModel.swift in Sources */,
+				D62418E01F9E974000C0C6FA /* DrawerCoordinator.swift in Sources */,
 				D6045A851F98CA5B00DA2840 /* ColorTheme.swift in Sources */,
 				D6D178AE1F98E38F004BC623 /* SC2CompareViewController.swift in Sources */,
 				D6045A6E1F98AC4600DA2840 /* Coordinating.swift in Sources */,
@@ -596,6 +601,7 @@
 				D6045A801F98BBBB00DA2840 /* MainMenuViewController.swift in Sources */,
 				D6045A791F98B77600DA2840 /* MainMenuViewModel.swift in Sources */,
 				D6B258701F98E75B0049F887 /* SC2BuildViewModel.swift in Sources */,
+				D62418E11F9E974000C0C6FA /* DrawerCoordinator.swift in Sources */,
 				D6045A861F98CA5B00DA2840 /* ColorTheme.swift in Sources */,
 				D6D178AF1F98E38F004BC623 /* SC2CompareViewController.swift in Sources */,
 				D6045A6F1F98AC4600DA2840 /* Coordinating.swift in Sources */,
