@@ -33,7 +33,6 @@ class SC2CompareCoordinator: Coordinating {
             childCoordinators.removeAll()
             parent?.addNew(coordinator: coordinator, fromRoot: fromRoot)
         }
-        
         let coordinator = SC2ProfileCoordinator(parent: self)
         childCoordinators.append(coordinator)
         coordinator.start()

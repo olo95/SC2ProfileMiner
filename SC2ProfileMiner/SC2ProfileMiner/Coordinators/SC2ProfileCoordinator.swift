@@ -15,7 +15,6 @@ class SC2ProfileCoordinator: Coordinating {
             childCoordinators.removeAll()
             parent?.addNew(coordinator: coordinator, fromRoot: fromRoot)
         }
-        
         childCoordinators.append(coordinator)
         coordinator.start()
         self.present(viewController: coordinator.navigationController, completion: nil)
