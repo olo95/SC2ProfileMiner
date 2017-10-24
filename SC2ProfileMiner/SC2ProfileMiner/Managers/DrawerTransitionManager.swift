@@ -53,6 +53,7 @@ class DrawerTransitionManager: TransitionManager {
                 UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1 / 1, animations: {
                     fromVC.view.frame.origin.x += fromVC.view.frame.maxX / 3
                     toVC.view.alpha = 1.0
+                    snapshot?.layer.opacity = 0.8
                     toVC.drawerView.frame = CGRect(x: containerView.frame.origin.x - containerView.frame.width / 2, y: containerView.frame.origin.y, width: containerView.frame.width, height: containerView.frame.height)
                 })
         },
@@ -97,6 +98,7 @@ class DrawerTransitionManager: TransitionManager {
                 UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1 / 1, animations: {
                     //fromVC.view.frame.origin.x -= fromVC.view.frame.maxX / 3
                     toVC.view.alpha = 1.0
+                    self.lastBackground.layer.opacity = 1.0
 //                    toVC.view.frame = CGRect(x: containerView.frame.origin.x - containerView.frame.width / 2, y: containerView.frame.origin.y, width: containerView.frame.width, height: containerView.frame.height)
                     toVC.view.frame.origin.x -= fromVC.view.frame.maxX
                 })

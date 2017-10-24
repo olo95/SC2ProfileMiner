@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		7A76AFD5589F057DDFAA07A3 /* Pods_SC2ProfileMiner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAB51F49296053653E28D4D /* Pods_SC2ProfileMiner.framework */; };
 		BB7722D86C8125043474A791 /* Pods_SC2ProfileMinerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F01BF2A72F3542D1A5D032 /* Pods_SC2ProfileMinerTests.framework */; };
+		D6037F941F9F7BDD00D9658D /* SC2ProfileMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6037F921F9F7BDD00D9658D /* SC2ProfileMenuViewController.swift */; };
+		D6037F951F9F7BDD00D9658D /* SC2ProfileMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6037F921F9F7BDD00D9658D /* SC2ProfileMenuViewController.swift */; };
+		D6037F961F9F7BDD00D9658D /* SC2ProfileMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6037F931F9F7BDD00D9658D /* SC2ProfileMenuViewController.xib */; };
+		D6037F971F9F7BDD00D9658D /* SC2ProfileMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6037F931F9F7BDD00D9658D /* SC2ProfileMenuViewController.xib */; };
+		D6037F991F9F7BF000D9658D /* SC2ProfileMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6037F981F9F7BF000D9658D /* SC2ProfileMenuViewModel.swift */; };
+		D6037F9A1F9F7BF000D9658D /* SC2ProfileMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6037F981F9F7BF000D9658D /* SC2ProfileMenuViewModel.swift */; };
 		D6045A451F98A58F00DA2840 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6045A441F98A58F00DA2840 /* AppDelegate.swift */; };
 		D6045A4C1F98A58F00DA2840 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6045A4B1F98A58F00DA2840 /* Assets.xcassets */; };
 		D6045A4F1F98A58F00DA2840 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6045A4D1F98A58F00DA2840 /* LaunchScreen.storyboard */; };
@@ -160,6 +166,9 @@
 		8312506D14FFC508A0F83246 /* Pods-SC2ProfileMiner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SC2ProfileMiner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SC2ProfileMiner/Pods-SC2ProfileMiner.debug.xcconfig"; sourceTree = "<group>"; };
 		BDAB51F49296053653E28D4D /* Pods_SC2ProfileMiner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SC2ProfileMiner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0912BAE0D245EC4AF545F0B /* Pods-SC2ProfileMinerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SC2ProfileMinerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SC2ProfileMinerTests/Pods-SC2ProfileMinerTests.release.xcconfig"; sourceTree = "<group>"; };
+		D6037F921F9F7BDD00D9658D /* SC2ProfileMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2ProfileMenuViewController.swift; sourceTree = "<group>"; };
+		D6037F931F9F7BDD00D9658D /* SC2ProfileMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SC2ProfileMenuViewController.xib; sourceTree = "<group>"; };
+		D6037F981F9F7BF000D9658D /* SC2ProfileMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2ProfileMenuViewModel.swift; sourceTree = "<group>"; };
 		D6045A411F98A58F00DA2840 /* SC2ProfileMiner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SC2ProfileMiner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6045A441F98A58F00DA2840 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6045A4B1F98A58F00DA2840 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -278,6 +287,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D6037F911F9F7BAE00D9658D /* SC2ProfileMenu */ = {
+			isa = PBXGroup;
+			children = (
+				D6037F921F9F7BDD00D9658D /* SC2ProfileMenuViewController.swift */,
+				D6037F931F9F7BDD00D9658D /* SC2ProfileMenuViewController.xib */,
+				D6037F981F9F7BF000D9658D /* SC2ProfileMenuViewModel.swift */,
+			);
+			path = SC2ProfileMenu;
+			sourceTree = "<group>";
+		};
 		D6045A381F98A58F00DA2840 = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +349,7 @@
 				D6045A4D1F98A58F00DA2840 /* LaunchScreen.storyboard */,
 				D68A22BD1F99224C009474C4 /* Drawer */,
 				D6045A761F98B76000DA2840 /* MainMenu */,
+				D6037F911F9F7BAE00D9658D /* SC2ProfileMenu */,
 				D6D178A31F98E340004BC623 /* SC2Profile */,
 				D6D178A41F98E349004BC623 /* SC2Compare */,
 				D6D178A51F98E350004BC623 /* SC2Build */,
@@ -635,6 +655,7 @@
 				D6045A4F1F98A58F00DA2840 /* LaunchScreen.storyboard in Resources */,
 				D6D178B01F98E38F004BC623 /* SC2CompareViewController.xib in Resources */,
 				D6D178B61F98E39D004BC623 /* SC2BuildViewController.xib in Resources */,
+				D6037F961F9F7BDD00D9658D /* SC2ProfileMenuViewController.xib in Resources */,
 				D6D178AA1F98E37E004BC623 /* SC2ProfileViewController.xib in Resources */,
 				D6045A811F98BBBB00DA2840 /* MainMenuViewController.xib in Resources */,
 				D6045A4C1F98A58F00DA2840 /* Assets.xcassets in Resources */,
@@ -645,6 +666,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6037F971F9F7BDD00D9658D /* SC2ProfileMenuViewController.xib in Resources */,
 				D6D178AB1F98E37E004BC623 /* SC2ProfileViewController.xib in Resources */,
 				D68A22C61F992282009474C4 /* DrawerViewController.xib in Resources */,
 				D6D178B71F98E39D004BC623 /* SC2BuildViewController.xib in Resources */,
@@ -811,6 +833,7 @@
 				D6045A7F1F98BBBB00DA2840 /* MainMenuViewController.swift in Sources */,
 				D624190A1F9EA4A000C0C6FA /* SC2Ladder.swift in Sources */,
 				D62419491F9EA51B00C0C6FA /* Points.swift in Sources */,
+				D6037F941F9F7BDD00D9658D /* SC2ProfileMenuViewController.swift in Sources */,
 				D624196E1F9EA71500C0C6FA /* UIResponder+Extension.swift in Sources */,
 				D6045A781F98B77600DA2840 /* MainMenuViewModel.swift in Sources */,
 				D6B2586F1F98E75B0049F887 /* SC2BuildViewModel.swift in Sources */,
@@ -824,6 +847,7 @@
 				D624194F1F9EA51B00C0C6FA /* SC2Profile.swift in Sources */,
 				D6D178AE1F98E38F004BC623 /* SC2CompareViewController.swift in Sources */,
 				D62419251F9EA50300C0C6FA /* SC2MatchHistory.swift in Sources */,
+				D6037F991F9F7BF000D9658D /* SC2ProfileMenuViewModel.swift in Sources */,
 				D62419711F9EA71500C0C6FA /* SC2Router.swift in Sources */,
 				D6045A6E1F98AC4600DA2840 /* Coordinating.swift in Sources */,
 				D624191A1F9EA4E800C0C6FA /* CurrentSeason.swift in Sources */,
@@ -860,6 +884,7 @@
 				D624194C1F9EA51B00C0C6FA /* CategoryPoints.swift in Sources */,
 				D6045A721F98B12400DA2840 /* AppCoordinator.swift in Sources */,
 				D6B258731F98EB730049F887 /* SC2ProfileCoordinator.swift in Sources */,
+				D6037F9A1F9F7BF000D9658D /* SC2ProfileMenuViewModel.swift in Sources */,
 				D62419691F9EA53600C0C6FA /* Animations.swift in Sources */,
 				D68A22B91F991D2C009474C4 /* DrawerTransitionManager.swift in Sources */,
 				D62419481F9EA51B00C0C6FA /* Stats.swift in Sources */,
@@ -898,6 +923,7 @@
 				D62418FB1F9EA47000C0C6FA /* Children.swift in Sources */,
 				D68A22C41F992282009474C4 /* DrawerViewController.swift in Sources */,
 				D624191F1F9EA4E800C0C6FA /* PreviousSeason.swift in Sources */,
+				D6037F951F9F7BDD00D9658D /* SC2ProfileMenuViewController.swift in Sources */,
 				D6045A5A1F98A58F00DA2840 /* SC2ProfileMinerTests.swift in Sources */,
 				D62419441F9EA51B00C0C6FA /* Zerg.swift in Sources */,
 				D62419401F9EA51B00C0C6FA /* Season.swift in Sources */,

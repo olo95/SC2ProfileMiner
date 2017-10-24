@@ -41,6 +41,13 @@ class SC2ProfileCoordinator: Coordinating {
         return vc
     }
     
+    var sc2ProfileMenu: SC2ProfileMenuViewController {
+        let vm = SC2ProfileMenuViewModel(flowDelegate: self)
+        let vc = SC2ProfileMenuViewController()
+        vc.viewModel = vm
+        return vc
+    }
+    
     func start() {
         navigationController.setViewControllers([sc2Profile], animated: true)
     }
@@ -54,7 +61,7 @@ class SC2ProfileCoordinator: Coordinating {
         profileRouter.subscribe( onNext: { choice in
             switch choice {
             case .showProfile(let profile):
-                print(profile)
+                self.sc2Profile.viewModel.profileData?.onNext(profile)
             default:
                 break
             }

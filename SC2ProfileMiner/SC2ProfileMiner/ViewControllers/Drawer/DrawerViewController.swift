@@ -33,7 +33,7 @@ class DrawerViewController: UIViewController {
     }
     
     private func setImages() {
-        let colorOfImage = ColorTheme.appTheme.lightGray
+        let colorOfImage = ColorTheme.appTheme.gray
         buildImageView.image = buildImageView.image!.withRenderingMode(.alwaysTemplate)
         buildImageView.tintColor = colorOfImage
         compareImageView.image = compareImageView.image!.withRenderingMode(.alwaysTemplate)
@@ -43,6 +43,7 @@ class DrawerViewController: UIViewController {
     }
     
     private func setButtons() {
+        
         sc2ProfileButton.rx.tap.subscribe(onNext: { _ in
             self.dismiss(animated: true, completion: {
                 let sc2ProfileCoordinator = SC2ProfileCoordinator(parent: self.flowDelegate.rootCoordinator())

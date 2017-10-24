@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -44,21 +44,21 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="SC2 Profile Miner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfV-1g-Lzx">
                                     <rect key="frame" x="0.0" y="0.0" width="188" height="129.5"/>
                                     <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
-                                    <color key="textColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="textColor" red="0.72162914820000001" green="0.72162914820000001" blue="0.72162914820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mjr-XD-xUI">
                                     <rect key="frame" x="0.0" y="129.5" width="188" height="129.5"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="diE-Q8-fii">
-                                            <rect key="frame" x="41.5" y="8" width="138.5" height="113"/>
+                                            <rect key="frame" x="41.5" y="8" width="138.5" height="113.5"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
                                             <state key="normal" title="Load the SC2Profile">
-                                                <color key="titleColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="titleColor" red="0.72162914820000001" green="0.72162914820000001" blue="0.72162914820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                         </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="KB7-C7-NwG">
-                                            <rect key="frame" x="8" y="52" width="25" height="25"/>
+                                            <rect key="frame" x="8" y="52.5" width="25" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="KB7-C7-NwG" secondAttribute="height" id="LeN-R8-7D8"/>
                                             </constraints>
@@ -80,7 +80,7 @@
                                             <rect key="frame" x="41" y="8" width="139" height="113"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
                                             <state key="normal" title="Compare SC2Profiles">
-                                                <color key="titleColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="titleColor" red="0.72162914820000001" green="0.72162914820000001" blue="0.72162914820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                         </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="compare" translatesAutoresizingMaskIntoConstraints="NO" id="t9O-xd-541">
@@ -103,14 +103,14 @@
                                     <rect key="frame" x="0.0" y="388" width="188" height="129.5"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="5Ph-Sh-oWF">
-                                            <rect key="frame" x="41.5" y="8" width="138.5" height="113"/>
+                                            <rect key="frame" x="41.5" y="8" width="138.5" height="113.5"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
                                             <state key="normal" title="Create the SC2Build">
-                                                <color key="titleColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="titleColor" red="0.72162914820000001" green="0.72162914820000001" blue="0.72162914820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                         </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="build" translatesAutoresizingMaskIntoConstraints="NO" id="m4m-Ex-WPt">
-                                            <rect key="frame" x="8" y="52" width="25" height="25"/>
+                                            <rect key="frame" x="8" y="52.5" width="25" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="m4m-Ex-WPt" secondAttribute="height" multiplier="1:1" id="uS8-oW-TC0"/>
                                             </constraints>
@@ -131,7 +131,7 @@
                             </subviews>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.4922660331" blue="0.87036008880000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="xLW-dy-l8j" firstAttribute="centerX" secondItem="qfy-98-kfE" secondAttribute="centerX" id="1Io-XZ-0EL"/>
                         <constraint firstAttribute="bottom" secondItem="VUb-1e-gZh" secondAttribute="bottom" id="HS9-kt-zT0"/>
