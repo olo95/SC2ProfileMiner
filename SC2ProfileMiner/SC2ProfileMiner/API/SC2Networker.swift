@@ -13,7 +13,7 @@ import ObjectMapper
 import PKHUD
 
 class SC2Networker {
-    static func GET<Item: BaseMappable>(url: URLConvertible, completionHandler: @escaping (Item) -> ()) {
+    static func GET<Item: BaseMappable>(url: URLConvertible, completion: @escaping (Item) -> ()) {
         var data: Item?
         HUD.show(.progress)
         Alamofire.request(url).responseJSON { response in
@@ -21,15 +21,15 @@ class SC2Networker {
             data = Mapper<Item>().map(JSON: json)
             if let result = data {
                 HUD.hide()
-                completionHandler(result)
+                completion(result)
             }
         }
     }
     
-    static func getImage(from url: URL, completionHandler: @escaping (UIImage) -> ()) {
+    static func getImage(from url: URL, completion: @escaping (UIImage) -> ()) {
         Alamofire.request(url).responseImage { response in
             if let image = response.result.value {
-                completionHandler(image)
+                completion(image)
             }
         }
     }

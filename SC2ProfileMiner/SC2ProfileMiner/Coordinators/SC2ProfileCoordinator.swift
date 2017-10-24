@@ -8,6 +8,11 @@
 
 import RxSwift
 
+enum SC2ProfileRouter {
+    case none
+    case showProfile(data: SC2Profile)
+}
+
 class SC2ProfileCoordinator: Coordinating {
     
     func addNew(coordinator: Coordinating, fromRoot: Bool) {
@@ -27,6 +32,7 @@ class SC2ProfileCoordinator: Coordinating {
     var childCoordinators: [Coordinating] = []
     var parent: Coordinating?
     let bag = DisposeBag()
+    var profileRouter = BehaviorSubject<SC2ProfileRouter>(value: .none)
     
     var sc2Profile: SC2ProfileViewController {
         let vm = SC2ProfileViewModel(flowDelegate: self)
@@ -41,6 +47,18 @@ class SC2ProfileCoordinator: Coordinating {
     
     required init(parent: Coordinating?) {
         self.parent = parent
+        setProfileRouter()
+    }
+    
+    private func setProfileRouter() {
+        profileRouter.subscribe( onNext: { choice in
+            switch choice {
+            case .showProfile(let profile):
+                print(profile)
+            default:
+                break
+            }
+        }).disposed(by: bag)
     }
     
     func showDrawer() {
