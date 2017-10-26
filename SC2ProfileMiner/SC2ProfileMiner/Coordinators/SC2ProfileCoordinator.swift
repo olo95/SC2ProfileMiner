@@ -61,7 +61,9 @@ class SC2ProfileCoordinator: Coordinating {
         profileRouter.subscribe( onNext: { choice in
             switch choice {
             case .showProfile(let profile):
-                self.sc2Profile.viewModel.profileData?.onNext(profile)
+                let profileMenu = self.sc2ProfileMenu
+                profileMenu.viewModel.profileData = profile
+                self.push(viewController: profileMenu)
             default:
                 break
             }

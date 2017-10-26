@@ -11,7 +11,6 @@ import RxSwift
 class SC2ProfileViewModel {
     var flowDelegate: SC2ProfileCoordinator!
     let bag = DisposeBag()
-    var profileData: BehaviorSubject<SC2Profile>?
     
     func downloadProfile(with id: String, name: String) {
         SC2Networker.GET(url: SC2Router.getUrl(parameters: SC2Url(name: name, id: id), method: .profile)) { (result: SC2Profile) in

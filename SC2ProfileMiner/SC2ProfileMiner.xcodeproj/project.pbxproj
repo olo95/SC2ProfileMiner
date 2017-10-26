@@ -149,6 +149,8 @@
 		D6D178B51F98E39D004BC623 /* SC2BuildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D178B21F98E39D004BC623 /* SC2BuildViewController.swift */; };
 		D6D178B61F98E39D004BC623 /* SC2BuildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D178B31F98E39D004BC623 /* SC2BuildViewController.xib */; };
 		D6D178B71F98E39D004BC623 /* SC2BuildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D178B31F98E39D004BC623 /* SC2BuildViewController.xib */; };
+		D6F5DAE31FA26C1A00506AA3 /* ProfileAchievementsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5DAE21FA26C1A00506AA3 /* ProfileAchievementsArray.swift */; };
+		D6F5DAE41FA26C1A00506AA3 /* ProfileAchievementsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5DAE21FA26C1A00506AA3 /* ProfileAchievementsArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -245,6 +247,7 @@
 		D6D178B21F98E39D004BC623 /* SC2BuildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2BuildViewController.swift; sourceTree = "<group>"; };
 		D6D178B31F98E39D004BC623 /* SC2BuildViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SC2BuildViewController.xib; sourceTree = "<group>"; };
 		D6F01BF2A72F3542D1A5D032 /* Pods_SC2ProfileMinerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SC2ProfileMinerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6F5DAE21FA26C1A00506AA3 /* ProfileAchievementsArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAchievementsArray.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -484,6 +487,7 @@
 				D62419341F9EA51B00C0C6FA /* CategoryPoints.swift */,
 				D62419331F9EA51B00C0C6FA /* Points.swift */,
 				D624192B1F9EA51A00C0C6FA /* ProfileAchievements.swift */,
+				D6F5DAE21FA26C1A00506AA3 /* ProfileAchievementsArray.swift */,
 				D624192A1F9EA51A00C0C6FA /* Protoss.swift */,
 				D624192C1F9EA51A00C0C6FA /* Rewards.swift */,
 				D62419361F9EA51B00C0C6FA /* SC2Profile.swift */,
@@ -828,6 +832,7 @@
 				D624191C1F9EA4E800C0C6FA /* SC2Ladders.swift in Sources */,
 				D6B2586C1F98E74E0049F887 /* SC2CompareViewModel.swift in Sources */,
 				D62419411F9EA51B00C0C6FA /* Terran.swift in Sources */,
+				D6F5DAE31FA26C1A00506AA3 /* ProfileAchievementsArray.swift in Sources */,
 				D6D178A11F98DC2C004BC623 /* CABasicAnimation+Extension.swift in Sources */,
 				D6B258751F98EB7F0049F887 /* SC2CompareCoordinator.swift in Sources */,
 				D6045A7F1F98BBBB00DA2840 /* MainMenuViewController.swift in Sources */,
@@ -873,6 +878,7 @@
 				D68A22BC1F991F5F009474C4 /* TransitionManager.swift in Sources */,
 				D624193E1F9EA51B00C0C6FA /* Career.swift in Sources */,
 				D624194E1F9EA51B00C0C6FA /* SwarmLevels.swift in Sources */,
+				D6F5DAE41FA26C1A00506AA3 /* ProfileAchievementsArray.swift in Sources */,
 				D62419071F9EA4A000C0C6FA /* LadderMembers.swift in Sources */,
 				D62419281F9EA50300C0C6FA /* Matches.swift in Sources */,
 				D62418FF1F9EA47000C0C6FA /* Achievements.swift in Sources */,

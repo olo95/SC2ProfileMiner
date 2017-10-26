@@ -14,7 +14,7 @@ public class SC2Profile: Mappable {
     public var campaign : Campaign?
     public var season : Season?
     public var rewards : Rewards?
-    public var achievements : Achievements?
+    public var achievements : ProfileAchievements?
     
     public func mapping(map: Map) {
         id <- map["id"]
