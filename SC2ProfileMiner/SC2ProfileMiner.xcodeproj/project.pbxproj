@@ -358,8 +358,8 @@
 		D6045A641F98AB3A00DA2840 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D6F5DAE51FA289EF00506AA3 /* GraphPresenter */,
 				D6045A4D1F98A58F00DA2840 /* LaunchScreen.storyboard */,
+				D6F5DAE51FA289EF00506AA3 /* GraphPresenter */,
 				D68A22BD1F99224C009474C4 /* Drawer */,
 				D6045A761F98B76000DA2840 /* MainMenu */,
 				D6037F911F9F7BAE00D9658D /* SC2ProfileMenu */,

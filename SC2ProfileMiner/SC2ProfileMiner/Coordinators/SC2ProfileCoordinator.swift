@@ -49,6 +49,13 @@ class SC2ProfileCoordinator: Coordinating {
         return vc
     }
     
+    var graphPresenter: GraphPresenterViewController {
+        let vm = GraphPresenterViewModel(flowDelegate: self)
+        let vc = GraphPresenterViewController()
+        vc.viewModel = vm
+        return vc
+    }
+    
     func start() {
         navigationController.setViewControllers([sc2Profile], animated: true)
     }
@@ -65,8 +72,11 @@ class SC2ProfileCoordinator: Coordinating {
                 let profileMenu = self.sc2ProfileMenu
                 profileMenu.viewModel.profileData = profile
                 self.push(viewController: profileMenu)
-            case .showGraph(let data, let type):
-                
+            case .showGraph(let profile, let type):
+                let graphPresenter = self.graphPresenter
+                graphPresenter.viewModel.profileData = profile
+                graphPresenter.viewModel.graphType = type
+                self.push(viewController: graphPresenter)
             default:
                 break
             }

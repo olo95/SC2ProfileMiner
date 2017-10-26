@@ -63,6 +63,7 @@ class SC2ProfileMenuViewController: UIViewController {
                                                       handler: { _ in
                                                         self.viewModel.flowDelegate.profileRouter.onNext(.showGraph(data: self.viewModel.profileData, type: .matchHistory))
             }))
+            self.viewModel.flowDelegate.present(viewController: graphChoiceAlert, completion: nil)
         }).disposed(by: viewModel.bag)
     }
 
