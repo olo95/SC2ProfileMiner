@@ -13,11 +13,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SC2ProfileMenuViewController" customModule="SC2ProfileMiner" customModuleProvider="target">
             <connections>
                 <outlet property="careerTotalGamesNumberLabel" destination="bwI-qp-5Mp" id="4Bx-iu-j6D"/>
+                <outlet property="clanTagLabel" destination="YfM-TT-sVt" id="5Id-QR-83j"/>
                 <outlet property="highestOneVOneRankTitleLabel" destination="npb-OS-0Z6" id="FnJ-ec-sJX"/>
                 <outlet property="primaryRaceLabel" destination="B3n-4H-Aah" id="BQ9-Yc-v4y"/>
                 <outlet property="profileNameLabel" destination="Uwi-4W-qJ6" id="3KY-d5-JBL"/>
                 <outlet property="protossWinsNumberLabel" destination="cGm-Mc-SPX" id="XWC-Za-S0T"/>
                 <outlet property="seasonTotalGamesNumberLabel" destination="rrj-ge-o02" id="3Su-ya-dAF"/>
+                <outlet property="showProfileGraphsButton" destination="LG9-DL-gPs" id="JKB-yM-QEL"/>
                 <outlet property="terranWinsNumberLabel" destination="mL5-LI-ByR" id="XGJ-GC-44N"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="zergWinsNumberLabel" destination="dTm-fU-HrD" id="bKj-NV-GD5"/>
@@ -25,44 +27,55 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="467" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Profile Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwi-4W-qJ6">
-                    <rect key="frame" x="16" y="84" width="375" height="24"/>
-                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="20"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Primary race" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3n-4H-Aah">
-                    <rect key="frame" x="16" y="124" width="375" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
-                    <color key="textColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1y0-95-Uwr">
+                    <rect key="frame" x="16" y="52" width="467" height="88"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Profile Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwi-4W-qJ6">
+                            <rect key="frame" x="0.0" y="0.0" width="467" height="24"/>
+                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="20"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Primary race" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3n-4H-Aah">
+                            <rect key="frame" x="0.0" y="32" width="467" height="24"/>
+                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                            <color key="textColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clan Tag" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfM-TT-sVt">
+                            <rect key="frame" x="0.0" y="64" width="467" height="24"/>
+                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                            <color key="textColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="746" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7Sx-4D-SAL">
-                    <rect key="frame" x="16" y="176.5" width="375" height="474.5"/>
+                    <rect key="frame" x="16" y="156" width="467" height="495"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="syM-Yy-sDI">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="153"/>
+                            <rect key="frame" x="0.0" y="0.0" width="467" height="159.5"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6hZ-88-5dC">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="467" height="54"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terran wins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zd-si-Uyd">
-                                            <rect key="frame" x="0.0" y="16.5" width="125" height="18"/>
+                                            <rect key="frame" x="0.0" y="18" width="155.5" height="18"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
                                             <color key="textColor" red="0.72162914820000001" green="0.72162914820000001" blue="0.72162914820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zerg wins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wvr-Mi-pOm">
-                                            <rect key="frame" x="109" y="16.5" width="125" height="18"/>
+                                            <rect key="frame" x="139.5" y="18" width="156" height="18"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
                                             <color key="textColor" red="0.72162914820000001" green="0.72162914820000001" blue="0.72162914820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protoss wins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsP-n2-c4y">
-                                            <rect key="frame" x="234" y="16.5" width="125" height="18"/>
+                                            <rect key="frame" x="295.5" y="18" width="155.5" height="18"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
                                             <color key="textColor" red="0.72162914820000001" green="0.72162914820000001" blue="0.72162914820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -70,22 +83,22 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MNB-HA-dgh">
-                                    <rect key="frame" x="0.0" y="51" width="375" height="102"/>
+                                    <rect key="frame" x="0.0" y="54" width="467" height="105.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terran wins number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mL5-LI-ByR">
-                                            <rect key="frame" x="0.0" y="42" width="125" height="18"/>
+                                            <rect key="frame" x="0.0" y="44" width="155.5" height="18"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zerg wins number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTm-fU-HrD">
-                                            <rect key="frame" x="109" y="42" width="125" height="18"/>
+                                            <rect key="frame" x="139.5" y="44" width="156" height="18"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protoss wins number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGm-Mc-SPX">
-                                            <rect key="frame" x="234" y="42" width="125" height="18"/>
+                                            <rect key="frame" x="295.5" y="44" width="155.5" height="18"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -111,25 +124,25 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTt-uH-r06">
-                            <rect key="frame" x="0.0" y="161" width="375" height="152.5"/>
+                            <rect key="frame" x="0.0" y="167.5" width="467" height="160"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="T8M-iv-aVG">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="467" height="52.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Career total games" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hj7-qn-fZa">
-                                            <rect key="frame" x="0.0" y="7.5" width="125" height="36"/>
+                                            <rect key="frame" x="0.0" y="17.5" width="155.5" height="18"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
                                             <color key="textColor" red="0.72162914820000001" green="0.72162914820000001" blue="0.72162914820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highest 1v1 rank" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qth-yJ-TZa">
-                                            <rect key="frame" x="109" y="16.5" width="125" height="18"/>
+                                            <rect key="frame" x="139.5" y="17.5" width="156" height="18"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
                                             <color key="textColor" red="0.72162914820000001" green="0.72162914820000001" blue="0.72162914820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season total games" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXU-Le-Cz2">
-                                            <rect key="frame" x="234" y="7.5" width="125" height="36"/>
+                                            <rect key="frame" x="295.5" y="17.5" width="155.5" height="18"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
                                             <color key="textColor" red="0.72162914820000001" green="0.72162914820000001" blue="0.72162914820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -137,22 +150,22 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lbP-9b-K7S">
-                                    <rect key="frame" x="0.0" y="51" width="375" height="101.5"/>
+                                    <rect key="frame" x="0.0" y="52.5" width="467" height="107.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Career total games number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwI-qp-5Mp">
-                                            <rect key="frame" x="0.0" y="42" width="125" height="18"/>
+                                            <rect key="frame" x="0.0" y="44.5" width="155.5" height="18"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highest 1v1 rank Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npb-OS-0Z6">
-                                            <rect key="frame" x="109" y="33" width="125" height="36"/>
+                                            <rect key="frame" x="139.5" y="44.5" width="156" height="18"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season total games number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrj-ge-o02">
-                                            <rect key="frame" x="234" y="42" width="125" height="18"/>
+                                            <rect key="frame" x="295.5" y="44.5" width="155.5" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -178,27 +191,36 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7l-0I-FDV">
-                            <rect key="frame" x="0.0" y="321.5" width="375" height="153"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <rect key="frame" x="0.0" y="335.5" width="467" height="159.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LG9-DL-gPs">
+                                    <rect key="frame" x="133.5" y="62.5" width="168" height="35"/>
+                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="19"/>
+                                    <size key="titleShadowOffset" width="1" height="1"/>
+                                    <state key="normal" title="Show profile graphs"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="LG9-DL-gPs" firstAttribute="centerY" secondItem="l7l-0I-FDV" secondAttribute="centerY" id="51r-Kn-lXN"/>
+                                <constraint firstItem="LG9-DL-gPs" firstAttribute="centerX" secondItem="l7l-0I-FDV" secondAttribute="centerX" id="GJK-9P-GO4"/>
+                            </constraints>
                         </view>
                     </subviews>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="0.72162914820000001" green="0.72162914820000001" blue="0.72162914820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Uwi-4W-qJ6" secondAttribute="trailing" constant="16" id="4Id-XH-fCT"/>
                 <constraint firstItem="7Sx-4D-SAL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="9U9-Zv-kV1"/>
-                <constraint firstItem="B3n-4H-Aah" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="DAF-eD-jQR"/>
-                <constraint firstItem="Uwi-4W-qJ6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="64" id="DCE-Xc-2S4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7Sx-4D-SAL" secondAttribute="bottom" constant="16" id="Ivy-a6-FDu"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="B3n-4H-Aah" secondAttribute="trailing" constant="16" id="Obh-db-hYq"/>
+                <constraint firstItem="7Sx-4D-SAL" firstAttribute="top" secondItem="1y0-95-Uwr" secondAttribute="bottom" constant="16" id="JXL-Lh-gM3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7Sx-4D-SAL" secondAttribute="trailing" constant="16" id="TXN-Fc-9t5"/>
-                <constraint firstItem="Uwi-4W-qJ6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="eyr-4A-axY"/>
-                <constraint firstItem="B3n-4H-Aah" firstAttribute="top" secondItem="Uwi-4W-qJ6" secondAttribute="bottom" constant="16" id="fhc-95-X9R"/>
-                <constraint firstItem="7Sx-4D-SAL" firstAttribute="top" secondItem="B3n-4H-Aah" secondAttribute="bottom" constant="32" id="pqS-jn-cjh"/>
+                <constraint firstItem="1y0-95-Uwr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="kZr-xe-6zq"/>
+                <constraint firstItem="1y0-95-Uwr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="w5u-a4-45D"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1y0-95-Uwr" secondAttribute="trailing" constant="16" id="yPi-Ql-mes"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="33.5" y="53.5"/>
+            <point key="canvasLocation" x="79.5" y="53.5"/>
         </view>
     </objects>
 </document>

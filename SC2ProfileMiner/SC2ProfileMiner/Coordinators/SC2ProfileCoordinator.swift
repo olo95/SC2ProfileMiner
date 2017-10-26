@@ -11,6 +11,7 @@ import RxSwift
 enum SC2ProfileRouter {
     case none
     case showProfile(data: SC2Profile)
+    case showGraph(data: SC2Profile, type: GraphType)
 }
 
 class SC2ProfileCoordinator: Coordinating {
@@ -64,6 +65,8 @@ class SC2ProfileCoordinator: Coordinating {
                 let profileMenu = self.sc2ProfileMenu
                 profileMenu.viewModel.profileData = profile
                 self.push(viewController: profileMenu)
+            case .showGraph(let data, let type):
+                
             default:
                 break
             }

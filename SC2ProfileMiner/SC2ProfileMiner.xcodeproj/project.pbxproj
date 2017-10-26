@@ -151,6 +151,12 @@
 		D6D178B71F98E39D004BC623 /* SC2BuildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D178B31F98E39D004BC623 /* SC2BuildViewController.xib */; };
 		D6F5DAE31FA26C1A00506AA3 /* ProfileAchievementsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5DAE21FA26C1A00506AA3 /* ProfileAchievementsArray.swift */; };
 		D6F5DAE41FA26C1A00506AA3 /* ProfileAchievementsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5DAE21FA26C1A00506AA3 /* ProfileAchievementsArray.swift */; };
+		D6F5DAE81FA28A0F00506AA3 /* GraphPresenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5DAE61FA28A0F00506AA3 /* GraphPresenterViewController.swift */; };
+		D6F5DAE91FA28A0F00506AA3 /* GraphPresenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5DAE61FA28A0F00506AA3 /* GraphPresenterViewController.swift */; };
+		D6F5DAEA1FA28A0F00506AA3 /* GraphPresenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6F5DAE71FA28A0F00506AA3 /* GraphPresenterViewController.xib */; };
+		D6F5DAEB1FA28A0F00506AA3 /* GraphPresenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6F5DAE71FA28A0F00506AA3 /* GraphPresenterViewController.xib */; };
+		D6F5DAED1FA28A2B00506AA3 /* GraphPresenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5DAEC1FA28A2B00506AA3 /* GraphPresenterViewModel.swift */; };
+		D6F5DAEE1FA28A2B00506AA3 /* GraphPresenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5DAEC1FA28A2B00506AA3 /* GraphPresenterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -248,6 +254,9 @@
 		D6D178B31F98E39D004BC623 /* SC2BuildViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SC2BuildViewController.xib; sourceTree = "<group>"; };
 		D6F01BF2A72F3542D1A5D032 /* Pods_SC2ProfileMinerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SC2ProfileMinerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F5DAE21FA26C1A00506AA3 /* ProfileAchievementsArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAchievementsArray.swift; sourceTree = "<group>"; };
+		D6F5DAE61FA28A0F00506AA3 /* GraphPresenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphPresenterViewController.swift; sourceTree = "<group>"; };
+		D6F5DAE71FA28A0F00506AA3 /* GraphPresenterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphPresenterViewController.xib; sourceTree = "<group>"; };
+		D6F5DAEC1FA28A2B00506AA3 /* GraphPresenterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphPresenterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +358,7 @@
 		D6045A641F98AB3A00DA2840 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D6F5DAE51FA289EF00506AA3 /* GraphPresenter */,
 				D6045A4D1F98A58F00DA2840 /* LaunchScreen.storyboard */,
 				D68A22BD1F99224C009474C4 /* Drawer */,
 				D6045A761F98B76000DA2840 /* MainMenu */,
@@ -566,6 +576,16 @@
 			path = SC2Build;
 			sourceTree = "<group>";
 		};
+		D6F5DAE51FA289EF00506AA3 /* GraphPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				D6F5DAE61FA28A0F00506AA3 /* GraphPresenterViewController.swift */,
+				D6F5DAE71FA28A0F00506AA3 /* GraphPresenterViewController.xib */,
+				D6F5DAEC1FA28A2B00506AA3 /* GraphPresenterViewModel.swift */,
+			);
+			path = GraphPresenter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -659,6 +679,7 @@
 				D6045A4F1F98A58F00DA2840 /* LaunchScreen.storyboard in Resources */,
 				D6D178B01F98E38F004BC623 /* SC2CompareViewController.xib in Resources */,
 				D6D178B61F98E39D004BC623 /* SC2BuildViewController.xib in Resources */,
+				D6F5DAEA1FA28A0F00506AA3 /* GraphPresenterViewController.xib in Resources */,
 				D6037F961F9F7BDD00D9658D /* SC2ProfileMenuViewController.xib in Resources */,
 				D6D178AA1F98E37E004BC623 /* SC2ProfileViewController.xib in Resources */,
 				D6045A811F98BBBB00DA2840 /* MainMenuViewController.xib in Resources */,
@@ -674,6 +695,7 @@
 				D6D178AB1F98E37E004BC623 /* SC2ProfileViewController.xib in Resources */,
 				D68A22C61F992282009474C4 /* DrawerViewController.xib in Resources */,
 				D6D178B71F98E39D004BC623 /* SC2BuildViewController.xib in Resources */,
+				D6F5DAEB1FA28A0F00506AA3 /* GraphPresenterViewController.xib in Resources */,
 				D6D1789F1F98D28E004BC623 /* Assets.xcassets in Resources */,
 				D6045A821F98BBBB00DA2840 /* MainMenuViewController.xib in Resources */,
 				D6D178B11F98E38F004BC623 /* SC2CompareViewController.xib in Resources */,
@@ -707,6 +729,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SC2ProfileMiner/Pods-SC2ProfileMiner-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
@@ -717,6 +740,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
@@ -827,6 +851,7 @@
 				D62419601F9EA53600C0C6FA /* Skins.swift in Sources */,
 				D62419181F9EA4E800C0C6FA /* NonRanked.swift in Sources */,
 				D6D178B41F98E39D004BC623 /* SC2BuildViewController.swift in Sources */,
+				D6F5DAE81FA28A0F00506AA3 /* GraphPresenterViewController.swift in Sources */,
 				D624193B1F9EA51B00C0C6FA /* Rewards.swift in Sources */,
 				D624195E1F9EA53600C0C6FA /* SC2Rewards.swift in Sources */,
 				D624191C1F9EA4E800C0C6FA /* SC2Ladders.swift in Sources */,
@@ -850,6 +875,7 @@
 				D6045A851F98CA5B00DA2840 /* ColorTheme.swift in Sources */,
 				D62419001F9EA47000C0C6FA /* Categories.swift in Sources */,
 				D624194F1F9EA51B00C0C6FA /* SC2Profile.swift in Sources */,
+				D6F5DAED1FA28A2B00506AA3 /* GraphPresenterViewModel.swift in Sources */,
 				D6D178AE1F98E38F004BC623 /* SC2CompareViewController.swift in Sources */,
 				D62419251F9EA50300C0C6FA /* SC2MatchHistory.swift in Sources */,
 				D6037F991F9F7BF000D9658D /* SC2ProfileMenuViewModel.swift in Sources */,
@@ -914,10 +940,12 @@
 				D6045A791F98B77600DA2840 /* MainMenuViewModel.swift in Sources */,
 				D6B258701F98E75B0049F887 /* SC2BuildViewModel.swift in Sources */,
 				D62418E11F9E974000C0C6FA /* DrawerCoordinator.swift in Sources */,
+				D6F5DAE91FA28A0F00506AA3 /* GraphPresenterViewController.swift in Sources */,
 				D62419171F9EA4E800C0C6FA /* Characters.swift in Sources */,
 				D62419651F9EA53600C0C6FA /* TerranDecals.swift in Sources */,
 				D62419631F9EA53600C0C6FA /* ZergDecals.swift in Sources */,
 				D62418FD1F9EA47000C0C6FA /* SC2Achievements.swift in Sources */,
+				D6F5DAEE1FA28A2B00506AA3 /* GraphPresenterViewModel.swift in Sources */,
 				D6045A861F98CA5B00DA2840 /* ColorTheme.swift in Sources */,
 				D62419011F9EA47000C0C6FA /* Categories.swift in Sources */,
 				D62419501F9EA51B00C0C6FA /* SC2Profile.swift in Sources */,
@@ -1079,7 +1107,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = SaszaCorp.SC2ProfileMiner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1096,7 +1124,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = SaszaCorp.SC2ProfileMiner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -35,7 +35,14 @@ class SC2ProfileMenuViewModel {
     
     var primaryRace: Observable<String> {
         return Observable.create( { observer in
-            observer.onNext((self.profileData.career?.primaryRace)!)
+            observer.onNext(self.profileData.career?.primaryRace ?? "")
+            return Disposables.create()
+        })
+    }
+    
+    var clanTag: Observable<String> {
+        return Observable.create( { observer in
+            observer.onNext(self.profileData.clanTag ?? "")
             return Disposables.create()
         })
     }
@@ -58,7 +65,7 @@ class SC2ProfileMenuViewModel {
     
     var highestOneVOneRank: Observable<String> {
         return Observable.create( { observer in
-            observer.onNext((self.profileData.career?.highest1v1Rank)!)
+            observer.onNext(self.profileData.career?.highest1v1Rank ?? "")
             return Disposables.create()
         })
     }

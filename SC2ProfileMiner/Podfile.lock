@@ -2,6 +2,9 @@ PODS:
   - Alamofire (4.5.1)
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
+  - Charts (3.0.4):
+    - Charts/Core (= 3.0.4)
+  - Charts/Core (3.0.4)
   - ObjectMapper (3.0.0)
   - PKHUD (5.0.0)
   - RxAlamofire (4.0.0):
@@ -16,21 +19,33 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
+  - Charts (from `https://github.com/danielgindi/Charts/`, commit `54171609c2f7d987a46eab60eb0422318d08d266`)
   - ObjectMapper
   - PKHUD
   - RxAlamofire
   - RxCocoa
   - RxSwift
 
+EXTERNAL SOURCES:
+  Charts:
+    :commit: 54171609c2f7d987a46eab60eb0422318d08d266
+    :git: https://github.com/danielgindi/Charts/
+
+CHECKOUT OPTIONS:
+  Charts:
+    :commit: 54171609c2f7d987a46eab60eb0422318d08d266
+    :git: https://github.com/danielgindi/Charts/
+
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  Charts: c5f4491efc3a24de9213fe3e68484bfdff881cfb
   ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
   PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
   RxAlamofire: 6ea579ac53bf14cb4bc7049a3866e5a769989b1d
   RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
 
-PODFILE CHECKSUM: 8af6e3fefdee89f03fe3ffcb3bee62f05d5602c6
+PODFILE CHECKSUM: 5340125e8480df88af435676c6c5e96d2bc329f0
 
 COCOAPODS: 1.3.1
