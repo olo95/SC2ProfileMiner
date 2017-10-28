@@ -31,25 +31,31 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="i2j-TN-EQ2">
-                    <rect key="frame" x="16" y="124" width="343" height="106"/>
+                    <rect key="frame" x="16" y="124" width="343" height="399"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="goO-Tm-a6Y">
-                            <rect key="frame" x="0.0" y="0.0" width="167.5" height="106"/>
+                            <rect key="frame" x="0.0" y="0.0" width="167.5" height="399"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile 1 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFq-LA-sxH">
-                                    <rect key="frame" x="0.0" y="0.0" width="167.5" height="30"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="167.5" height="127.5"/>
                                     <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
                                     <color key="textColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0B9-ts-JOs">
-                                    <rect key="frame" x="0.0" y="38" width="167.5" height="30"/>
+                                    <rect key="frame" x="0.0" y="135.5" width="167.5" height="128"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="J9C-wo-YTl"/>
+                                    </constraints>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="npp-VX-6gJ">
-                                    <rect key="frame" x="0.0" y="76" width="167.5" height="30"/>
+                                    <rect key="frame" x="0.0" y="271.5" width="167.5" height="127.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="3wr-LL-2w9"/>
+                                    </constraints>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -57,22 +63,28 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="703-1O-5eK">
-                            <rect key="frame" x="175.5" y="0.0" width="167.5" height="106"/>
+                            <rect key="frame" x="175.5" y="0.0" width="167.5" height="399"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZa-gA-Xyd">
-                                    <rect key="frame" x="0.0" y="0.0" width="167.5" height="30"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="167.5" height="127.5"/>
                                     <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
                                     <color key="textColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="esD-lW-bTQ">
-                                    <rect key="frame" x="0.0" y="38" width="167.5" height="30"/>
+                                    <rect key="frame" x="0.0" y="135.5" width="167.5" height="128"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="FsL-eZ-Dik"/>
+                                    </constraints>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9cg-iX-ulH">
-                                    <rect key="frame" x="0.0" y="76" width="167.5" height="30"/>
+                                    <rect key="frame" x="0.0" y="271.5" width="167.5" height="127.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="5dc-BX-JNu"/>
+                                    </constraints>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -86,7 +98,10 @@
                     </constraints>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlh-lP-Iwk">
-                    <rect key="frame" x="16" y="246" width="343" height="357"/>
+                    <rect key="frame" x="16" y="539" width="343" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="64" id="5uQ-om-5wr"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
                     <state key="normal" title="Compare">
                         <color key="titleColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

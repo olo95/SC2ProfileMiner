@@ -6,7 +6,8 @@
 //  Copyright © 2017 Alexander Stolar. All rights reserved.
 //
 
-import UIKit
+import RxSwift
+import RxCocoa
 
 class SC2CompareViewController: UIViewController {
 
@@ -20,12 +21,28 @@ class SC2CompareViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBar()
+        setupButtons()
+        bindUI()
     }
     
     private func setNavigationBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "hamburger"), style: .done, target: self, action: #selector(showDrawer))
         navigationItem.leftBarButtonItem?.image = navigationItem.leftBarButtonItem?.image!.withRenderingMode(.alwaysTemplate)
         navigationItem.leftBarButtonItem?.tintColor = ColorTheme.appTheme.gray
+    }
+    
+    private func setupButtons() {
+        compareButton.layer.add(CABasicAnimation().pulseAnimation(duration: 2), forKey: "animateOpacity")
+    }
+    
+    private func bindUI() {
+        Observable.combineLatest(profileOneIdTextField.rx.text, profileTwoIdTextField.rx.text, profileOneNameTextField.rx.text, profileTwoNameTextField.rx.text)
+            .filter( { return $0.0!.isEmpty && $0.1!.isEmpty && $0.2!.isEmpty && $0.3!.isEmpty })
+            .map({ return (($0.0, $0.1), ($0.2, $0.3)) })
+            .sample(compareButton.rx.tap)
+            .subscribe( onNext: {
+                self.viewModel.compareProfiles(names: ($0.0.0!, $0.0.1!), ids: ($0.1.0!, $0.1.1!))
+            }).disposed(by: viewModel.bag)
     }
 
     @objc
