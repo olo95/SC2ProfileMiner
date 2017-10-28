@@ -37,7 +37,7 @@ class SC2CompareViewController: UIViewController {
     
     private func bindUI() {
         Observable.combineLatest(profileOneIdTextField.rx.text, profileTwoIdTextField.rx.text, profileOneNameTextField.rx.text, profileTwoNameTextField.rx.text)
-            .filter( { return $0.0!.isEmpty && $0.1!.isEmpty && $0.2!.isEmpty && $0.3!.isEmpty })
+            .filter( { return !($0.0!.isEmpty) && !($0.1!.isEmpty) && !($0.2!.isEmpty) && !($0.3!.isEmpty) })
             .map({ return (($0.0, $0.1), ($0.2, $0.3)) })
             .sample(compareButton.rx.tap)
             .subscribe( onNext: {
