@@ -20,6 +20,7 @@ class GraphPresenterViewModel {
     }
     
     func setGraphData(completion: @escaping ([(String, Int)]) -> () ) {
+        graphData.removeAll()
         switch graphType {
         case .matchHistory:
             SC2Networker.GET(url: SC2Router.getUrl(parameters: SC2Url(name: profileData.displayName!, id: String(profileData.id!)), method: .matchHistory)) { (result: SC2MatchHistory) in
@@ -31,6 +32,16 @@ class GraphPresenterViewModel {
                 })
                 completion(self.graphData)
             }
+        case .seasonWinsLosses:
+            guard let career = profileData.career, let zergWins = career.zergWins, let terranWins = career.terranWins, let protossWins = career.protossWins, let seasonTotalGames = career.seasonTotalGames, let totalGames = career.careerTotalGames else {
+                return
+            }
+            let seasonWins = zergWins + terranWins + protossWins
+            let seasonLosses = seasonTotalGames - seasonWins
+            graphData.append(("seasonWins", seasonWins))
+            graphData.append(("seasonLosses", seasonLosses))
+            graphData.append(("totalGames", totalGames))
+            completion(self.graphData)
         default:
             break
         }

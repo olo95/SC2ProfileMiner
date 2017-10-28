@@ -10,6 +10,7 @@ import UIKit
 
 enum GraphType {
     case matchHistory
+    case seasonWinsLosses
 }
 
 class SC2ProfileMenuViewController: UIViewController {
@@ -62,6 +63,13 @@ class SC2ProfileMenuViewController: UIViewController {
                                                       style: .default,
                                                       handler: { _ in
                                                         self.viewModel.flowDelegate.profileRouter.onNext(.showGraph(data: self.viewModel.profileData, type: .matchHistory))
+                                                        
+            }))
+            graphChoiceAlert.addAction(UIAlertAction(title: "Wins and losses",
+                                                     style: .default,
+                                                     handler: { _ in
+                                                        self.viewModel.flowDelegate.profileRouter.onNext(.showGraph(data: self.viewModel.profileData, type: .seasonWinsLosses))
+                                                        
             }))
             self.viewModel.flowDelegate.present(viewController: graphChoiceAlert, completion: nil)
         }).disposed(by: viewModel.bag)

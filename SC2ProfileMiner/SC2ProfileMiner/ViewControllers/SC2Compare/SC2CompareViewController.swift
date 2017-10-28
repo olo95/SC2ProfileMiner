@@ -10,6 +10,11 @@ import UIKit
 
 class SC2CompareViewController: UIViewController {
 
+    @IBOutlet weak var compareButton: UIButton!
+    @IBOutlet weak var profileTwoNameTextField: UITextField!
+    @IBOutlet weak var profileOneNameTextField: UITextField!
+    @IBOutlet weak var profileTwoIdTextField: UITextField!
+    @IBOutlet weak var profileOneIdTextField: UITextField!
     var viewModel: SC2CompareViewModel!
     
     override func viewDidLoad() {

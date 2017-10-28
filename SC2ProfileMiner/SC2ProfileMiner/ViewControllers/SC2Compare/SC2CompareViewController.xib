@@ -1,13 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SC2CompareViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SC2CompareViewController" customModule="SC2ProfileMiner" customModuleProvider="target">
             <connections>
+                <outlet property="compareButton" destination="jlh-lP-Iwk" id="q3s-ld-L1f"/>
+                <outlet property="profileOneIdTextField" destination="0B9-ts-JOs" id="Dp5-fu-MdB"/>
+                <outlet property="profileOneNameTextField" destination="npp-VX-6gJ" id="e0e-yD-xR2"/>
+                <outlet property="profileTwoIdTextField" destination="esD-lW-bTQ" id="6ha-1i-oiD"/>
+                <outlet property="profileTwoNameTextField" destination="9cg-iX-ulH" id="xR5-bQ-GDj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,7 +23,91 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compare profiles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYq-Qa-qar">
+                    <rect key="frame" x="16" y="84" width="343" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="20"/>
+                    <color key="textColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="i2j-TN-EQ2">
+                    <rect key="frame" x="16" y="124" width="343" height="106"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="goO-Tm-a6Y">
+                            <rect key="frame" x="0.0" y="0.0" width="167.5" height="106"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile 1 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFq-LA-sxH">
+                                    <rect key="frame" x="0.0" y="0.0" width="167.5" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                                    <color key="textColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0B9-ts-JOs">
+                                    <rect key="frame" x="0.0" y="38" width="167.5" height="30"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="npp-VX-6gJ">
+                                    <rect key="frame" x="0.0" y="76" width="167.5" height="30"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="703-1O-5eK">
+                            <rect key="frame" x="175.5" y="0.0" width="167.5" height="106"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZa-gA-Xyd">
+                                    <rect key="frame" x="0.0" y="0.0" width="167.5" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                                    <color key="textColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="esD-lW-bTQ">
+                                    <rect key="frame" x="0.0" y="38" width="167.5" height="30"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9cg-iX-ulH">
+                                    <rect key="frame" x="0.0" y="76" width="167.5" height="30"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="703-1O-5eK" firstAttribute="centerY" secondItem="i2j-TN-EQ2" secondAttribute="centerY" id="WMD-uD-xqe"/>
+                        <constraint firstItem="goO-Tm-a6Y" firstAttribute="centerY" secondItem="i2j-TN-EQ2" secondAttribute="centerY" id="vye-cT-AE2"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlh-lP-Iwk">
+                    <rect key="frame" x="16" y="246" width="343" height="357"/>
+                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
+                    <state key="normal" title="Compare">
+                        <color key="titleColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.72162914820000001" green="0.72162914820000001" blue="0.72162914820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="i2j-TN-EQ2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="2FQ-GR-3Za"/>
+                <constraint firstItem="jlh-lP-Iwk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6GR-X7-crn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jlh-lP-Iwk" secondAttribute="bottom" constant="64" id="Egf-fY-874"/>
+                <constraint firstItem="jlh-lP-Iwk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="L1o-XM-Rcg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SYq-Qa-qar" secondAttribute="trailing" constant="16" id="LMi-dG-LFz"/>
+                <constraint firstItem="SYq-Qa-qar" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="apX-BN-8pS"/>
+                <constraint firstItem="i2j-TN-EQ2" firstAttribute="top" secondItem="SYq-Qa-qar" secondAttribute="bottom" constant="16" id="can-gE-eQL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jlh-lP-Iwk" secondAttribute="trailing" constant="16" id="e7R-w5-1er"/>
+                <constraint firstItem="SYq-Qa-qar" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="64" id="i5g-1w-VbF"/>
+                <constraint firstItem="jlh-lP-Iwk" firstAttribute="top" secondItem="i2j-TN-EQ2" secondAttribute="bottom" constant="16" id="nsh-Uc-1xf"/>
+                <constraint firstItem="SYq-Qa-qar" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="s6A-4d-aOU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="i2j-TN-EQ2" secondAttribute="trailing" constant="16" id="wKR-qk-xQe"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
