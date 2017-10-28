@@ -58,7 +58,7 @@ class SC2ProfileMenuViewController: UIViewController {
         
         showProfileGraphsButton.rx.tap.subscribe( onNext: { _ in
             let graphChoiceAlert = UIAlertController(title: "Choose graph:", message: nil, preferredStyle: .actionSheet)
-            graphChoiceAlert.addAction(UIAlertAction(title: "Match history",
+            graphChoiceAlert.addAction(UIAlertAction(title: "Last match history",
                                                       style: .default,
                                                       handler: { _ in
                                                         self.viewModel.flowDelegate.profileRouter.onNext(.showGraph(data: self.viewModel.profileData, type: .matchHistory))
