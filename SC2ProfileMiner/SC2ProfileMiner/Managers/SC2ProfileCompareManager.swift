@@ -11,7 +11,7 @@ import Foundation
 struct ProfilePointsModifiers {
     static let seasonWinMod = 2.0
     static let seasonLossMod = 0.5
-    static let careerTotalMatchesMod = 0.25
+    static let careerTotalMatchesMod = 0.1
     static let seasonPrimaryRaceWin = 2.0
     static let achievementMod = 0.15
     
@@ -41,7 +41,7 @@ class SC2ProfileCompareManager {
             winnerProfilePoints = profileTwoPoints
             loserProfilePoints = profileOnePoints
         }
-        let winPossibility = ( winnerProfilePoints / winnerProfilePoints + loserProfilePoints ) * 100
+        let winPossibility = ( winnerProfilePoints / (winnerProfilePoints + loserProfilePoints) ) * 100
         
         let compareResult = CompareResult(winner: winner, winPossibility: winPossibility)
         return compareResult

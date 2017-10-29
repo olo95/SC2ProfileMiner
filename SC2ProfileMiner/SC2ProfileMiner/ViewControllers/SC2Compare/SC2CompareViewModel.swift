@@ -16,13 +16,15 @@ class SC2CompareViewModel {
     let bag = DisposeBag()
     var profileOneLoaded = PublishSubject<Bool>()
     var profileTwoLoaded = PublishSubject<Bool>()
+    var compareResult = Variable<CompareResult>(CompareResult())
 
     init(flowDelegate: SC2CompareCoordinator) {
         self.flowDelegate = flowDelegate
         Observable.combineLatest(profileOneLoaded, profileTwoLoaded)
             .filter( { return ( $0 && $1 ) })
             .subscribe( onNext: { _ in
-                self.setCompareResult()
+                self.compareResult.value = self.getCompareResult()
+                print("")
             }).disposed(by: bag)
     }
     
@@ -38,7 +40,8 @@ class SC2CompareViewModel {
         }
     }
     
-    private func setCompareResult() {
-        
+    private func getCompareResult() -> CompareResult {
+        let compareManager = SC2ProfileCompareManager()
+        return compareManager.getResult(profileOne: sc2ProfileOne, profileTwo: sc2ProfileTwo)
     }
 }
