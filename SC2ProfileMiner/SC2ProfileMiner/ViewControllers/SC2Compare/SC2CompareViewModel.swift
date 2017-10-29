@@ -26,7 +26,7 @@ class SC2CompareViewModel {
             }).disposed(by: bag)
     }
     
-    func compareProfiles(names: (String, String), ids: (String, String)) {
+    func compareProfiles(ids: (String, String), names: (String, String)) {
         SC2Networker.GET(url: SC2Router.getUrl(parameters: SC2Url(name: names.0, id: ids.0), method: .profile)) { (result: SC2Profile) in
             self.sc2ProfileOne = result
             self.profileOneLoaded.onNext(true)

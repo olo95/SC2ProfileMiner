@@ -157,6 +157,10 @@
 		D6F5DAEB1FA28A0F00506AA3 /* GraphPresenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6F5DAE71FA28A0F00506AA3 /* GraphPresenterViewController.xib */; };
 		D6F5DAED1FA28A2B00506AA3 /* GraphPresenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5DAEC1FA28A2B00506AA3 /* GraphPresenterViewModel.swift */; };
 		D6F5DAEE1FA28A2B00506AA3 /* GraphPresenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5DAEC1FA28A2B00506AA3 /* GraphPresenterViewModel.swift */; };
+		D6FD15251FA6557C00AD5D2A /* SC2ProfileCompareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD15241FA6557C00AD5D2A /* SC2ProfileCompareManager.swift */; };
+		D6FD15261FA6557C00AD5D2A /* SC2ProfileCompareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD15241FA6557C00AD5D2A /* SC2ProfileCompareManager.swift */; };
+		D6FD15291FA658B100AD5D2A /* CompareResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD15281FA658B100AD5D2A /* CompareResult.swift */; };
+		D6FD152A1FA658B100AD5D2A /* CompareResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD15281FA658B100AD5D2A /* CompareResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -257,6 +261,8 @@
 		D6F5DAE61FA28A0F00506AA3 /* GraphPresenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphPresenterViewController.swift; sourceTree = "<group>"; };
 		D6F5DAE71FA28A0F00506AA3 /* GraphPresenterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphPresenterViewController.xib; sourceTree = "<group>"; };
 		D6F5DAEC1FA28A2B00506AA3 /* GraphPresenterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphPresenterViewModel.swift; sourceTree = "<group>"; };
+		D6FD15241FA6557C00AD5D2A /* SC2ProfileCompareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2ProfileCompareManager.swift; sourceTree = "<group>"; };
+		D6FD15281FA658B100AD5D2A /* CompareResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,6 +379,7 @@
 		D6045A651F98AB4200DA2840 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D6FD15271FA6589E00AD5D2A /* CompareResult */,
 				D62419511F9EA52700C0C6FA /* SC2Rewards */,
 				D62419291F9EA50E00C0C6FA /* SC2Profile */,
 				D62419221F9EA4F000C0C6FA /* SC2MatchHistory */,
@@ -542,6 +549,7 @@
 				D68A22BA1F991F5F009474C4 /* TransitionManager.swift */,
 				D6B2587B1F98F8470049F887 /* AppTransitionManager.swift */,
 				D68A22B71F991D2C009474C4 /* DrawerTransitionManager.swift */,
+				D6FD15241FA6557C00AD5D2A /* SC2ProfileCompareManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -584,6 +592,14 @@
 				D6F5DAEC1FA28A2B00506AA3 /* GraphPresenterViewModel.swift */,
 			);
 			path = GraphPresenter;
+			sourceTree = "<group>";
+		};
+		D6FD15271FA6589E00AD5D2A /* CompareResult */ = {
+			isa = PBXGroup;
+			children = (
+				D6FD15281FA658B100AD5D2A /* CompareResult.swift */,
+			);
+			path = CompareResult;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -836,6 +852,7 @@
 				D62418FE1F9EA47000C0C6FA /* Achievements.swift in Sources */,
 				D624195C1F9EA53600C0C6FA /* ProtossDecals.swift in Sources */,
 				D62419371F9EA51B00C0C6FA /* Protoss.swift in Sources */,
+				D6FD15291FA658B100AD5D2A /* CompareResult.swift in Sources */,
 				D62419661F9EA53600C0C6FA /* Portraits.swift in Sources */,
 				D62419391F9EA51B00C0C6FA /* ProfileAchievements.swift in Sources */,
 				D6B258781F98EB8D0049F887 /* SC2BuildCoordinator.swift in Sources */,
@@ -865,6 +882,7 @@
 				D62419491F9EA51B00C0C6FA /* Points.swift in Sources */,
 				D6037F941F9F7BDD00D9658D /* SC2ProfileMenuViewController.swift in Sources */,
 				D624196E1F9EA71500C0C6FA /* UIResponder+Extension.swift in Sources */,
+				D6FD15251FA6557C00AD5D2A /* SC2ProfileCompareManager.swift in Sources */,
 				D6045A781F98B77600DA2840 /* MainMenuViewModel.swift in Sources */,
 				D6B2586F1F98E75B0049F887 /* SC2BuildViewModel.swift in Sources */,
 				D62418E01F9E974000C0C6FA /* DrawerCoordinator.swift in Sources */,
@@ -931,6 +949,7 @@
 				D624191D1F9EA4E800C0C6FA /* SC2Ladders.swift in Sources */,
 				D6B2586D1F98E74E0049F887 /* SC2CompareViewModel.swift in Sources */,
 				D62419421F9EA51B00C0C6FA /* Terran.swift in Sources */,
+				D6FD152A1FA658B100AD5D2A /* CompareResult.swift in Sources */,
 				D6D178A21F98DC2C004BC623 /* CABasicAnimation+Extension.swift in Sources */,
 				D6B258761F98EB7F0049F887 /* SC2CompareCoordinator.swift in Sources */,
 				D6045A801F98BBBB00DA2840 /* MainMenuViewController.swift in Sources */,
@@ -949,6 +968,7 @@
 				D6045A861F98CA5B00DA2840 /* ColorTheme.swift in Sources */,
 				D62419011F9EA47000C0C6FA /* Categories.swift in Sources */,
 				D62419501F9EA51B00C0C6FA /* SC2Profile.swift in Sources */,
+				D6FD15261FA6557C00AD5D2A /* SC2ProfileCompareManager.swift in Sources */,
 				D6D178AF1F98E38F004BC623 /* SC2CompareViewController.swift in Sources */,
 				D62419261F9EA50300C0C6FA /* SC2MatchHistory.swift in Sources */,
 				D6045A6F1F98AC4600DA2840 /* Coordinating.swift in Sources */,

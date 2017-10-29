@@ -41,7 +41,7 @@ class SC2CompareViewController: UIViewController {
             .map({ return (($0.0, $0.1), ($0.2, $0.3)) })
             .sample(compareButton.rx.tap)
             .subscribe( onNext: {
-                self.viewModel.compareProfiles(names: ($0.0.0!, $0.0.1!), ids: ($0.1.0!, $0.1.1!))
+                self.viewModel.compareProfiles(ids: ($0.0.0!, $0.0.1!), names: ($0.1.0!, $0.1.1!))
             }).disposed(by: viewModel.bag)
     }
 
