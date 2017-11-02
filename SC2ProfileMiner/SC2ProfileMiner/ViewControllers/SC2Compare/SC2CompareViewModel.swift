@@ -14,8 +14,8 @@ class SC2CompareViewModel {
     var sc2ProfileOne: SC2Profile!
     var sc2ProfileTwo: SC2Profile!
     let bag = DisposeBag()
-    var profileOneLoaded = PublishSubject<Bool>()
-    var profileTwoLoaded = PublishSubject<Bool>()
+    var profileOneLoaded = BehaviorSubject<Bool>(value: false)
+    var profileTwoLoaded = BehaviorSubject<Bool>(value: false)
 
     init(flowDelegate: SC2CompareCoordinator) {
         self.flowDelegate = flowDelegate
@@ -23,6 +23,8 @@ class SC2CompareViewModel {
             .filter( { return ( $0 && $1 ) })
             .subscribe( onNext: { _ in
                 flowDelegate.compareRouter.onNext(.showCompareResult(self.getCompareResult()))
+                self.profileOneLoaded.onNext(false)
+                self.profileTwoLoaded.onNext(false)
             }).disposed(by: bag)
     }
     

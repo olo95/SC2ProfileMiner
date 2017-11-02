@@ -62,7 +62,7 @@ class SC2ProfileCompareManager {
     
     public func getResult(profileOne: SC2Profile, profileTwo: SC2Profile) -> CompareResult {
         guard let careerOne = profileOne.career, let careerTwo = profileTwo.career, let achievsOne = profileOne.achievements, let achievsTwo = profileTwo.achievements else {
-            return CompareResult()
+            return CompareResult(winner: "", winPossibility: 0.0)
         }
         checkSeasonMatches(careerOne: careerOne, careerTwo: careerTwo)
         checkPrimaryRaceLevelAndCurrentXp(raceOne: profileOne, raceTwo: profileTwo)
@@ -79,7 +79,7 @@ class SC2ProfileCompareManager {
         }
         let winPossibility = ( winnerProfilePoints / (winnerProfilePoints + loserProfilePoints) ) * 100
         
-        let compareResult = CompareResult(winner: winner, winPossibility: winPossibility)
+        let compareResult = CompareResult(winner: winner!, winPossibility: winPossibility)
         return compareResult
     }
     
@@ -112,7 +112,7 @@ class SC2ProfileCompareManager {
     
     private func checkTotalMatches(careerOne: Career, careerTwo: Career) {
         profileOnePoints += Double(careerOne.careerTotalGames!) * ProfilePointsModifiers.careerTotalMatchesMod
-        profileOnePoints += Double(careerTwo.careerTotalGames!) * ProfilePointsModifiers.careerTotalMatchesMod
+        profileTwoPoints += Double(careerTwo.careerTotalGames!) * ProfilePointsModifiers.careerTotalMatchesMod
     }
     
     private func checkAchievements(achievementsOne: ProfileAchievements, achievementsTwo: ProfileAchievements) {

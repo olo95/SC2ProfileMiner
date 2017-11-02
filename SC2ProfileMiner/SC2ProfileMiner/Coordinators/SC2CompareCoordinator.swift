@@ -31,6 +31,13 @@ class SC2CompareCoordinator: Coordinating {
         return vc
     }
     
+    var sc2CompareResult: SC2CompareResultViewController {
+        let vm = SC2CompareResultViewModel(flowDelegate: self)
+        let vc = SC2CompareResultViewController()
+        vc.viewModel = vm
+        return vc
+    }
+    
     func start() {
         navigationController.setViewControllers([sc2Compare], animated: true)
     }
@@ -55,7 +62,9 @@ class SC2CompareCoordinator: Coordinating {
         compareRouter.subscribe( onNext: { choice in
             switch choice {
             case .showCompareResult(let result):
-                print("Compare result view")
+                let compareResult = self.sc2CompareResult
+                compareResult.viewModel.compareResult = result
+                self.push(viewController: compareResult)
             default:
                 break
             }

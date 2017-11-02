@@ -9,6 +9,6 @@
 import Foundation
 
 struct CompareResult {
-    var winner: String?
-    var winPossibility: Double?
+    var winner: String
+    var winPossibility: Double
 }

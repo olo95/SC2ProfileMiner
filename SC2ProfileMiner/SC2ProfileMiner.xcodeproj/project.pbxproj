@@ -35,6 +35,8 @@
 		D617BF1A1FABC64800DB6285 /* SC2CompareResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617BF171FABC64800DB6285 /* SC2CompareResultViewController.swift */; };
 		D617BF1B1FABC64800DB6285 /* SC2CompareResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D617BF181FABC64800DB6285 /* SC2CompareResultViewController.xib */; };
 		D617BF1C1FABC64800DB6285 /* SC2CompareResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D617BF181FABC64800DB6285 /* SC2CompareResultViewController.xib */; };
+		D617BF1E1FABCA0900DB6285 /* SC2CompareResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617BF1D1FABCA0900DB6285 /* SC2CompareResultViewModel.swift */; };
+		D617BF1F1FABCA0900DB6285 /* SC2CompareResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617BF1D1FABCA0900DB6285 /* SC2CompareResultViewModel.swift */; };
 		D62418E01F9E974000C0C6FA /* DrawerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62418DF1F9E974000C0C6FA /* DrawerCoordinator.swift */; };
 		D62418E11F9E974000C0C6FA /* DrawerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62418DF1F9E974000C0C6FA /* DrawerCoordinator.swift */; };
 		D62418FA1F9EA47000C0C6FA /* Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62418F61F9EA47000C0C6FA /* Children.swift */; };
@@ -201,6 +203,7 @@
 		D6045A841F98CA5B00DA2840 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		D617BF171FABC64800DB6285 /* SC2CompareResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2CompareResultViewController.swift; sourceTree = "<group>"; };
 		D617BF181FABC64800DB6285 /* SC2CompareResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SC2CompareResultViewController.xib; sourceTree = "<group>"; };
+		D617BF1D1FABCA0900DB6285 /* SC2CompareResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2CompareResultViewModel.swift; sourceTree = "<group>"; };
 		D62418DF1F9E974000C0C6FA /* DrawerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerCoordinator.swift; sourceTree = "<group>"; };
 		D62418F61F9EA47000C0C6FA /* Children.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Children.swift; sourceTree = "<group>"; };
 		D62418F71F9EA47000C0C6FA /* SC2Achievements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SC2Achievements.swift; sourceTree = "<group>"; };
@@ -460,6 +463,7 @@
 			children = (
 				D617BF171FABC64800DB6285 /* SC2CompareResultViewController.swift */,
 				D617BF181FABC64800DB6285 /* SC2CompareResultViewController.xib */,
+				D617BF1D1FABCA0900DB6285 /* SC2CompareResultViewModel.swift */,
 			);
 			path = SC2CompareResult;
 			sourceTree = "<group>";
@@ -920,6 +924,7 @@
 				D6045A6E1F98AC4600DA2840 /* Coordinating.swift in Sources */,
 				D624191A1F9EA4E800C0C6FA /* CurrentSeason.swift in Sources */,
 				D6B2587C1F98F8470049F887 /* AppTransitionManager.swift in Sources */,
+				D617BF1E1FABCA0900DB6285 /* SC2CompareResultViewModel.swift in Sources */,
 				D62418FA1F9EA47000C0C6FA /* Children.swift in Sources */,
 				D68A22C31F992282009474C4 /* DrawerViewController.swift in Sources */,
 				D624191E1F9EA4E800C0C6FA /* PreviousSeason.swift in Sources */,
@@ -936,6 +941,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D617BF1F1FABCA0900DB6285 /* SC2CompareResultViewModel.swift in Sources */,
 				D62419151F9EA4E800C0C6FA /* ShowcasePlacement.swift in Sources */,
 				D62419091F9EA4A000C0C6FA /* Character.swift in Sources */,
 				D68A22BC1F991F5F009474C4 /* TransitionManager.swift in Sources */,

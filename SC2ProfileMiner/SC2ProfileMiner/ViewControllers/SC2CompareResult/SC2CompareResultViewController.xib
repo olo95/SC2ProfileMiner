@@ -40,15 +40,24 @@
                     <color key="textColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyJ-xl-m7g">
+                    <rect key="frame" x="160" y="282" width="54" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                    <color key="textColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.72162914820000001" green="0.72162914820000001" blue="0.72162914820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="iyJ-xl-m7g" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="67C-by-sCg"/>
                 <constraint firstItem="PK7-AE-UiH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="85x-y5-d1F"/>
                 <constraint firstItem="yuS-Rr-f0j" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DcI-W5-ZlX"/>
                 <constraint firstItem="D6P-fw-wCX" firstAttribute="top" secondItem="PK7-AE-UiH" secondAttribute="bottom" constant="16" id="Fg5-aG-wEh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="D6P-fw-wCX" secondAttribute="bottom" constant="16" id="Hux-fi-SQ0"/>
                 <constraint firstItem="D6P-fw-wCX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UFO-hY-sWG"/>
                 <constraint firstItem="yuS-Rr-f0j" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="dYJ-SZ-bXN"/>
+                <constraint firstItem="yuS-Rr-f0j" firstAttribute="top" secondItem="iyJ-xl-m7g" secondAttribute="bottom" constant="16" id="gS0-kF-Vw1"/>
+                <constraint firstItem="iyJ-xl-m7g" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rfM-rg-Bch"/>
                 <constraint firstItem="PK7-AE-UiH" firstAttribute="top" secondItem="yuS-Rr-f0j" secondAttribute="bottom" constant="32" id="tZ6-GN-Hcu"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
