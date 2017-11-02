@@ -9,12 +9,48 @@
 import Foundation
 
 struct ProfilePointsModifiers {
-    static let seasonWinMod = 2.0
+    static let seasonWinMod = 1.5
     static let seasonLossMod = 0.5
     static let careerTotalMatchesMod = 0.1
-    static let seasonPrimaryRaceWin = 2.0
-    static let achievementMod = 0.15
+    static let seasonPrimaryRaceWin = 3.0
+    static let achievementMod = 0.1
+    static let xpLevel = 0.01
+}
+
+struct RacesStrings {
+    static let zerg = "ZERG"
+    static let protoss = "PROTOSS"
+    static let terran = "TERRAN"
+}
+
+enum Race {
+    case zerg
+    case terran
+    case protoss
     
+    var toString: String {
+        switch self {
+        case .zerg:
+            return RacesStrings.zerg
+        case .protoss:
+            return RacesStrings.protoss
+        case .terran:
+            return RacesStrings.terran
+        }
+    }
+    
+    public init?(rawValue: String) {
+        switch rawValue {
+        case RacesStrings.zerg:
+            self = .zerg
+        case RacesStrings.protoss:
+            self = .protoss
+        case RacesStrings.terran:
+            self = .terran
+        default:
+            return nil
+        }
+    }
 }
 
 class SC2ProfileCompareManager {
@@ -48,11 +84,30 @@ class SC2ProfileCompareManager {
     }
     
     private func checkSeasonMatches(careerOne: Career, careerTwo: Career) {
+        guard let primaryRaceOneString = careerOne.primaryRace, let primaryRaceTwoString = careerTwo.primaryRace else {
+            return
+        }
         
+        let racesWinsOne = [(Race.zerg, careerOne.zergWins!), (Race.protoss, careerOne.protossWins!), (Race.terran, careerOne.terranWins!)]
+        let racesWinsTwo = [(Race.zerg, careerTwo.zergWins!), (Race.protoss, careerTwo.protossWins!), (Race.terran, careerTwo.terranWins!)]
+        
+        profileOnePoints += racesWinsOne.map( {
+            return Double($0.1) * ($0.0.toString == primaryRaceOneString ? ProfilePointsModifiers.seasonPrimaryRaceWin : ProfilePointsModifiers.seasonWinMod)
+        }).reduce(0, { return $0 + $1 })
+        
+        profileTwoPoints += racesWinsTwo.map( {
+            return Double($0.1) * ($0.0.toString == primaryRaceTwoString ? ProfilePointsModifiers.seasonPrimaryRaceWin : ProfilePointsModifiers.seasonWinMod)
+        }).reduce(0, { return $0 + $1 })
     }
     
     private func checkPrimaryRaceLevelAndCurrentXp(raceOne: SC2Profile, raceTwo: SC2Profile) {
+        profileOnePoints += Double(raceOne.swarmLevels?.protoss?.currentLevelXP ?? 0) * ProfilePointsModifiers.xpLevel
+        profileOnePoints += Double(raceOne.swarmLevels?.protoss?.currentLevelXP ?? 0) * ProfilePointsModifiers.xpLevel
+        profileOnePoints += Double(raceOne.swarmLevels?.protoss?.currentLevelXP ?? 0) * ProfilePointsModifiers.xpLevel
         
+        profileTwoPoints += Double(raceTwo.swarmLevels?.protoss?.currentLevelXP ?? 0) * ProfilePointsModifiers.xpLevel
+        profileTwoPoints += Double(raceTwo.swarmLevels?.protoss?.currentLevelXP ?? 0) * ProfilePointsModifiers.xpLevel
+        profileTwoPoints += Double(raceTwo.swarmLevels?.protoss?.currentLevelXP ?? 0) * ProfilePointsModifiers.xpLevel
     }
     
     private func checkTotalMatches(careerOne: Career, careerTwo: Career) {

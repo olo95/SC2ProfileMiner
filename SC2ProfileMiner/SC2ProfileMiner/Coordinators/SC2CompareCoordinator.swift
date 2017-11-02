@@ -8,6 +8,11 @@
 
 import RxSwift
 
+enum SC2CompareRouter {
+    case none
+    case showCompareResult(CompareResult)
+}
+
 class SC2CompareCoordinator: Coordinating {
     
     var navigationController: UINavigationController = {
@@ -16,6 +21,8 @@ class SC2CompareCoordinator: Coordinating {
     
     var childCoordinators: [Coordinating] = []
     var parent: Coordinating?
+    var compareRouter = BehaviorSubject<SC2CompareRouter>(value: .none)
+    let bag = DisposeBag()
     
     var sc2Compare: SC2CompareViewController {
         let vm = SC2CompareViewModel(flowDelegate: self)
@@ -41,6 +48,18 @@ class SC2CompareCoordinator: Coordinating {
     
     required init(parent: Coordinating?) {
         self.parent = parent
+        setCompareRouter()
+    }
+    
+    private func setCompareRouter() {
+        compareRouter.subscribe( onNext: { choice in
+            switch choice {
+            case .showCompareResult(let result):
+                print("Compare result view")
+            default:
+                break
+            }
+        }).disposed(by: bag)
     }
     
     func showDrawer() {

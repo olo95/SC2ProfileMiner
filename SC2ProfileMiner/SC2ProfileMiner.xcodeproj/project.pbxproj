@@ -31,6 +31,10 @@
 		D6045A821F98BBBB00DA2840 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6045A7E1F98BBBB00DA2840 /* MainMenuViewController.xib */; };
 		D6045A851F98CA5B00DA2840 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6045A841F98CA5B00DA2840 /* ColorTheme.swift */; };
 		D6045A861F98CA5B00DA2840 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6045A841F98CA5B00DA2840 /* ColorTheme.swift */; };
+		D617BF191FABC64800DB6285 /* SC2CompareResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617BF171FABC64800DB6285 /* SC2CompareResultViewController.swift */; };
+		D617BF1A1FABC64800DB6285 /* SC2CompareResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617BF171FABC64800DB6285 /* SC2CompareResultViewController.swift */; };
+		D617BF1B1FABC64800DB6285 /* SC2CompareResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D617BF181FABC64800DB6285 /* SC2CompareResultViewController.xib */; };
+		D617BF1C1FABC64800DB6285 /* SC2CompareResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D617BF181FABC64800DB6285 /* SC2CompareResultViewController.xib */; };
 		D62418E01F9E974000C0C6FA /* DrawerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62418DF1F9E974000C0C6FA /* DrawerCoordinator.swift */; };
 		D62418E11F9E974000C0C6FA /* DrawerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62418DF1F9E974000C0C6FA /* DrawerCoordinator.swift */; };
 		D62418FA1F9EA47000C0C6FA /* Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62418F61F9EA47000C0C6FA /* Children.swift */; };
@@ -195,6 +199,8 @@
 		D6045A7D1F98BBBB00DA2840 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		D6045A7E1F98BBBB00DA2840 /* MainMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuViewController.xib; sourceTree = "<group>"; };
 		D6045A841F98CA5B00DA2840 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
+		D617BF171FABC64800DB6285 /* SC2CompareResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2CompareResultViewController.swift; sourceTree = "<group>"; };
+		D617BF181FABC64800DB6285 /* SC2CompareResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SC2CompareResultViewController.xib; sourceTree = "<group>"; };
 		D62418DF1F9E974000C0C6FA /* DrawerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerCoordinator.swift; sourceTree = "<group>"; };
 		D62418F61F9EA47000C0C6FA /* Children.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Children.swift; sourceTree = "<group>"; };
 		D62418F71F9EA47000C0C6FA /* SC2Achievements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SC2Achievements.swift; sourceTree = "<group>"; };
@@ -371,6 +377,7 @@
 				D6037F911F9F7BAE00D9658D /* SC2ProfileMenu */,
 				D6D178A31F98E340004BC623 /* SC2Profile */,
 				D6D178A41F98E349004BC623 /* SC2Compare */,
+				D617BF161FABC44500DB6285 /* SC2CompareResult */,
 				D6D178A51F98E350004BC623 /* SC2Build */,
 			);
 			path = ViewControllers;
@@ -446,6 +453,15 @@
 				D6045A841F98CA5B00DA2840 /* ColorTheme.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D617BF161FABC44500DB6285 /* SC2CompareResult */ = {
+			isa = PBXGroup;
+			children = (
+				D617BF171FABC64800DB6285 /* SC2CompareResultViewController.swift */,
+				D617BF181FABC64800DB6285 /* SC2CompareResultViewController.xib */,
+			);
+			path = SC2CompareResult;
 			sourceTree = "<group>";
 		};
 		D62418F51F9EA45800C0C6FA /* SC2Achievements */ = {
@@ -695,6 +711,7 @@
 				D6045A4F1F98A58F00DA2840 /* LaunchScreen.storyboard in Resources */,
 				D6D178B01F98E38F004BC623 /* SC2CompareViewController.xib in Resources */,
 				D6D178B61F98E39D004BC623 /* SC2BuildViewController.xib in Resources */,
+				D617BF1B1FABC64800DB6285 /* SC2CompareResultViewController.xib in Resources */,
 				D6F5DAEA1FA28A0F00506AA3 /* GraphPresenterViewController.xib in Resources */,
 				D6037F961F9F7BDD00D9658D /* SC2ProfileMenuViewController.xib in Resources */,
 				D6D178AA1F98E37E004BC623 /* SC2ProfileViewController.xib in Resources */,
@@ -707,6 +724,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D617BF1C1FABC64800DB6285 /* SC2CompareResultViewController.xib in Resources */,
 				D6037F971F9F7BDD00D9658D /* SC2ProfileMenuViewController.xib in Resources */,
 				D6D178AB1F98E37E004BC623 /* SC2ProfileViewController.xib in Resources */,
 				D68A22C61F992282009474C4 /* DrawerViewController.xib in Resources */,
@@ -847,6 +865,7 @@
 				D62419701F9EA71500C0C6FA /* SC2RequestStrings.swift in Sources */,
 				D624193D1F9EA51B00C0C6FA /* Career.swift in Sources */,
 				D624194D1F9EA51B00C0C6FA /* SwarmLevels.swift in Sources */,
+				D617BF191FABC64800DB6285 /* SC2CompareResultViewController.swift in Sources */,
 				D62419061F9EA4A000C0C6FA /* LadderMembers.swift in Sources */,
 				D62419271F9EA50300C0C6FA /* Matches.swift in Sources */,
 				D62418FE1F9EA47000C0C6FA /* Achievements.swift in Sources */,
@@ -978,6 +997,7 @@
 				D68A22C41F992282009474C4 /* DrawerViewController.swift in Sources */,
 				D624191F1F9EA4E800C0C6FA /* PreviousSeason.swift in Sources */,
 				D6037F951F9F7BDD00D9658D /* SC2ProfileMenuViewController.swift in Sources */,
+				D617BF1A1FABC64800DB6285 /* SC2CompareResultViewController.swift in Sources */,
 				D6045A5A1F98A58F00DA2840 /* SC2ProfileMinerTests.swift in Sources */,
 				D62419441F9EA51B00C0C6FA /* Zerg.swift in Sources */,
 				D62419401F9EA51B00C0C6FA /* Season.swift in Sources */,
