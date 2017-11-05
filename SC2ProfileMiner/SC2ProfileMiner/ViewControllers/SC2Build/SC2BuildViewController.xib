@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SC2BuildViewController" customModule="SC2ProfileMiner" customModuleProvider="target">
             <connections>
+                <outlet property="createNewBuildButton" destination="taJ-yX-8X8" id="1In-da-V9B"/>
+                <outlet property="loadSavedBuildButton" destination="ioS-hK-R5E" id="Xh7-jX-iqB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,7 +28,34 @@
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QoT-dV-N8s">
                     <rect key="frame" x="32" y="222" width="311" height="222"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IAK-MW-WbB">
+                            <rect key="frame" x="0.0" y="0.0" width="311" height="222"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taJ-yX-8X8">
+                                    <rect key="frame" x="0.0" y="0.0" width="311" height="111"/>
+                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                                    <state key="normal" title="Create new build">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioS-hK-R5E">
+                                    <rect key="frame" x="0.0" y="111" width="311" height="111"/>
+                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                                    <state key="normal" title="Load saved build">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="IAK-MW-WbB" firstAttribute="leading" secondItem="QoT-dV-N8s" secondAttribute="leading" id="2Qb-t7-cMa"/>
+                        <constraint firstAttribute="trailing" secondItem="IAK-MW-WbB" secondAttribute="trailing" id="M1R-Qa-b4d"/>
+                        <constraint firstItem="IAK-MW-WbB" firstAttribute="top" secondItem="QoT-dV-N8s" secondAttribute="top" id="URC-Eo-7Ke"/>
+                        <constraint firstAttribute="bottom" secondItem="IAK-MW-WbB" secondAttribute="bottom" id="gwj-1O-63g"/>
+                    </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="8"/>

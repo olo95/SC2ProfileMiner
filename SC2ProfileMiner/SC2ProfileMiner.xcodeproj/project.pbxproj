@@ -122,6 +122,14 @@
 		D6306A161FAF6D800027C6B6 /* SC2Build.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6306A141FAF6D800027C6B6 /* SC2Build.swift */; };
 		D6306A181FAF6DA50027C6B6 /* SC2BuildDataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6306A171FAF6DA50027C6B6 /* SC2BuildDataEntry.swift */; };
 		D6306A191FAF6DA50027C6B6 /* SC2BuildDataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6306A171FAF6DA50027C6B6 /* SC2BuildDataEntry.swift */; };
+		D6306A1E1FAFA29F0027C6B6 /* SC2BuildCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6306A1C1FAFA29F0027C6B6 /* SC2BuildCreateViewController.swift */; };
+		D6306A1F1FAFA29F0027C6B6 /* SC2BuildCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6306A1C1FAFA29F0027C6B6 /* SC2BuildCreateViewController.swift */; };
+		D6306A201FAFA29F0027C6B6 /* SC2BuildCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6306A1D1FAFA29F0027C6B6 /* SC2BuildCreateViewController.xib */; };
+		D6306A211FAFA29F0027C6B6 /* SC2BuildCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6306A1D1FAFA29F0027C6B6 /* SC2BuildCreateViewController.xib */; };
+		D6306A241FAFA2B50027C6B6 /* SC2BuildLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6306A221FAFA2B50027C6B6 /* SC2BuildLoadViewController.swift */; };
+		D6306A251FAFA2B50027C6B6 /* SC2BuildLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6306A221FAFA2B50027C6B6 /* SC2BuildLoadViewController.swift */; };
+		D6306A261FAFA2B50027C6B6 /* SC2BuildLoadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6306A231FAFA2B50027C6B6 /* SC2BuildLoadViewController.xib */; };
+		D6306A271FAFA2B50027C6B6 /* SC2BuildLoadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6306A231FAFA2B50027C6B6 /* SC2BuildLoadViewController.xib */; };
 		D68A22B81F991D2C009474C4 /* DrawerTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A22B71F991D2C009474C4 /* DrawerTransitionManager.swift */; };
 		D68A22B91F991D2C009474C4 /* DrawerTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A22B71F991D2C009474C4 /* DrawerTransitionManager.swift */; };
 		D68A22BB1F991F5F009474C4 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A22BA1F991F5F009474C4 /* TransitionManager.swift */; };
@@ -253,6 +261,10 @@
 		D6247AB79494F1A2A1E31AF2 /* Pods-SC2ProfileMiner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SC2ProfileMiner.release.xcconfig"; path = "Pods/Target Support Files/Pods-SC2ProfileMiner/Pods-SC2ProfileMiner.release.xcconfig"; sourceTree = "<group>"; };
 		D6306A141FAF6D800027C6B6 /* SC2Build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2Build.swift; sourceTree = "<group>"; };
 		D6306A171FAF6DA50027C6B6 /* SC2BuildDataEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2BuildDataEntry.swift; sourceTree = "<group>"; };
+		D6306A1C1FAFA29F0027C6B6 /* SC2BuildCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2BuildCreateViewController.swift; sourceTree = "<group>"; };
+		D6306A1D1FAFA29F0027C6B6 /* SC2BuildCreateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SC2BuildCreateViewController.xib; sourceTree = "<group>"; };
+		D6306A221FAFA2B50027C6B6 /* SC2BuildLoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2BuildLoadViewController.swift; sourceTree = "<group>"; };
+		D6306A231FAFA2B50027C6B6 /* SC2BuildLoadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SC2BuildLoadViewController.xib; sourceTree = "<group>"; };
 		D68A22B71F991D2C009474C4 /* DrawerTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerTransitionManager.swift; sourceTree = "<group>"; };
 		D68A22BA1F991F5F009474C4 /* TransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		D68A22C11F992282009474C4 /* DrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
@@ -387,6 +399,8 @@
 				D6D178A31F98E340004BC623 /* SC2Profile */,
 				D6D178A41F98E349004BC623 /* SC2Compare */,
 				D617BF161FABC44500DB6285 /* SC2CompareResult */,
+				D6306A1A1FAF98C30027C6B6 /* SC2BuildCreate */,
+				D6306A1B1FAF98D20027C6B6 /* SC2BuildLoad */,
 				D6D178A51F98E350004BC623 /* SC2Build */,
 			);
 			path = ViewControllers;
@@ -578,6 +592,24 @@
 			path = SC2BuildDataEntry;
 			sourceTree = "<group>";
 		};
+		D6306A1A1FAF98C30027C6B6 /* SC2BuildCreate */ = {
+			isa = PBXGroup;
+			children = (
+				D6306A1C1FAFA29F0027C6B6 /* SC2BuildCreateViewController.swift */,
+				D6306A1D1FAFA29F0027C6B6 /* SC2BuildCreateViewController.xib */,
+			);
+			path = SC2BuildCreate;
+			sourceTree = "<group>";
+		};
+		D6306A1B1FAF98D20027C6B6 /* SC2BuildLoad */ = {
+			isa = PBXGroup;
+			children = (
+				D6306A221FAFA2B50027C6B6 /* SC2BuildLoadViewController.swift */,
+				D6306A231FAFA2B50027C6B6 /* SC2BuildLoadViewController.xib */,
+			);
+			path = SC2BuildLoad;
+			sourceTree = "<group>";
+		};
 		D68A22BD1F99224C009474C4 /* Drawer */ = {
 			isa = PBXGroup;
 			children = (
@@ -741,9 +773,11 @@
 				D6D178B61F98E39D004BC623 /* SC2BuildViewController.xib in Resources */,
 				D617BF1B1FABC64800DB6285 /* SC2CompareResultViewController.xib in Resources */,
 				D6F5DAEA1FA28A0F00506AA3 /* GraphPresenterViewController.xib in Resources */,
+				D6306A201FAFA29F0027C6B6 /* SC2BuildCreateViewController.xib in Resources */,
 				D6037F961F9F7BDD00D9658D /* SC2ProfileMenuViewController.xib in Resources */,
 				D6D178AA1F98E37E004BC623 /* SC2ProfileViewController.xib in Resources */,
 				D6045A811F98BBBB00DA2840 /* MainMenuViewController.xib in Resources */,
+				D6306A261FAFA2B50027C6B6 /* SC2BuildLoadViewController.xib in Resources */,
 				D6045A4C1F98A58F00DA2840 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -759,7 +793,9 @@
 				D6D178B71F98E39D004BC623 /* SC2BuildViewController.xib in Resources */,
 				D6F5DAEB1FA28A0F00506AA3 /* GraphPresenterViewController.xib in Resources */,
 				D6D1789F1F98D28E004BC623 /* Assets.xcassets in Resources */,
+				D6306A271FAFA2B50027C6B6 /* SC2BuildLoadViewController.xib in Resources */,
 				D6045A821F98BBBB00DA2840 /* MainMenuViewController.xib in Resources */,
+				D6306A211FAFA29F0027C6B6 /* SC2BuildCreateViewController.xib in Resources */,
 				D6D178B11F98E38F004BC623 /* SC2CompareViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -893,6 +929,8 @@
 				D62419701F9EA71500C0C6FA /* SC2RequestStrings.swift in Sources */,
 				D624193D1F9EA51B00C0C6FA /* Career.swift in Sources */,
 				D6306A181FAF6DA50027C6B6 /* SC2BuildDataEntry.swift in Sources */,
+				D6306A1E1FAFA29F0027C6B6 /* SC2BuildCreateViewController.swift in Sources */,
+				D6306A241FAFA2B50027C6B6 /* SC2BuildLoadViewController.swift in Sources */,
 				D624194D1F9EA51B00C0C6FA /* SwarmLevels.swift in Sources */,
 				D617BF191FABC64800DB6285 /* SC2CompareResultViewController.swift in Sources */,
 				D62419061F9EA4A000C0C6FA /* LadderMembers.swift in Sources */,
@@ -971,6 +1009,7 @@
 				D62419151F9EA4E800C0C6FA /* ShowcasePlacement.swift in Sources */,
 				D62419091F9EA4A000C0C6FA /* Character.swift in Sources */,
 				D68A22BC1F991F5F009474C4 /* TransitionManager.swift in Sources */,
+				D6306A251FAFA2B50027C6B6 /* SC2BuildLoadViewController.swift in Sources */,
 				D624193E1F9EA51B00C0C6FA /* Career.swift in Sources */,
 				D624194E1F9EA51B00C0C6FA /* SwarmLevels.swift in Sources */,
 				D6F5DAE41FA26C1A00506AA3 /* ProfileAchievementsArray.swift in Sources */,
@@ -1014,6 +1053,7 @@
 				D6F5DAE91FA28A0F00506AA3 /* GraphPresenterViewController.swift in Sources */,
 				D62419171F9EA4E800C0C6FA /* Characters.swift in Sources */,
 				D62419651F9EA53600C0C6FA /* TerranDecals.swift in Sources */,
+				D6306A1F1FAFA29F0027C6B6 /* SC2BuildCreateViewController.swift in Sources */,
 				D62419631F9EA53600C0C6FA /* ZergDecals.swift in Sources */,
 				D62418FD1F9EA47000C0C6FA /* SC2Achievements.swift in Sources */,
 				D6F5DAEE1FA28A2B00506AA3 /* GraphPresenterViewModel.swift in Sources */,

@@ -8,6 +8,12 @@
 
 import RxSwift
 
+enum SC2BuildRouter {
+    case none
+    case showCreateNew
+    case showLoaded
+}
+
 class SC2BuildCoordinator: Coordinating {
     
     var navigationController: UINavigationController = {
@@ -16,6 +22,7 @@ class SC2BuildCoordinator: Coordinating {
     
     var childCoordinators: [Coordinating] = []
     var parent: Coordinating?
+    var buildRouter = BehaviorSubject<SC2BuildRouter>(value: .none)
     
     var sc2Build: SC2BuildViewController {
         let vm = SC2BuildViewModel(flowDelegate: self)
@@ -23,6 +30,8 @@ class SC2BuildCoordinator: Coordinating {
         vc.viewModel = vm
         return vc
     }
+    
+    let bag = DisposeBag()
     
     func start() {
         navigationController.setViewControllers([sc2Build], animated: true)
@@ -43,6 +52,20 @@ class SC2BuildCoordinator: Coordinating {
     
     required init(parent: Coordinating?) {
         self.parent = parent
+        setBuildRouter()
+    }
+    
+    private func setBuildRouter() {
+        buildRouter.subscribe( onNext: { choice in
+            switch choice {
+            case .showCreateNew:
+                print("")
+            case .showLoaded:
+                print("")
+            default:
+                break
+            }
+        }).disposed(by: bag)
     }
     
     func showDrawer() {

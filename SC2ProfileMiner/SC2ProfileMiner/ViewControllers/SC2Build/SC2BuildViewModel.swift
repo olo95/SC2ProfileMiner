@@ -11,6 +11,7 @@ import RxSwift
 class SC2BuildViewModel {
     
     var flowDelegate: SC2BuildCoordinator!
+    let bag = DisposeBag()
     
     init(flowDelegate: SC2BuildCoordinator) {
         self.flowDelegate = flowDelegate
