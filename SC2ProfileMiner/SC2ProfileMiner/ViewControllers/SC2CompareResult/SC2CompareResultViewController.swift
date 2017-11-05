@@ -18,7 +18,13 @@ class SC2CompareResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
         bindUI()
+    }
+    
+    private func setupNavigationBar() {
+        navigationItem.title = "SC2 Profile Miner"
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: ColorTheme.appTheme.gray]
     }
     
     private func bindUI() {

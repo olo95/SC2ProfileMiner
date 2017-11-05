@@ -17,6 +17,7 @@ class SC2BuildViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBar()
+        setupUI()
         bindUI()
     }
     
@@ -24,6 +25,13 @@ class SC2BuildViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "hamburger"), style: .done, target: self, action: #selector(showDrawer))
         navigationItem.leftBarButtonItem?.image = navigationItem.leftBarButtonItem?.image!.withRenderingMode(.alwaysTemplate)
         navigationItem.leftBarButtonItem?.tintColor = ColorTheme.appTheme.gray
+        navigationItem.title = "SC2 Profile Miner"
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: ColorTheme.appTheme.gray]
+    }
+    
+    private func setupUI() {
+        loadSavedBuildButton.layer.add(CABasicAnimation().pulseAnimation(duration: 2), forKey: "animateOpacity")
+        createNewBuildButton.layer.add(CABasicAnimation().pulseAnimation(duration: 1.5), forKey: "animateOpacity")
     }
     
     private func bindUI() {

@@ -18,7 +18,12 @@ class GraphPresenterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
         graphSetup()
+    }
+    
+    private func setupNavigationBar() {
+        navigationItem.title = "SC2 Profile Miner"
     }
     
     private func graphSetup() {
