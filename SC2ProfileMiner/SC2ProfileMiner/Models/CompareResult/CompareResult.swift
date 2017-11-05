@@ -8,7 +8,13 @@
 
 import Foundation
 
+struct CompareResultAdvantages {
+    static let morePrimaryRaceWins = "Much more primary race wins"
+    static let moreAchievements = "Much more achievements obtained"
+}
+
 struct CompareResult {
     var winner: String
     var winPossibility: Double
+    var winnerAdvantages: [String]
 }

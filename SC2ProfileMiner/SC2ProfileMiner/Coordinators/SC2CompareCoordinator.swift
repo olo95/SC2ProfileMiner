@@ -44,13 +44,15 @@ class SC2CompareCoordinator: Coordinating {
     
     func addNew(coordinator: Coordinating, fromRoot: Bool) {
         if fromRoot && parent != nil {
-            childCoordinators.removeAll()
-            parent?.addNew(coordinator: coordinator, fromRoot: fromRoot)
+            navigationController.dismiss(animated: false, completion: {
+                self.childCoordinators.removeAll()
+                self.parent?.addNew(coordinator: coordinator, fromRoot: fromRoot)
+            })
+        } else {
+            childCoordinators.append(coordinator)
+            coordinator.start()
+            self.present(viewController: coordinator.navigationController, completion: nil)
         }
-        let coordinator = SC2ProfileCoordinator(parent: self)
-        childCoordinators.append(coordinator)
-        coordinator.start()
-        self.present(viewController: coordinator.navigationController, completion: nil)
     }
     
     required init(parent: Coordinating?) {

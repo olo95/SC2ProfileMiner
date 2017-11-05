@@ -58,7 +58,6 @@ class AppCoordinator: Coordinating {
     }
     
     func addNew(coordinator: Coordinating, fromRoot: Bool) {
-
         childCoordinators.removeAll()
         childCoordinators.append(coordinator)
         coordinator.start()
