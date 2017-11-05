@@ -40,7 +40,7 @@ class GraphPresenterViewModel {
             let seasonLosses = seasonTotalGames - seasonWins
             graphData.append(("seasonWins", seasonWins))
             graphData.append(("seasonLosses", seasonLosses))
-            graphData.append(("totalGames", totalGames))
+            //graphData.append(("totalGames", totalGames))
             completion(self.graphData)
         default:
             break

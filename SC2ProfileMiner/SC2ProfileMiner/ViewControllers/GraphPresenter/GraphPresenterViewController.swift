@@ -30,6 +30,7 @@ class GraphPresenterViewController: UIViewController {
         default:
             break
         }
+        view.layoutIfNeeded()
     }
     
     private func createMatchHistoryGraph() {
@@ -41,7 +42,7 @@ class GraphPresenterViewController: UIViewController {
                 return dataEntry
             })
             
-            let lineChartDataSet = LineChartDataSet(values: dataEntries, label: "Match history")
+            let lineChartDataSet = LineChartDataSet(values: dataEntries, label: "Match history 1 = Win 0 = Loss")
             let lineChartData = LineChartData(dataSets: [lineChartDataSet])
             self.lineChartView.data = lineChartData
             self.lineChartView.animate(xAxisDuration: 2.0)
@@ -61,10 +62,27 @@ class GraphPresenterViewController: UIViewController {
                 return dataEntry
             })
             
+            for (index, element) in graphData.enumerated() {
+                dataEntries.append(ChartDataEntry(x: Double(index), y: Double(element.1)))
+            }
+            
             let pieChartDataSet = PieChartDataSet(values: dataEntries, label: "Wins and losses")
             let pieChartData = PieChartData(dataSets: [pieChartDataSet])
             self.pieChartView.data = pieChartData
             self.pieChartView.animate(xAxisDuration: 2.0)
+            
+            var colors: [UIColor] = []
+            
+            for _ in 0..<graphData.count {
+                let red = Double(arc4random_uniform(256))
+                let green = Double(arc4random_uniform(256))
+                let blue = Double(arc4random_uniform(256))
+                
+                let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
+                colors.append(color)
+            }
+            
+            pieChartDataSet.colors = colors
             
             self.view.addSubview(self.pieChartView)
             self.pieChartView.notifyDataSetChanged()
