@@ -17,6 +17,20 @@
 		D6003AA41FB1EE4C008431DC /* SC2BuildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6003AA11FB1EE4C008431DC /* SC2BuildTableViewCell.swift */; };
 		D6003AA51FB1EE4C008431DC /* SC2BuildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6003AA21FB1EE4C008431DC /* SC2BuildTableViewCell.xib */; };
 		D6003AA61FB1EE4C008431DC /* SC2BuildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6003AA21FB1EE4C008431DC /* SC2BuildTableViewCell.xib */; };
+		D6003AA81FB1EECD008431DC /* SC2BuildCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6003AA71FB1EECD008431DC /* SC2BuildCellViewModel.swift */; };
+		D6003AA91FB1EECD008431DC /* SC2BuildCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6003AA71FB1EECD008431DC /* SC2BuildCellViewModel.swift */; };
+		D6003AAB1FB1EEE5008431DC /* SC2BuildLoadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6003AAA1FB1EEE5008431DC /* SC2BuildLoadViewModel.swift */; };
+		D6003AAC1FB1EEE5008431DC /* SC2BuildLoadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6003AAA1FB1EEE5008431DC /* SC2BuildLoadViewModel.swift */; };
+		D6003AAE1FB1EEF7008431DC /* SC2BuildCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6003AAD1FB1EEF7008431DC /* SC2BuildCreateViewModel.swift */; };
+		D6003AAF1FB1EEF7008431DC /* SC2BuildCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6003AAD1FB1EEF7008431DC /* SC2BuildCreateViewModel.swift */; };
+		D6003AB11FB1EF0D008431DC /* SC2BuildPresenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6003AB01FB1EF0D008431DC /* SC2BuildPresenterViewModel.swift */; };
+		D6003AB21FB1EF0D008431DC /* SC2BuildPresenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6003AB01FB1EF0D008431DC /* SC2BuildPresenterViewModel.swift */; };
+		D6003AB91FB1F82A008431DC /* SC2BuildCellCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6003AB71FB1F82A008431DC /* SC2BuildCellCreatorViewController.swift */; };
+		D6003ABA1FB1F82A008431DC /* SC2BuildCellCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6003AB71FB1F82A008431DC /* SC2BuildCellCreatorViewController.swift */; };
+		D6003ABB1FB1F82A008431DC /* SC2BuildCellCreatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6003AB81FB1F82A008431DC /* SC2BuildCellCreatorViewController.xib */; };
+		D6003ABC1FB1F82A008431DC /* SC2BuildCellCreatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6003AB81FB1F82A008431DC /* SC2BuildCellCreatorViewController.xib */; };
+		D6003ABE1FB1F84D008431DC /* SC2BuildCellCreatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6003ABD1FB1F84D008431DC /* SC2BuildCellCreatorViewModel.swift */; };
+		D6003ABF1FB1F84D008431DC /* SC2BuildCellCreatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6003ABD1FB1F84D008431DC /* SC2BuildCellCreatorViewModel.swift */; };
 		D6037F941F9F7BDD00D9658D /* SC2ProfileMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6037F921F9F7BDD00D9658D /* SC2ProfileMenuViewController.swift */; };
 		D6037F951F9F7BDD00D9658D /* SC2ProfileMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6037F921F9F7BDD00D9658D /* SC2ProfileMenuViewController.swift */; };
 		D6037F961F9F7BDD00D9658D /* SC2ProfileMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6037F931F9F7BDD00D9658D /* SC2ProfileMenuViewController.xib */; };
@@ -208,6 +222,13 @@
 		D6003A9B1FB1ED1C008431DC /* SC2BuildPresenterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SC2BuildPresenterViewController.xib; sourceTree = "<group>"; };
 		D6003AA11FB1EE4C008431DC /* SC2BuildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2BuildTableViewCell.swift; sourceTree = "<group>"; };
 		D6003AA21FB1EE4C008431DC /* SC2BuildTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SC2BuildTableViewCell.xib; sourceTree = "<group>"; };
+		D6003AA71FB1EECD008431DC /* SC2BuildCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2BuildCellViewModel.swift; sourceTree = "<group>"; };
+		D6003AAA1FB1EEE5008431DC /* SC2BuildLoadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2BuildLoadViewModel.swift; sourceTree = "<group>"; };
+		D6003AAD1FB1EEF7008431DC /* SC2BuildCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2BuildCreateViewModel.swift; sourceTree = "<group>"; };
+		D6003AB01FB1EF0D008431DC /* SC2BuildPresenterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2BuildPresenterViewModel.swift; sourceTree = "<group>"; };
+		D6003AB71FB1F82A008431DC /* SC2BuildCellCreatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2BuildCellCreatorViewController.swift; sourceTree = "<group>"; };
+		D6003AB81FB1F82A008431DC /* SC2BuildCellCreatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SC2BuildCellCreatorViewController.xib; sourceTree = "<group>"; };
+		D6003ABD1FB1F84D008431DC /* SC2BuildCellCreatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2BuildCellCreatorViewModel.swift; sourceTree = "<group>"; };
 		D6037F921F9F7BDD00D9658D /* SC2ProfileMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2ProfileMenuViewController.swift; sourceTree = "<group>"; };
 		D6037F931F9F7BDD00D9658D /* SC2ProfileMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SC2ProfileMenuViewController.xib; sourceTree = "<group>"; };
 		D6037F981F9F7BF000D9658D /* SC2ProfileMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2ProfileMenuViewModel.swift; sourceTree = "<group>"; };
@@ -349,6 +370,7 @@
 			children = (
 				D6003A9A1FB1ED1C008431DC /* SC2BuildPresenterViewController.swift */,
 				D6003A9B1FB1ED1C008431DC /* SC2BuildPresenterViewController.xib */,
+				D6003AB01FB1EF0D008431DC /* SC2BuildPresenterViewModel.swift */,
 			);
 			path = SC2BuildPresenter;
 			sourceTree = "<group>";
@@ -358,8 +380,19 @@
 			children = (
 				D6003AA11FB1EE4C008431DC /* SC2BuildTableViewCell.swift */,
 				D6003AA21FB1EE4C008431DC /* SC2BuildTableViewCell.xib */,
+				D6003AA71FB1EECD008431DC /* SC2BuildCellViewModel.swift */,
 			);
 			path = SC2BuildCell;
+			sourceTree = "<group>";
+		};
+		D6003AB31FB1F7C5008431DC /* SC2BuildCellCreator */ = {
+			isa = PBXGroup;
+			children = (
+				D6003AB71FB1F82A008431DC /* SC2BuildCellCreatorViewController.swift */,
+				D6003AB81FB1F82A008431DC /* SC2BuildCellCreatorViewController.xib */,
+				D6003ABD1FB1F84D008431DC /* SC2BuildCellCreatorViewModel.swift */,
+			);
+			path = SC2BuildCellCreator;
 			sourceTree = "<group>";
 		};
 		D6037F911F9F7BAE00D9658D /* SC2ProfileMenu */ = {
@@ -433,6 +466,7 @@
 				D6306A1B1FAF98D20027C6B6 /* SC2BuildLoad */,
 				D6D178A51F98E350004BC623 /* SC2Build */,
 				D6003AA01FB1ED8B008431DC /* SC2BuildCell */,
+				D6003AB31FB1F7C5008431DC /* SC2BuildCellCreator */,
 				D6003A991FB1ECC6008431DC /* SC2BuildPresenter */,
 			);
 			path = ViewControllers;
@@ -629,6 +663,7 @@
 			children = (
 				D6306A1C1FAFA29F0027C6B6 /* SC2BuildCreateViewController.swift */,
 				D6306A1D1FAFA29F0027C6B6 /* SC2BuildCreateViewController.xib */,
+				D6003AAD1FB1EEF7008431DC /* SC2BuildCreateViewModel.swift */,
 			);
 			path = SC2BuildCreate;
 			sourceTree = "<group>";
@@ -638,6 +673,7 @@
 			children = (
 				D6306A221FAFA2B50027C6B6 /* SC2BuildLoadViewController.swift */,
 				D6306A231FAFA2B50027C6B6 /* SC2BuildLoadViewController.xib */,
+				D6003AAA1FB1EEE5008431DC /* SC2BuildLoadViewModel.swift */,
 			);
 			path = SC2BuildLoad;
 			sourceTree = "<group>";
@@ -807,6 +843,7 @@
 				D617BF1B1FABC64800DB6285 /* SC2CompareResultViewController.xib in Resources */,
 				D6F5DAEA1FA28A0F00506AA3 /* GraphPresenterViewController.xib in Resources */,
 				D6003AA51FB1EE4C008431DC /* SC2BuildTableViewCell.xib in Resources */,
+				D6003ABB1FB1F82A008431DC /* SC2BuildCellCreatorViewController.xib in Resources */,
 				D6306A201FAFA29F0027C6B6 /* SC2BuildCreateViewController.xib in Resources */,
 				D6037F961F9F7BDD00D9658D /* SC2ProfileMenuViewController.xib in Resources */,
 				D6D178AA1F98E37E004BC623 /* SC2ProfileViewController.xib in Resources */,
@@ -823,6 +860,7 @@
 				D617BF1C1FABC64800DB6285 /* SC2CompareResultViewController.xib in Resources */,
 				D6037F971F9F7BDD00D9658D /* SC2ProfileMenuViewController.xib in Resources */,
 				D6D178AB1F98E37E004BC623 /* SC2ProfileViewController.xib in Resources */,
+				D6003ABC1FB1F82A008431DC /* SC2BuildCellCreatorViewController.xib in Resources */,
 				D68A22C61F992282009474C4 /* DrawerViewController.xib in Resources */,
 				D6D178B71F98E39D004BC623 /* SC2BuildViewController.xib in Resources */,
 				D6F5DAEB1FA28A0F00506AA3 /* GraphPresenterViewController.xib in Resources */,
@@ -962,6 +1000,7 @@
 				D62419141F9EA4E800C0C6FA /* ShowcasePlacement.swift in Sources */,
 				D62419081F9EA4A000C0C6FA /* Character.swift in Sources */,
 				D68A22BB1F991F5F009474C4 /* TransitionManager.swift in Sources */,
+				D6003AB91FB1F82A008431DC /* SC2BuildCellCreatorViewController.swift in Sources */,
 				D62419701F9EA71500C0C6FA /* SC2RequestStrings.swift in Sources */,
 				D624193D1F9EA51B00C0C6FA /* Career.swift in Sources */,
 				D6306A181FAF6DA50027C6B6 /* SC2BuildDataEntry.swift in Sources */,
@@ -970,10 +1009,12 @@
 				D624194D1F9EA51B00C0C6FA /* SwarmLevels.swift in Sources */,
 				D617BF191FABC64800DB6285 /* SC2CompareResultViewController.swift in Sources */,
 				D62419061F9EA4A000C0C6FA /* LadderMembers.swift in Sources */,
+				D6003AB11FB1EF0D008431DC /* SC2BuildPresenterViewModel.swift in Sources */,
 				D62419271F9EA50300C0C6FA /* Matches.swift in Sources */,
 				D62418FE1F9EA47000C0C6FA /* Achievements.swift in Sources */,
 				D624195C1F9EA53600C0C6FA /* ProtossDecals.swift in Sources */,
 				D62419371F9EA51B00C0C6FA /* Protoss.swift in Sources */,
+				D6003ABE1FB1F84D008431DC /* SC2BuildCellCreatorViewModel.swift in Sources */,
 				D6FD15291FA658B100AD5D2A /* CompareResult.swift in Sources */,
 				D62419661F9EA53600C0C6FA /* Portraits.swift in Sources */,
 				D6306A151FAF6D800027C6B6 /* SC2Build.swift in Sources */,
@@ -983,6 +1024,7 @@
 				D6045A711F98B12400DA2840 /* AppCoordinator.swift in Sources */,
 				D6B258721F98EB730049F887 /* SC2ProfileCoordinator.swift in Sources */,
 				D62419681F9EA53600C0C6FA /* Animations.swift in Sources */,
+				D6003AA81FB1EECD008431DC /* SC2BuildCellViewModel.swift in Sources */,
 				D68A22B81F991D2C009474C4 /* DrawerTransitionManager.swift in Sources */,
 				D62419471F9EA51B00C0C6FA /* Stats.swift in Sources */,
 				D62419201F9EA4E800C0C6FA /* Ladder.swift in Sources */,
@@ -1009,6 +1051,7 @@
 				D6FD15251FA6557C00AD5D2A /* SC2ProfileCompareManager.swift in Sources */,
 				D6045A781F98B77600DA2840 /* MainMenuViewModel.swift in Sources */,
 				D6003AA31FB1EE4C008431DC /* SC2BuildTableViewCell.swift in Sources */,
+				D6003AAB1FB1EEE5008431DC /* SC2BuildLoadViewModel.swift in Sources */,
 				D6B2586F1F98E75B0049F887 /* SC2BuildViewModel.swift in Sources */,
 				D62418E01F9E974000C0C6FA /* DrawerCoordinator.swift in Sources */,
 				D62419161F9EA4E800C0C6FA /* Characters.swift in Sources */,
@@ -1021,6 +1064,7 @@
 				D6F5DAED1FA28A2B00506AA3 /* GraphPresenterViewModel.swift in Sources */,
 				D6D178AE1F98E38F004BC623 /* SC2CompareViewController.swift in Sources */,
 				D62419251F9EA50300C0C6FA /* SC2MatchHistory.swift in Sources */,
+				D6003AAE1FB1EEF7008431DC /* SC2BuildCreateViewModel.swift in Sources */,
 				D6037F991F9F7BF000D9658D /* SC2ProfileMenuViewModel.swift in Sources */,
 				D62419711F9EA71500C0C6FA /* SC2Router.swift in Sources */,
 				D6045A6E1F98AC4600DA2840 /* Coordinating.swift in Sources */,
@@ -1051,13 +1095,17 @@
 				D6306A251FAFA2B50027C6B6 /* SC2BuildLoadViewController.swift in Sources */,
 				D624193E1F9EA51B00C0C6FA /* Career.swift in Sources */,
 				D624194E1F9EA51B00C0C6FA /* SwarmLevels.swift in Sources */,
+				D6003AB21FB1EF0D008431DC /* SC2BuildPresenterViewModel.swift in Sources */,
 				D6F5DAE41FA26C1A00506AA3 /* ProfileAchievementsArray.swift in Sources */,
 				D62419071F9EA4A000C0C6FA /* LadderMembers.swift in Sources */,
 				D62419281F9EA50300C0C6FA /* Matches.swift in Sources */,
 				D62418FF1F9EA47000C0C6FA /* Achievements.swift in Sources */,
 				D624195D1F9EA53600C0C6FA /* ProtossDecals.swift in Sources */,
 				D62419381F9EA51B00C0C6FA /* Protoss.swift in Sources */,
+				D6003ABA1FB1F82A008431DC /* SC2BuildCellCreatorViewController.swift in Sources */,
+				D6003AAC1FB1EEE5008431DC /* SC2BuildLoadViewModel.swift in Sources */,
 				D62419671F9EA53600C0C6FA /* Portraits.swift in Sources */,
+				D6003AA91FB1EECD008431DC /* SC2BuildCellViewModel.swift in Sources */,
 				D624193A1F9EA51B00C0C6FA /* ProfileAchievements.swift in Sources */,
 				D6B258791F98EB8D0049F887 /* SC2BuildCoordinator.swift in Sources */,
 				D624194C1F9EA51B00C0C6FA /* CategoryPoints.swift in Sources */,
@@ -1076,6 +1124,7 @@
 				D6306A191FAF6DA50027C6B6 /* SC2BuildDataEntry.swift in Sources */,
 				D624193C1F9EA51B00C0C6FA /* Rewards.swift in Sources */,
 				D624195F1F9EA53600C0C6FA /* SC2Rewards.swift in Sources */,
+				D6003ABF1FB1F84D008431DC /* SC2BuildCellCreatorViewModel.swift in Sources */,
 				D624191D1F9EA4E800C0C6FA /* SC2Ladders.swift in Sources */,
 				D6B2586D1F98E74E0049F887 /* SC2CompareViewModel.swift in Sources */,
 				D62419421F9EA51B00C0C6FA /* Terran.swift in Sources */,
@@ -1092,6 +1141,7 @@
 				D62418E11F9E974000C0C6FA /* DrawerCoordinator.swift in Sources */,
 				D6F5DAE91FA28A0F00506AA3 /* GraphPresenterViewController.swift in Sources */,
 				D62419171F9EA4E800C0C6FA /* Characters.swift in Sources */,
+				D6003AAF1FB1EEF7008431DC /* SC2BuildCreateViewModel.swift in Sources */,
 				D62419651F9EA53600C0C6FA /* TerranDecals.swift in Sources */,
 				D6306A1F1FAFA29F0027C6B6 /* SC2BuildCreateViewController.swift in Sources */,
 				D62419631F9EA53600C0C6FA /* ZergDecals.swift in Sources */,

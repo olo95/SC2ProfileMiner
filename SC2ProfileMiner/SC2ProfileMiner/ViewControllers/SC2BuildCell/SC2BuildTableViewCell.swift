@@ -6,19 +6,16 @@
 //  Copyright © 2017 Alexander Stolar. All rights reserved.
 //
 
-import UIKit
+import RxSwift
+import RxCocoa
 
 class SC2BuildTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var decriptionLabel: UILabel!
+    @IBOutlet weak var actionLabel: UILabel!
+    @IBOutlet weak var timeMomentLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
