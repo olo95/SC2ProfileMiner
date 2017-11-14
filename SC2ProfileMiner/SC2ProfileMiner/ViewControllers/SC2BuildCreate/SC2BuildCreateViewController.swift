@@ -22,9 +22,13 @@ class SC2BuildCreateViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
-        navigationItem.title = "SC2 Profile Miner"
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: ColorTheme.appTheme.gray]
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add build element", style: .done, target: self, action: #selector(createNewCell))
+        
+        navigationController?.navigationBar.tintColor = ColorTheme.appTheme.gray
+        navigationItem.rightBarButtonItems = [UIBarButtonItem(image: #imageLiteral(resourceName: "hamburger"), style: .done, target: self, action: #selector(reorderCells)), UIBarButtonItem(image: #imageLiteral(resourceName: "plus"), style: .done, target: self, action: #selector(createNewCell))]
+        navigationItem.rightBarButtonItems?.forEach {
+            $0.image = $0.image!.withRenderingMode(.alwaysTemplate)
+            $0.tintColor = ColorTheme.appTheme.gray
+        }
     }
     
     private func setupUI() {
@@ -40,6 +44,8 @@ class SC2BuildCreateViewController: UIViewController {
     private func setupTableView() {
         buildTableView.rowHeight = buildTableView.frame.height / 6
         buildTableView.layoutIfNeeded()
+        buildTableView.allowsSelection = false
+        buildTableView.isEditing = true
     }
     
     private func bindUI() {
@@ -54,11 +60,20 @@ class SC2BuildCreateViewController: UIViewController {
             cell.descriptionLabel.text = element.description
             return cell
         }.disposed(by: viewModel.bag)
+        
+        buildTableView.rx.itemMoved.subscribe( { indexPath in
+            
+        }).disposed(by: viewModel.bag)
     }
     
     @objc
     private func createNewCell() {
         viewModel.flowDelegate.buildRouter.onNext(.showCellCreator)
+    }
+    
+    @objc
+    private func reorderCells() {
+        
     }
 
 }
