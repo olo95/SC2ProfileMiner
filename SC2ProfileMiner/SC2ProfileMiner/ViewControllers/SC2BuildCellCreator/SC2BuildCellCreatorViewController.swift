@@ -44,6 +44,7 @@ class SC2BuildCellCreatorViewController: UIViewController {
             .sample(addButton.rx.tap)
             .subscribe( onNext: {
                 self.viewModel.newBuildElement.onNext((time: $0.0!, action: $0.1!, description: $0.2!))
+                self.viewModel.flowDelegate.dismiss(viewController: self, completion: nil)
             }).disposed(by: viewModel.bag)
     }
 

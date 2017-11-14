@@ -11,7 +11,7 @@ import RxCocoa
 
 class SC2BuildTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var decriptionLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var actionLabel: UILabel!
     @IBOutlet weak var timeMomentLabel: UILabel!
     

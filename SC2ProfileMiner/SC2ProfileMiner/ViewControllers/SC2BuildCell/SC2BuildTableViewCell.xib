@@ -58,7 +58,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="actionLabel" destination="HtG-X7-Buz" id="IYn-ak-GEv"/>
-                <outlet property="decriptionLabel" destination="0G3-Gi-F76" id="BIj-L2-UK5"/>
+                <outlet property="descriptionLabel" destination="0G3-Gi-F76" id="BIj-L2-UK5"/>
                 <outlet property="timeMomentLabel" destination="trk-uw-5rL" id="0ap-YV-Hyt"/>
             </connections>
             <point key="canvasLocation" x="39.5" y="-16.5"/>

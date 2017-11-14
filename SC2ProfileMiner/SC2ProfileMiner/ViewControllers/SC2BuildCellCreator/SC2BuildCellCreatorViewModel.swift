@@ -24,7 +24,9 @@ class SC2BuildCellCreatorViewModel {
         newBuildElement
             .filter { return !$0.0.isEmpty && !$0.1.isEmpty && !$0.2.isEmpty }
             .subscribe( onNext: { newElement in
-                self.flowDelegate.sc2BuildCreate.viewModel.newBuildCell.onNext(newElement)
+                if let buildCreate = self.flowDelegate.navigationController.viewControllers.last as? SC2BuildCreateViewController {
+                    buildCreate.viewModel.newBuildCell.onNext(newElement)
+                }
         }).disposed(by: bag)
     }
 }
