@@ -5,12 +5,18 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SC2BuildCellCreatorViewController" customModule="SC2ProfileMiner" customModuleProvider="target">
             <connections>
+                <outlet property="actionTextField" destination="pmw-Fo-koZ" id="duY-Mm-ezY"/>
+                <outlet property="addButton" destination="CRu-CM-VJP" id="GzK-gI-HEq"/>
+                <outlet property="cancelButton" destination="qX5-GS-ZQG" id="SXp-M1-Ue1"/>
+                <outlet property="descriptionTextField" destination="mHN-F7-PXj" id="mp4-M1-MpO"/>
+                <outlet property="timeTextField" destination="dF9-ls-lPF" id="amX-Hi-bVu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,8 +24,63 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="wSV-sD-8ap">
+                    <rect key="frame" x="32" y="52" width="311" height="437.5"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dF9-ls-lPF">
+                            <rect key="frame" x="0.0" y="0.0" width="311" height="124.5"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Action" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pmw-Fo-koZ">
+                            <rect key="frame" x="0.0" y="156.5" width="311" height="124.5"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mHN-F7-PXj">
+                            <rect key="frame" x="0.0" y="313" width="311" height="124.5"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xDM-az-mxD">
+                    <rect key="frame" x="32" y="505.5" width="311" height="145.5"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qX5-GS-ZQG">
+                            <rect key="frame" x="0.0" y="56" width="155.5" height="33"/>
+                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRu-CM-VJP">
+                            <rect key="frame" x="155.5" y="56" width="155.5" height="33"/>
+                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                            <state key="normal" title="Add">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
             <color key="backgroundColor" red="0.72162914820000001" green="0.72162914820000001" blue="0.72162914820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xDM-az-mxD" firstAttribute="top" secondItem="wSV-sD-8ap" secondAttribute="bottom" constant="16" id="6Nx-7n-qGr"/>
+                <constraint firstItem="xDM-az-mxD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="9LF-Eh-Njh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xDM-az-mxD" secondAttribute="bottom" constant="16" id="Ayz-A1-QJ2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xDM-az-mxD" secondAttribute="trailing" constant="32" id="LkZ-wF-U7y"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wSV-sD-8ap" secondAttribute="trailing" constant="32" id="diT-qf-a1Z"/>
+                <constraint firstItem="wSV-sD-8ap" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="eTP-yS-XZ8"/>
+                <constraint firstItem="wSV-sD-8ap" firstAttribute="height" secondItem="xDM-az-mxD" secondAttribute="height" multiplier="3:1" id="rIG-8N-aCz"/>
+                <constraint firstItem="wSV-sD-8ap" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="uyE-ng-293"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
         </view>
     </objects>
 </document>

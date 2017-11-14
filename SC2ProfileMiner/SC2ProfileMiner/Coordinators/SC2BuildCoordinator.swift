@@ -12,6 +12,7 @@ enum SC2BuildRouter {
     case none
     case showCreateNew
     case showLoaded
+    case showCellCreator
 }
 
 class SC2BuildCoordinator: Coordinating {
@@ -27,6 +28,21 @@ class SC2BuildCoordinator: Coordinating {
     var sc2Build: SC2BuildViewController {
         let vm = SC2BuildViewModel(flowDelegate: self)
         let vc = SC2BuildViewController()
+        vc.viewModel = vm
+        return vc
+    }
+    
+    var sc2BuildCreate: SC2BuildCreateViewController {
+        let vm = SC2BuildCreateViewModel(flowDelegate: self)
+        let vc = SC2BuildCreateViewController()
+        vc.viewModel = vm
+        return vc
+    }
+    
+    var sc2BuildCellCreator: SC2BuildCellCreatorViewController {
+        let vm = SC2BuildCellCreatorViewModel(flowDelegate: self)
+        let vc = SC2BuildCellCreatorViewController()
+        vm.viewControllerDelegate = vc
         vc.viewModel = vm
         return vc
     }
@@ -59,9 +75,11 @@ class SC2BuildCoordinator: Coordinating {
         buildRouter.subscribe( onNext: { choice in
             switch choice {
             case .showCreateNew:
-                print("")
+                self.push(viewController: self.sc2BuildCreate)
             case .showLoaded:
                 print("")
+            case .showCellCreator:
+                self.present(viewController: self.sc2BuildCellCreator, completion: nil)
             default:
                 break
             }
