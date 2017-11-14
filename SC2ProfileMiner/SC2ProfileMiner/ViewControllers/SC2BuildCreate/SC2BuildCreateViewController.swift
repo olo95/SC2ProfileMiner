@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 class SC2BuildCreateViewController: UIViewController {
-
+    
     @IBOutlet weak var buildTableView: UITableView!
     var viewModel: SC2BuildCreateViewModel!
     
@@ -22,9 +22,8 @@ class SC2BuildCreateViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
-        
         navigationController?.navigationBar.tintColor = ColorTheme.appTheme.gray
-        navigationItem.rightBarButtonItems = [UIBarButtonItem(image: #imageLiteral(resourceName: "hamburger"), style: .done, target: self, action: #selector(reorderCells)), UIBarButtonItem(image: #imageLiteral(resourceName: "plus"), style: .done, target: self, action: #selector(createNewCell))]
+        navigationItem.rightBarButtonItems = [UIBarButtonItem(image: #imageLiteral(resourceName: "hamburger"), style: .done, target: self, action: #selector(editCells)), UIBarButtonItem(image: #imageLiteral(resourceName: "plus"), style: .done, target: self, action: #selector(createNewCell))]
         navigationItem.rightBarButtonItems?.forEach {
             $0.image = $0.image!.withRenderingMode(.alwaysTemplate)
             $0.tintColor = ColorTheme.appTheme.gray
@@ -45,7 +44,7 @@ class SC2BuildCreateViewController: UIViewController {
         buildTableView.rowHeight = buildTableView.frame.height / 6
         buildTableView.layoutIfNeeded()
         buildTableView.allowsSelection = false
-        buildTableView.isEditing = true
+        buildTableView.isEditing = false
     }
     
     private func bindUI() {
@@ -58,11 +57,16 @@ class SC2BuildCreateViewController: UIViewController {
             cell.timeMomentLabel.text = element.time
             cell.actionLabel.text = element.action
             cell.descriptionLabel.text = element.description
+            cell.backgroundColor = ColorTheme.appTheme.lightGray
             return cell
         }.disposed(by: viewModel.bag)
         
-        buildTableView.rx.itemMoved.subscribe( { indexPath in
+        buildTableView.rx.itemMoved.subscribe( onNext: { indexPath in
             
+        }).disposed(by: viewModel.bag)
+        
+        buildTableView.rx.itemDeleted.subscribe( onNext: { indexPath in
+            self.viewModel.buildCells.value.remove(at: indexPath.row)
         }).disposed(by: viewModel.bag)
     }
     
@@ -72,8 +76,15 @@ class SC2BuildCreateViewController: UIViewController {
     }
     
     @objc
-    private func reorderCells() {
-        
+    private func editCells() {
+        buildTableView.isEditing = true
+        navigationItem.rightBarButtonItems![0] = UIBarButtonItem(title: "OK", style: .done, target: self, action: #selector(endEditingCells))
+    }
+    
+    @objc
+    private func endEditingCells() {
+        buildTableView.isEditing = false
+        navigationItem.rightBarButtonItems![0] = UIBarButtonItem(image: #imageLiteral(resourceName: "hamburger"), style: .done, target: self, action: #selector(editCells))
     }
 
 }
