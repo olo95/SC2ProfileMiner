@@ -13,6 +13,8 @@ enum SC2BuildRouter {
     case showCreateNew
     case showLoaded
     case showCellCreator
+    case showBuildSave(buildCellsData: [BuildCellData], name: String?)
+    case showLoadedBuild(buildCellsData: [BuildCellData], name: String)
 }
 
 class SC2BuildCoordinator: Coordinating {
@@ -47,6 +49,20 @@ class SC2BuildCoordinator: Coordinating {
         return vc
     }
     
+    var sc2BuildSave: SC2BuildSaveViewController {
+        let vm = SC2BuildSaveViewModel(flowDelegate: self)
+        let vc = SC2BuildSaveViewController()
+        vc.viewModel = vm
+        return vc
+    }
+    
+    var sc2BuildLoad: SC2BuildLoadViewController {
+        let vm = SC2BuildLoadViewModel(flowDelegate: self)
+        let vc = SC2BuildLoadViewController()
+        vc.viewModel = vm
+        return vc
+    }
+    
     let bag = DisposeBag()
     
     func start() {
@@ -77,9 +93,19 @@ class SC2BuildCoordinator: Coordinating {
             case .showCreateNew:
                 self.push(viewController: self.sc2BuildCreate)
             case .showLoaded:
-                print("")
+                self.push(viewController: self.sc2BuildLoad)
             case .showCellCreator:
                 self.present(viewController: self.sc2BuildCellCreator, completion: nil)
+            case .showBuildSave(let data, let name):
+                let buildSaveController = self.sc2BuildSave
+                buildSaveController.viewModel.nameOfBuild = name
+                buildSaveController.viewModel.buildCellsData = data
+                self.push(viewController: buildSaveController)
+            case .showLoadedBuild(let data, let name):
+                let buildCreateController = self.sc2BuildCreate
+                buildCreateController.viewModel.nameOfBuild = name
+                buildCreateController.viewModel.buildCells.value = data
+                self.push(viewController: buildCreateController)
             default:
                 break
             }

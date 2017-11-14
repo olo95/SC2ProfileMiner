@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SC2BuildLoadViewController" customModule="SC2ProfileMiner" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SC2BuildSaveViewController" customModule="SC2ProfileMiner" customModuleProvider="target">
             <connections>
-                <outlet property="buildNameTextField" destination="KnX-mZ-9Ka" id="sgf-Q7-zGT"/>
-                <outlet property="loadBuildButton" destination="lnA-b7-SJ8" id="Oeg-sc-tI5"/>
+                <outlet property="buildNameTextField" destination="gBx-RV-uP3" id="v9u-qB-ryc"/>
+                <outlet property="saveBuildButton" destination="7WK-01-CjL" id="WcS-gW-ej5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,28 +21,28 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of build" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KnX-mZ-9Ka">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of build" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gBx-RV-uP3">
                     <rect key="frame" x="16" y="318.5" width="343" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnA-b7-SJ8">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WK-01-CjL">
                     <rect key="frame" x="16" y="364.5" width="343" height="30"/>
-                    <state key="normal" title="Load">
+                    <state key="normal" title="Save">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.88908235250000001" green="0.88908235250000001" blue="0.88908235250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KnX-mZ-9Ka" secondAttribute="trailing" constant="16" id="Pex-Pr-NzB"/>
-                <constraint firstItem="KnX-mZ-9Ka" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="RFj-Vp-c6x"/>
-                <constraint firstItem="lnA-b7-SJ8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="RjP-EX-ydx"/>
-                <constraint firstItem="KnX-mZ-9Ka" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="eFC-Jn-nzy"/>
-                <constraint firstItem="KnX-mZ-9Ka" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ga0-5p-iXN"/>
-                <constraint firstItem="lnA-b7-SJ8" firstAttribute="top" secondItem="KnX-mZ-9Ka" secondAttribute="bottom" constant="16" id="uOq-dO-lbL"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lnA-b7-SJ8" secondAttribute="trailing" constant="16" id="zDy-AI-Zme"/>
+                <constraint firstItem="gBx-RV-uP3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9bO-IC-qRd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gBx-RV-uP3" secondAttribute="trailing" constant="16" id="KPS-5A-sfg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7WK-01-CjL" secondAttribute="trailing" constant="16" id="W5q-lQ-BbX"/>
+                <constraint firstItem="gBx-RV-uP3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="YKP-Vx-F8A"/>
+                <constraint firstItem="7WK-01-CjL" firstAttribute="top" secondItem="gBx-RV-uP3" secondAttribute="bottom" constant="16" id="aQ5-lu-18x"/>
+                <constraint firstItem="7WK-01-CjL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="c6f-26-nyr"/>
+                <constraint firstItem="gBx-RV-uP3" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="oEw-22-Fan"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

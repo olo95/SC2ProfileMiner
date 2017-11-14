@@ -11,6 +11,7 @@ import RxCocoa
 
 class SC2BuildCreateViewController: UIViewController {
     
+    @IBOutlet weak var saveBuildButton: UIButton!
     @IBOutlet weak var buildTableView: UITableView!
     var viewModel: SC2BuildCreateViewModel!
     
@@ -33,6 +34,7 @@ class SC2BuildCreateViewController: UIViewController {
     private func setupUI() {
         registerNibs()
         setupTableView()
+        setupButtons()
     }
     
     private func registerNibs() {
@@ -45,6 +47,13 @@ class SC2BuildCreateViewController: UIViewController {
         buildTableView.layoutIfNeeded()
         buildTableView.allowsSelection = false
         buildTableView.isEditing = false
+    }
+    
+    private func setupButtons() {
+        saveBuildButton.layer.add(CABasicAnimation().pulseAnimation(duration: 2), forKey: "animateOpacity")
+        saveBuildButton.rx.tap.subscribe( onNext: { _ in
+            self.viewModel.flowDelegate.buildRouter.onNext(.showBuildSave(buildCellsData: self.viewModel.buildCells.value, name: self.viewModel.nameOfBuild))
+        }).disposed(by: viewModel.bag)
     }
     
     private func bindUI() {

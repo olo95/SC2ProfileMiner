@@ -16,6 +16,7 @@ class SC2BuildCreateViewModel {
     var buildCells = Variable<[BuildCellData]>([("","","")])
     var newBuildCell = PublishSubject<BuildCellData>()
     let bag = DisposeBag()
+    var nameOfBuild: String?
     
     init(flowDelegate: SC2BuildCoordinator) {
         self.flowDelegate = flowDelegate
