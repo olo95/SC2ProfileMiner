@@ -17,6 +17,8 @@ class SC2ProfileViewModel {
             guard let result = result else {
                 return
             }
+            UserDefaultsManager.saveProfileId(id: Int(id)!)
+            UserDefaultsManager.saveProfileName(name: name)
             self.flowDelegate.profileRouter.onNext(.showProfile(data: result))
         }
     }

@@ -31,4 +31,40 @@ class UserDefaultsManager {
         
         return buildCellDataArray
     }
+    
+    static func saveProfileId(id: Int) {
+        let defaults = UserDefaults.standard
+        let array = defaults.array(forKey: "profileIds")  as? [Int] ?? [Int]()
+        if array.contains(id) {
+            return
+        }
+        var range: Range<Int>?
+        if array.count == 5 {
+            range = array.index(array.endIndex, offsetBy: -5) ..< array.endIndex
+        } else {
+            range = array.index(array.endIndex, offsetBy: -(array.count % 5)) ..< array.endIndex
+        }
+        let arraySlice = array[range!]
+        var newArray = Array(arraySlice)
+        newArray.append(id)
+        defaults.set(newArray, forKey: "profileIds")
+    }
+    
+    static func saveProfileName(name: String) {
+        let defaults = UserDefaults.standard
+        let array = defaults.stringArray(forKey: "profileNames") ?? [String]()
+        if array.contains(name) {
+            return
+        }
+        var range: Range<Int>?
+        if array.count == 5 {
+            range = array.index(array.endIndex, offsetBy: -5) ..< array.endIndex
+        } else {
+            range = array.index(array.endIndex, offsetBy: -(array.count % 5)) ..< array.endIndex
+        }
+        let arraySlice = array[range!]
+        var newArray = Array(arraySlice)
+        newArray.append(name)
+        defaults.set(newArray, forKey: "profileNames")
+    }
 }
