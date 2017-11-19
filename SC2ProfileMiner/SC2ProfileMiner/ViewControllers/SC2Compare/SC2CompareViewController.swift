@@ -8,6 +8,7 @@
 
 import RxSwift
 import RxCocoa
+import PKHUD
 
 class SC2CompareViewController: UIViewController {
 
@@ -38,12 +39,22 @@ class SC2CompareViewController: UIViewController {
     }
     
     private func bindUI() {
-        Observable.combineLatest(profileOneIdTextField.rx.text, profileTwoIdTextField.rx.text, profileOneNameTextField.rx.text, profileTwoNameTextField.rx.text)
-            .filter( { return !($0.0!.isEmpty) && !($0.1!.isEmpty) && !($0.2!.isEmpty) && !($0.3!.isEmpty) })
-            .map({ return (($0.0, $0.1), ($0.2, $0.3)) })
+        
+        let observable = Observable.combineLatest(profileOneIdTextField.rx.text, profileTwoIdTextField.rx.text, profileOneNameTextField.rx.text, profileTwoNameTextField.rx.text)
+            .filter { return $0.0 != nil && $0.1 != nil && $0.2 != nil && $0.3 != nil }
+            .map { return (($0.0!, $0.1!), ($0.2!, $0.3!)) }
+        
+        observable
+            .filter { return !$0.0.0.isEmpty && !$0.0.1.isEmpty && !$0.1.0.isEmpty && !$0.1.1.isEmpty }
             .sample(compareButton.rx.tap)
             .subscribe( onNext: {
-                self.viewModel.compareProfiles(ids: ($0.0.0!, $0.0.1!), names: ($0.1.0!, $0.1.1!))
+                self.viewModel.compareProfiles(ids: ($0.0.0, $0.0.1), names: ($0.1.0, $0.1.1))
+            }).disposed(by: viewModel.bag)
+        
+        observable
+            .sample(compareButton.rx.tap)
+            .subscribe( onNext: { _ in
+                HUD.flash(.labeledError(title: "Error", subtitle: "Some fields are not filled"), delay: 1.0)
             }).disposed(by: viewModel.bag)
     }
 

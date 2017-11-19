@@ -8,6 +8,7 @@
 
 import RxSwift
 import RxCocoa
+import PKHUD
 
 class SC2ProfileViewController: UIViewController {
 
@@ -41,12 +42,29 @@ class SC2ProfileViewController: UIViewController {
     }
     
     private func bindUI() {
-        Observable.combineLatest(profileIdTextField.rx.text, profileNameTextField.rx.text)
-            .map( { return ($0.0, $0.1)})
+        
+        loadProfileButton.rx.tap.subscribe( onNext: { _ in
+            self.profileIdTextField.sendActions(for: .valueChanged)
+            self.profileNameTextField.sendActions(for: .valueChanged)
+        }).disposed(by: viewModel.bag)
+        
+        let observable = Observable.combineLatest(profileIdTextField.rx.text, profileNameTextField.rx.text)
             .filter({ return $0.0 != nil && $0.1 != nil })
+            .map { return ($0.0!, $0.1!) }
+            .share()
+        
+        observable
+            .filter { return !$0.0.isEmpty && !$0.1.isEmpty }
             .sample(loadProfileButton.rx.tap)
             .subscribe( onNext: {
-                self.viewModel.downloadProfile(with: $0.0!, name: $0.1!)
+                self.viewModel.downloadProfile(with: $0.0, name: $0.1)
+            }).disposed(by: viewModel.bag)
+        
+        observable
+            .filter { return $0.0.isEmpty || $0.1.isEmpty }
+            .sample(loadProfileButton.rx.tap)
+            .subscribe( onNext: { _ in
+                HUD.flash(.labeledError(title: "Error", subtitle: "Some fields are not filled"), delay: 1.0)
             }).disposed(by: viewModel.bag)
     }
 }
