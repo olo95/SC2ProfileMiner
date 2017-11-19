@@ -29,12 +29,18 @@ class SC2CompareViewModel {
     }
     
     func compareProfiles(ids: (String, String), names: (String, String)) {
-        SC2Networker.GET(url: SC2Router.getUrl(parameters: SC2Url(name: names.0, id: ids.0), method: .profile)) { (result: SC2Profile) in
+        SC2Networker.GET(url: SC2Router.getUrl(parameters: SC2Url(name: names.0, id: ids.0), method: .profile)) { (result: SC2Profile?) in
+            guard let result = result else {
+                return
+            }
             self.sc2ProfileOne = result
             self.profileOneLoaded.onNext(true)
         }
         
-        SC2Networker.GET(url: SC2Router.getUrl(parameters: SC2Url(name: names.1, id: ids.1), method: .profile)) { (result: SC2Profile) in
+        SC2Networker.GET(url: SC2Router.getUrl(parameters: SC2Url(name: names.1, id: ids.1), method: .profile)) { (result: SC2Profile?) in
+            guard let result = result else {
+                return
+            }
             self.sc2ProfileTwo = result
             self.profileTwoLoaded.onNext(true)
         }

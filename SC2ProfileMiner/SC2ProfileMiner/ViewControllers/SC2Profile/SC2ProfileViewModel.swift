@@ -13,7 +13,10 @@ class SC2ProfileViewModel {
     let bag = DisposeBag()
     
     func downloadProfile(with id: String, name: String) {
-        SC2Networker.GET(url: SC2Router.getUrl(parameters: SC2Url(name: name, id: id), method: .profile)) { (result: SC2Profile) in
+        SC2Networker.GET(url: SC2Router.getUrl(parameters: SC2Url(name: name, id: id), method: .profile)) { (result: SC2Profile?) in
+            guard let result = result else {
+                return
+            }
             self.flowDelegate.profileRouter.onNext(.showProfile(data: result))
         }
     }

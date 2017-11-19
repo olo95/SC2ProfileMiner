@@ -30,7 +30,5 @@ class UserDefaultsManager {
         let buildCellDataArray = arrayOfData.filter { return !$0.isEmpty }.map { return BuildCellData( (time: String(describing: $0[0]), action: String(describing: $0[1]), description: String(describing: $0[2])) ) }
         
         return buildCellDataArray
-        
-//        return save.split(separator: " ").map { return BuildCellData((time: $0[0], action: $0[1], description: $0[2])) }
     }
 }

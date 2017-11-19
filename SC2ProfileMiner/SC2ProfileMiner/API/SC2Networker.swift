@@ -13,15 +13,24 @@ import ObjectMapper
 import PKHUD
 
 class SC2Networker {
-    static func GET<Item: BaseMappable>(url: URLConvertible, completion: @escaping (Item) -> ()) {
+    static func GET<Item: BaseMappable>(url: URLConvertible, completion: @escaping (Item?) -> ()) {
         var data: Item?
         HUD.show(.progress)
         Alamofire.request(url).responseJSON { response in
-            let json = response.result.value as! [String: AnyObject]
-            data = Mapper<Item>().map(JSON: json)
-            if let result = data {
+            switch response.response?.statusCode {
+            case 200?:
+                let json = response.result.value as! [String: AnyObject]
+                data = Mapper<Item>().map(JSON: json)
+                completion(data)
                 HUD.hide()
-                completion(result)
+            case 404?:
+                HUD.flash(.labeledError(title: "Error", subtitle: "Profile not found"), delay: 1.0)
+                completion(nil)
+                return
+            default:
+                HUD.flash(.labeledError(title: "Error", subtitle: "Something went wrong"), delay: 1.0)
+                completion(nil)
+                return
             }
         }
     }

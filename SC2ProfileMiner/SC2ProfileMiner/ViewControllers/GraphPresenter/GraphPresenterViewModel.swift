@@ -23,7 +23,10 @@ class GraphPresenterViewModel {
         graphData.removeAll()
         switch graphType {
         case .matchHistory:
-            SC2Networker.GET(url: SC2Router.getUrl(parameters: SC2Url(name: profileData.displayName!, id: String(profileData.id!)), method: .matchHistory)) { (result: SC2MatchHistory) in
+            SC2Networker.GET(url: SC2Router.getUrl(parameters: SC2Url(name: profileData.displayName!, id: String(profileData.id!)), method: .matchHistory)) { (result: SC2MatchHistory?) in
+                guard let result = result else {
+                    return
+                }
                 result.matches.map( { return $0 }).map( {
                     $0.forEach( { match in
                         self.graphData.append((match.decision!, match.date!))
