@@ -43,10 +43,15 @@ class SC2ProfileViewController: UIViewController {
     
     private func bindUI() {
         
-        loadProfileButton.rx.tap.subscribe( onNext: { _ in
-            self.profileIdTextField.sendActions(for: .valueChanged)
-            self.profileNameTextField.sendActions(for: .valueChanged)
-        }).disposed(by: viewModel.bag)
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)))
+        
+        let idTextFieldValidation = profileIdTextField.rx.text
+            .map { !(($0?.isEmpty)!) }
+            .share()
+        
+        let nameTextFieldValidation = profileNameTextField.rx.text
+            .map { !(($0?.isEmpty)!) }
+            .share()
         
         let observable = Observable.combineLatest(profileIdTextField.rx.text, profileNameTextField.rx.text)
             .filter({ return $0.0 != nil && $0.1 != nil })
@@ -66,5 +71,10 @@ class SC2ProfileViewController: UIViewController {
             .subscribe( onNext: { _ in
                 HUD.flash(.labeledError(title: "Error", subtitle: "Some fields are not filled"), delay: 1.0)
             }).disposed(by: viewModel.bag)
+    }
+    
+    @objc
+    private func dismissKeyboard() {
+        view.endEditing(true)
     }
 }

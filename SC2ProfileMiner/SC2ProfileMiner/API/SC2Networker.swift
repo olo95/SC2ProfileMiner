@@ -17,6 +17,7 @@ class SC2Networker {
         var data: Item?
         HUD.show(.progress)
         Alamofire.request(url).responseJSON { response in
+            print(response.result.value)
             switch response.response?.statusCode {
             case 200?:
                 let json = response.result.value as! [String: AnyObject]

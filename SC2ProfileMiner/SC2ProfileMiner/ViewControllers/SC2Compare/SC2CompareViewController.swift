@@ -40,6 +40,8 @@ class SC2CompareViewController: UIViewController {
     
     private func bindUI() {
         
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)))
+        
         let observable = Observable.combineLatest(profileOneIdTextField.rx.text, profileTwoIdTextField.rx.text, profileOneNameTextField.rx.text, profileTwoNameTextField.rx.text)
             .filter { return $0.0 != nil && $0.1 != nil && $0.2 != nil && $0.3 != nil }
             .map { return (($0.0!, $0.1!), ($0.2!, $0.3!)) }
@@ -56,6 +58,11 @@ class SC2CompareViewController: UIViewController {
             .subscribe( onNext: { _ in
                 HUD.flash(.labeledError(title: "Error", subtitle: "Some fields are not filled"), delay: 1.0)
             }).disposed(by: viewModel.bag)
+    }
+    
+    @objc
+    private func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     @objc
