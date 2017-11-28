@@ -160,6 +160,8 @@
 		D63250DF1FBB8125003B14E0 /* SC2BuildSaveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63250DD1FBB8125003B14E0 /* SC2BuildSaveViewModel.swift */; };
 		D63250E11FBB859B003B14E0 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63250E01FBB859B003B14E0 /* UserDefaultsManager.swift */; };
 		D63250E21FBB859B003B14E0 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63250E01FBB859B003B14E0 /* UserDefaultsManager.swift */; };
+		D67201611FC23DE3006E3B7C /* DropDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67201601FC23DE3006E3B7C /* DropDownPicker.swift */; };
+		D67201621FC23DE3006E3B7C /* DropDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67201601FC23DE3006E3B7C /* DropDownPicker.swift */; };
 		D68A22B81F991D2C009474C4 /* DrawerTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A22B71F991D2C009474C4 /* DrawerTransitionManager.swift */; };
 		D68A22B91F991D2C009474C4 /* DrawerTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A22B71F991D2C009474C4 /* DrawerTransitionManager.swift */; };
 		D68A22BB1F991F5F009474C4 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A22BA1F991F5F009474C4 /* TransitionManager.swift */; };
@@ -310,6 +312,7 @@
 		D63250D81FBB7FCA003B14E0 /* SC2BuildSaveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SC2BuildSaveViewController.xib; sourceTree = "<group>"; };
 		D63250DD1FBB8125003B14E0 /* SC2BuildSaveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SC2BuildSaveViewModel.swift; sourceTree = "<group>"; };
 		D63250E01FBB859B003B14E0 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		D67201601FC23DE3006E3B7C /* DropDownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownPicker.swift; sourceTree = "<group>"; };
 		D68A22B71F991D2C009474C4 /* DrawerTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerTransitionManager.swift; sourceTree = "<group>"; };
 		D68A22BA1F991F5F009474C4 /* TransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		D68A22C11F992282009474C4 /* DrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
@@ -450,6 +453,7 @@
 				D6045A661F98AB4A00DA2840 /* Coordinators */,
 				D6045A651F98AB4200DA2840 /* Models */,
 				D6045A641F98AB3A00DA2840 /* ViewControllers */,
+				D672015F1FC23D63006E3B7C /* Views */,
 			);
 			path = SC2ProfileMiner;
 			sourceTree = "<group>";
@@ -699,6 +703,14 @@
 				D63250DD1FBB8125003B14E0 /* SC2BuildSaveViewModel.swift */,
 			);
 			path = SC2BuildSave;
+			sourceTree = "<group>";
+		};
+		D672015F1FC23D63006E3B7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D67201601FC23DE3006E3B7C /* DropDownPicker.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D68A22BD1F99224C009474C4 /* Drawer */ = {
@@ -1055,6 +1067,7 @@
 				D68A22B81F991D2C009474C4 /* DrawerTransitionManager.swift in Sources */,
 				D62419471F9EA51B00C0C6FA /* Stats.swift in Sources */,
 				D62419201F9EA4E800C0C6FA /* Ladder.swift in Sources */,
+				D67201611FC23DE3006E3B7C /* DropDownPicker.swift in Sources */,
 				D6003A9C1FB1ED1C008431DC /* SC2BuildPresenterViewController.swift in Sources */,
 				D6D178A81F98E37E004BC623 /* SC2ProfileViewController.swift in Sources */,
 				D624195A1F9EA53600C0C6FA /* Icon.swift in Sources */,
@@ -1118,6 +1131,7 @@
 			files = (
 				D617BF1F1FABCA0900DB6285 /* SC2CompareResultViewModel.swift in Sources */,
 				D62419151F9EA4E800C0C6FA /* ShowcasePlacement.swift in Sources */,
+				D67201621FC23DE3006E3B7C /* DropDownPicker.swift in Sources */,
 				D62419091F9EA4A000C0C6FA /* Character.swift in Sources */,
 				D68A22BC1F991F5F009474C4 /* TransitionManager.swift in Sources */,
 				D6003A9D1FB1ED1C008431DC /* SC2BuildPresenterViewController.swift in Sources */,

@@ -43,6 +43,14 @@ class SC2ProfileViewController: UIViewController {
     
     private func bindUI() {
         
+        profileIdTextField.rx.text.subscribe( onNext: { _ in
+            self.view.addSubview(DropDownPicker(frame: CGRect(origin: self.view.frame.origin, size: self.view.bounds.size), typeOfData: .ids))
+        }).disposed(by: viewModel.bag)
+        
+        profileNameTextField.rx.text.subscribe( onNext: { _ in
+            self.view.addSubview(DropDownPicker(frame: CGRect(origin: self.view.frame.origin, size: self.view.bounds.size), typeOfData: .names))
+        }).disposed(by: viewModel.bag)
+        
         loadProfileButton.rx.tap.subscribe( onNext: { _ in
             self.profileIdTextField.sendActions(for: .valueChanged)
             self.profileNameTextField.sendActions(for: .valueChanged)
