@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,24 +25,36 @@
                                 <rect key="frame" x="0.0" y="0.0" width="583" height="220.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time, moment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trk-uw-5rL">
-                                        <rect key="frame" x="0.0" y="100" width="194.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="194.5" height="220.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtG-X7-Buz">
-                                        <rect key="frame" x="194.5" y="100" width="194" height="20.5"/>
+                                        <rect key="frame" x="194.5" y="0.0" width="194" height="220.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0G3-Gi-F76">
-                                        <rect key="frame" x="388.5" y="100" width="194.5" height="20.5"/>
+                                        <rect key="frame" x="388.5" y="0.0" width="194.5" height="220.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="0G3-Gi-F76" secondAttribute="trailing" id="6jK-MP-uQh"/>
+                                    <constraint firstItem="0G3-Gi-F76" firstAttribute="leading" secondItem="HtG-X7-Buz" secondAttribute="trailing" id="Wk7-iH-pDX"/>
+                                    <constraint firstAttribute="bottom" secondItem="HtG-X7-Buz" secondAttribute="bottom" id="Zu9-Vh-xZE"/>
+                                    <constraint firstAttribute="bottom" secondItem="0G3-Gi-F76" secondAttribute="bottom" id="bzn-dP-aW8"/>
+                                    <constraint firstItem="trk-uw-5rL" firstAttribute="leading" secondItem="1RH-MG-cL2" secondAttribute="leading" id="dYS-Cr-XbF"/>
+                                    <constraint firstAttribute="bottom" secondItem="trk-uw-5rL" secondAttribute="bottom" id="ljC-AK-YJj"/>
+                                    <constraint firstItem="trk-uw-5rL" firstAttribute="top" secondItem="1RH-MG-cL2" secondAttribute="top" id="lrP-35-g7H"/>
+                                    <constraint firstItem="HtG-X7-Buz" firstAttribute="top" secondItem="1RH-MG-cL2" secondAttribute="top" id="nGy-T9-1qy"/>
+                                    <constraint firstItem="0G3-Gi-F76" firstAttribute="top" secondItem="1RH-MG-cL2" secondAttribute="top" id="pG9-W2-a1N"/>
+                                    <constraint firstItem="HtG-X7-Buz" firstAttribute="leading" secondItem="trk-uw-5rL" secondAttribute="trailing" id="sLD-lj-ljD"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                     </stackView>

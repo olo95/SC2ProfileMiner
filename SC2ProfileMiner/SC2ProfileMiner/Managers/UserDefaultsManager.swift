@@ -13,7 +13,7 @@ class UserDefaultsManager {
     static func saveBuild(with data: [BuildCellData], name: String) {
         var save: [String] = []
         
-        save = data.map { return "\($0.time) \($0.action) \($0.description)" }
+        save = data.map { return "\n\($0.time)\n\($0.action)\n\($0.description)" }
         
         let defaults = UserDefaults.standard
         defaults.set(save, forKey: name)
@@ -25,7 +25,7 @@ class UserDefaultsManager {
         let defaults = UserDefaults.standard
         let save = defaults.stringArray(forKey: name) ?? [String]()
         
-        let arrayOfData = save.map { return $0.split(separator: " ") }
+        let arrayOfData = save.map { return $0.split(separator: "\n") }
         
         let buildCellDataArray = arrayOfData.filter { return !$0.isEmpty }.map { return BuildCellData( (time: String(describing: $0[0]), action: String(describing: $0[1]), description: String(describing: $0[2])) ) }
         
