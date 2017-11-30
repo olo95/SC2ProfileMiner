@@ -42,8 +42,10 @@ class GraphPresenterViewController: UIViewController {
         lineChartView = LineChartView(frame: view.frame)
         viewModel.setGraphData() { graphData in
             var dataEntries: [ChartDataEntry] = []
+            var count = 0.0
             dataEntries = graphData.map( {
-                let dataEntry = ChartDataEntry(x: Double($0.1), y: $0.0 == "WIN" ? 1 : 0)
+                let dataEntry = ChartDataEntry(x: count, y: $0.0 == "WIN" ? 1 : 0)
+                count += 1
                 return dataEntry
             })
             
