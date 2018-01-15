@@ -32,7 +32,7 @@ class MainMenuViewController: UIViewController {
     }
     
     private func setupUIArrows() {
-        let colorOfArrow = ColorTheme.appTheme.lightGray
+        let colorOfArrow = ColorTheme.appTheme.lightBase
         sc2ProfileButtonArrow.image = sc2ProfileButtonArrow.image!.withRenderingMode(.alwaysTemplate)
         sc2ProfileButtonArrow.tintColor = colorOfArrow
         sc2CompareButtonArrow.image = sc2CompareButtonArrow.image!.withRenderingMode(.alwaysTemplate)

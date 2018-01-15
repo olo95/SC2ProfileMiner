@@ -12,7 +12,7 @@ extension CABasicAnimation {
     func pulseAnimation(duration: Double) -> CABasicAnimation {
         keyPath = #keyPath(CALayer.opacity)
         self.duration = duration
-        fromValue = 0.25
+        fromValue = 1.0
         toValue = 1
         timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         autoreverses = true

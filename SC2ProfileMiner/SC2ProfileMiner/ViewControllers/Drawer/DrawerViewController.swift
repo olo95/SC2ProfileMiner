@@ -33,7 +33,7 @@ class DrawerViewController: UIViewController {
     }
     
     private func setImages() {
-        let colorOfImage = ColorTheme.appTheme.gray
+        let colorOfImage = ColorTheme.appTheme.base
         buildImageView.image = buildImageView.image!.withRenderingMode(.alwaysTemplate)
         buildImageView.tintColor = colorOfImage
         compareImageView.image = compareImageView.image!.withRenderingMode(.alwaysTemplate)

@@ -22,7 +22,7 @@ class SC2BuildSaveViewController: UIViewController {
     }
     
     private func setupUI() {
-        navigationController?.navigationBar.tintColor = ColorTheme.appTheme.gray
+        navigationController?.navigationBar.tintColor = ColorTheme.appTheme.base
         saveBuildButton.layer.add(CABasicAnimation().pulseAnimation(duration: 2), forKey: "animateOpacity")
         buildNameTextField.text = viewModel.nameOfBuild
     }

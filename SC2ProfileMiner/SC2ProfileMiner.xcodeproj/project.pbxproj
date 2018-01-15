@@ -826,7 +826,7 @@
 				TargetAttributes = {
 					D6045A401F98A58F00DA2840 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					D6045A541F98A58F00DA2840 = {
 						CreatedOnToolsVersion = 9.0;
@@ -1336,8 +1336,9 @@
 			baseConfigurationReference = 8312506D14FFC508A0F83246 /* Pods-SC2ProfileMiner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CH748L7MFS;
 				INFOPLIST_FILE = SC2ProfileMiner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SaszaCorp.SC2ProfileMiner;
@@ -1353,8 +1354,9 @@
 			baseConfigurationReference = D6247AB79494F1A2A1E31AF2 /* Pods-SC2ProfileMiner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CH748L7MFS;
 				INFOPLIST_FILE = SC2ProfileMiner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SaszaCorp.SC2ProfileMiner;

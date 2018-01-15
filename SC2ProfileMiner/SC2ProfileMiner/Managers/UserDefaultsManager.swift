@@ -27,7 +27,13 @@ class UserDefaultsManager {
         
         let arrayOfData = save.map { return $0.split(separator: " ") }
         
-        let buildCellDataArray = arrayOfData.filter { return !$0.isEmpty }.map { return BuildCellData( (time: String(describing: $0[0]), action: String(describing: $0[1]), description: String(describing: $0[2])) ) }
+        let buildCellDataArray = arrayOfData
+            .filter { return !$0.isEmpty }
+            .map {
+                return BuildCellData( (time: String(describing: $0[0]), action: String(describing: $0[1]),
+                                       description: String(describing: $0[2])) )
+                
+            }
         
         return buildCellDataArray
     }

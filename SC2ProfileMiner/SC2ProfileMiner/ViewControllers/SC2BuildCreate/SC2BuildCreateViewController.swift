@@ -23,11 +23,11 @@ class SC2BuildCreateViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
-        navigationController?.navigationBar.tintColor = ColorTheme.appTheme.gray
+        navigationController?.navigationBar.tintColor = ColorTheme.appTheme.base
         navigationItem.rightBarButtonItems = [UIBarButtonItem(image: #imageLiteral(resourceName: "hamburger"), style: .done, target: self, action: #selector(editCells)), UIBarButtonItem(image: #imageLiteral(resourceName: "plus"), style: .done, target: self, action: #selector(createNewCell))]
         navigationItem.rightBarButtonItems?.forEach {
             $0.image = $0.image!.withRenderingMode(.alwaysTemplate)
-            $0.tintColor = ColorTheme.appTheme.gray
+            $0.tintColor = ColorTheme.appTheme.base
         }
     }
     
@@ -66,7 +66,7 @@ class SC2BuildCreateViewController: UIViewController {
             cell.timeMomentLabel.text = element.time
             cell.actionLabel.text = element.action
             cell.descriptionLabel.text = element.description
-            cell.backgroundColor = ColorTheme.appTheme.lightGray
+            cell.backgroundColor = ColorTheme.appTheme.lightBase
             return cell
         }.disposed(by: viewModel.bag)
         

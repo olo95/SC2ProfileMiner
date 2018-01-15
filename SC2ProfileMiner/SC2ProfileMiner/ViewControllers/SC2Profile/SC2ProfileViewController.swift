@@ -27,9 +27,9 @@ class SC2ProfileViewController: UIViewController {
     private func setNavigationBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "hamburger"), style: .done, target: self, action: #selector(showDrawer))
         navigationItem.leftBarButtonItem?.image = navigationItem.leftBarButtonItem?.image!.withRenderingMode(.alwaysTemplate)
-        navigationItem.leftBarButtonItem?.tintColor = ColorTheme.appTheme.gray
+        navigationItem.leftBarButtonItem?.tintColor = ColorTheme.appTheme.base
         navigationItem.title = "SC2 Profile Miner"
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: ColorTheme.appTheme.gray]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: ColorTheme.appTheme.base]
     }
     
     @objc
